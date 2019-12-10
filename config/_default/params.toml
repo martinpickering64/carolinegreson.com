@@ -160,6 +160,9 @@ sharing = false
 # Link authors to their profile page? (true/false)
 link_authors = false
 
+# Enable the author box display on content other than Pages see layouts/partials/page_author.html
+profile = true
+
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
 plugins_js  = []

@@ -8,7 +8,7 @@ weight = 10  # Order that this section will appear.
 title = "Willow Sculptures by Caroline Gregson"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = "hero-academic.png"
+#hero_media = "making-willow-sculpture.jpg"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -20,15 +20,17 @@ hero_media = "hero-academic.png"
   # color = "navy"
   
   # Background gradient.
-  gradient_start = "#4bb4e3"
-  gradient_end = "#2b94c3"
+  #gradient_start = "#4bb4e3"
+  #gradient_end = "#2b94c3"
   
   # Background image.
-  # image = ""  # Name of image in `static/img/`.
+   image = "making-willow-sculpture.jpg"  # Name of image in `static/img/`.
+   
   # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-  # image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
-  # image_position = "center"  # Options include `left`, `center` (default), or `right`.
-  # image_parallax = true  # Use a fun parallax-like fixed background effect? true/false
+   image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
+   image_position = "center"  # Options include `left`, `center` (default), or `right`.
+   image_parallax = false  # Use a fun parallax-like fixed background effect? true/false
+   image_min_height = "500px"
   
   # Text color (true=light or false=dark).
   text_color_light = true
@@ -36,9 +38,9 @@ hero_media = "hero-academic.png"
 # Call to action links (optional).
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
-[cta]
-  url = "gallery"
-  label = "art inspired by nature"
+#[cta]
+#  url = "gallery"
+#  label = "art inspired by nature"
 #  icon_pack = "fa"
 #  icon = "angle-down"
   
@@ -48,6 +50,7 @@ hero_media = "hero-academic.png"
 
 # Note. An optional note to show underneath the links.
 [cta_note]
-  label = '<a href="#about"><span class="fa fa-angle-down">&nbsp;</span></a>'
+  label = '<a href="#about"><span class="fa fa-angle-down" style="padding-top:200px;font-size:2.5em;">&nbsp;</span></a>'
 +++
 
+<p class="lead">art inspired by nature</p>

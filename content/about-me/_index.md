@@ -22,18 +22,19 @@ organizations:
 bio: I have loved and been inspired by the natural world since I was a child and the ability to work as a Willow Artist and make willow sculptures representing the essence of animals, birds and other living forms now brings me great pleasure. I love to represent movement and vitality in my work. My willow sculptures appear to have just paused in their setting before they are ready to move on. One of the nicest things anyone has said about my animal sculptures is that you can always see where they are looking!
 
 interests:
-- Willow Sculpture
-- Basket Making
+- Orienteering
+- Gardening
 - Green Woodworking
+- Bronze Age Experimental Archeology
 
 education:
   courses:
+  - course: HND Design Crafts
+    institution: Glydwr University
+    year: 2004
   - course: BSC in Electrical and Control Systems Engineering
     institution: Birmingham University
     year: 1986
-  - course: HND Design Crafts
-    institution: Glydwr University
-    year: 2000
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons

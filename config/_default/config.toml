@@ -72,6 +72,6 @@ pluralizeListTitles = false
 # change the permalinks configuration
 
 [permalinks]
-# post to blog
     blog = "/blog/:year/:month/:day/:slug"
+	"workshops" = "/workshops/:year/:month/:day/:slug"
 

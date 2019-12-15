@@ -3,13 +3,8 @@
 name: Caroline Gregson
 
 # Username (this should match the folder name)
-authors:
-- caroline-gregson
-
-superuser: false
-
-# Is this the primary user of the site?
-superuser: true
+#authors:
+#- caroline-gregson
 
 # Role/position
 role: Willow Sculpture Artist

@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
-title = "Recent & Upcoming Talks"
-subtitle = ""
+title = "Upcoming Workshops"
+subtitle = "I run courses and workshops in Willow Sculpture and Basketmaking throughout the year, some of my next workshop dates are:"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -29,7 +29,7 @@ subtitle = ""
     category = ""
     publication_type = ""
     exclude_featured = false
-    exclude_past = false
+    exclude_past = true
     exclude_future = false
     
 [design]

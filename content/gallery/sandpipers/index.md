@@ -2,9 +2,9 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Sandpipers"
-summary: ""
+summary: "These approximately lifesize Sandpipers are some of my most popular willow sculptures."
 authors: []
-tags: ["featured"]
+tags: ["featured", "wildlife", "birds"]
 categories: []
 date: 2019-12-10T13:21:47Z
 
@@ -15,8 +15,8 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
+  caption: "Sandpipers by Caroline Gregson"
+  focal_point: "Smart"
   preview_only: false
 
 # Custom links (optional).
@@ -39,3 +39,8 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+These approximately lifesize Sandpipers are some of my most popular willow sculptures. 
+They can be ordered separately or in whole flocks, if you wish. 
+You can also decide on the pose they have.
+
+The bird is made from willow with wire legs.

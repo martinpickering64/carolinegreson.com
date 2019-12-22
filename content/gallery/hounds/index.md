@@ -4,9 +4,11 @@
 title: "Hounds"
 summary: "Inspired by the sculpture of a Talbot Hound in Chester Cathedral."
 authors: []
-tags: ["featured", "dogs", "farm or domestic"]
+tags: ["dogs", "farm or domestic"]
 categories: []
 date: 2019-12-10T13:21:47Z
+type: "project"
+featured: false
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

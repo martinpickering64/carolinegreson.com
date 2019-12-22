@@ -4,9 +4,11 @@
 title: "Sandpipers"
 summary: "These approximately lifesize Sandpipers are some of my most popular willow sculptures."
 authors: []
-tags: ["featured", "wildlife", "birds"]
+tags: ["wildlife", "birds"]
 categories: []
 date: 2019-12-10T13:21:47Z
+type: "project"
+featured: true
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

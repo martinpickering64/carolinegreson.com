@@ -1,6 +1,6 @@
 +++
-# A Projects section created with the Portfolio widget.
-widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
+# A Projects section created with the Gallery widget.
+widget = "gallery"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
@@ -10,7 +10,15 @@ subtitle = "These images give you a taste of some of the Willow Sculptures I hav
 
 [content]
   # Page type to display. E.g. project.
-  page_type = "gallery"
+  page_type = "project"
+
+  # only show the first few items
+  count = 10
+
+# content filters (optional)
+#  [[content.filters]]
+#    tag = "human"
+#    category = "sculpture"
   
 # Filter toolbar (optional).
 # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
@@ -21,9 +29,9 @@ subtitle = "These images give you a taste of some of the Willow Sculptures I hav
 # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
 filter_default = 0
   
-  [[content.filter_button]]
-    name = "Featured"
-    tag = "featured"
+#  [[content.filter_button]]
+#    name = "Featured"
+#    tag = "featured"
   
 #  [[content.filter_button]]
 #    name = "Deep Learning"

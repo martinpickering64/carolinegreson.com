@@ -4,9 +4,11 @@
 title: "Caroline at work"
 summary: "Caroline at work outside her studio."
 authors: []
-tags: ["featured", "human"]
+tags: ["human"]
 categories: []
 date: 2019-12-10T13:21:47Z
+type: "project"
+featured: true
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

@@ -1,14 +1,13 @@
 +++
-# A Recent and Upcoming Talks section created with the Pages widget.
-# This section displays recent talks from `content/talk/`.
+# An upcoming workshops section
 
-widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
+widget = "workshops"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Upcoming Workshops"
-subtitle = "I run courses and workshops in Willow Sculpture and Basketmaking throughout the year, some of my next workshop dates are:"
+subtitle = "I run courses and workshops in Willow Sculpture and Basketmaking throughout the year, here some of my upcoming workshops, or you can [see all of them here](/workshops)"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

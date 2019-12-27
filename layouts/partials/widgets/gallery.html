@@ -62,7 +62,7 @@
         {{ $default_filter_tag_raw := (index $st.Params.content.filter_button ($filter_default)).tag }}
         {{ $default_filter_tag := printf ".js-id-%s" (replace $default_filter_tag_raw " " "-") }}
         {{ if or (eq (substr $default_filter_tag_raw 0 1) "*") (eq (substr $default_filter_tag_raw 0 1) ".") }}
-        {{ $default_filter_tag = $default_filter_tag_raw }}
+			{{ $default_filter_tag = $default_filter_tag_raw }}
         {{ end }}
 
         <span class="d-none default-project-filter">{{ $default_filter_tag }}</span>

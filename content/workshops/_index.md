@@ -1,10 +1,12 @@
 +++
 title = "Willow Sculpture Workshops"
 subtitle = "Why not learn how to create your own willow sculptures?"
+
 # Optional header image (relative to `static/img/` folder).
 [header]
   #caption = "Why not learn how to create your own willow sculptures?"
   #image = "willow-sculpture-workshop.jpg"
+  
 [image]
 	# placement: 1=column width, 2=container width, 3=fluid, any other value article container width
 	placement = 3

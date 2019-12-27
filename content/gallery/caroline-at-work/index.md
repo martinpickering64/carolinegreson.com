@@ -9,6 +9,7 @@ categories: []
 date: 2019-12-10T13:21:47Z
 type: "project"
 featured: true
+weight: 1
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

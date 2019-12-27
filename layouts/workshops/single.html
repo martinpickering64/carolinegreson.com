@@ -13,6 +13,8 @@
 	   <time datetime="{{.Date.Format "2006-01-02" }}">
 	   <span class="fa fa-calendar-alt" aria-hidden="true"></span> {{ .Date.Format "Monday, 2 January 2006" }}</time></h2>
 	{{ .Content }}
+	{{ partial "workshopPrices" . }}
+	{{ partial "workshopPlaces" . }}
 	</div>
 
     {{ partial "page_footer" . }}

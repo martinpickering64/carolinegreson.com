@@ -7,20 +7,20 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Upcoming Workshops"
-subtitle = "I run courses and workshops in Willow Sculpture and Basketmaking throughout the year, here some of my upcoming workshops, or you can [see all of them here](/workshops)"
+subtitle = "I run courses and workshops in Willow Sculpture and Basketmaking throughout the year, here are some of my upcoming workshops, or you can [see all of them here](/workshops)"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
   page_type = "workshops"
   
   # Choose how much pages you would like to display (0 = all pages)
-  count = 5
+  count = 3
   
   # Choose how many pages you would like to offset by
   offset = 0
 
   # Page order. Descending (desc) or ascending (asc) date.
-  order = "desc"
+  order = "asc"
 
   # Filter posts by a taxonomy term.
   [content.filters]

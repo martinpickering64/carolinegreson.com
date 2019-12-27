@@ -1,0 +1,21 @@
+{{/* paint the availability of a workshop */}}
+
+{{ $item := . }}
+{{ $places := $item.Params.Places }}
+{{ $today := now.Format "20060102" }}
+{{ $workshopDate := $item.Date.Format "20060102" }}
+
+{{ if gt $workshopDate $today }}
+{{ if lt $places 1 }}
+<p>Sorry, there are no places left. <a href="/#contact">Contact me</a> about about last minute places.</p>
+{{ else if eq $places 1 }}
+<p>Hurry, there is only {{ $places }} place left on this workshop.</p>
+{{ else }}
+<p>There are only {{ $places }} places left on this workshop.</p>
+{{ end }}
+{{ else if eq $workshopDate $today }}
+<p>This workshop is being held today!</p>
+{{ else }}
+<p>Sorry, this workshop is now over.</p>
+{{ end }}
+	   

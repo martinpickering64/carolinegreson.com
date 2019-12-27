@@ -1,12 +1,14 @@
 {{/* paint the price of a workshop */}}
 
 {{ $item := . }}
-{{ $price := $item.Params.Price }}
+{{ $price := $item.Params.Price | default 75 }}
+{{ $deposit := $item.Params.Deposit | default 35 }}
 
 {{ if gt $price 0 }}
-<p>Total price is £{{$price}}, to reserve a place I request a deposit of £35, which is non-returnable,
-should the booking be cancelled less than 2 weeks before the scheduled workshop date, 
-the balance can be paid on the day.</p>
+<p>Total price is £{{$price}}. To reserve a place, I request a deposit of £{{$deposit}}, 
+which is non-returnable should the booking be cancelled less than 2 weeks 
+before the scheduled workshop date. 
+The balance can be paid on the day.</p>
 <p>Price: £{{$price}}</p>
 {{ else }}
 {{/* need something here? */}}

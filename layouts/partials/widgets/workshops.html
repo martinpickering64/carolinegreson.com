@@ -1,6 +1,7 @@
 {{/* Pages Widget */}}
 
 {{/* Initialise */}}
+{{ $yesterday := now.AddDate 0 0 -1 }}
 {{ $ := .root }}
 {{ $st := .page }}
 {{ $items_type := $st.Params.content.page_type | default "post" }}
@@ -34,10 +35,10 @@
   {{ $query = where $query "Params.featured" "!=" true }}
 {{ end }}
 {{ if $st.Params.content.filters.exclude_past }}
-  {{ $query = where $query "Date" ">=" now }}
+  {{ $query = where $query "Date" ">=" $yesterday }}
 {{ end }}
 {{ if $st.Params.content.filters.exclude_future }}
-  {{ $query = where $query "Date" "<" now }}
+  {{ $query = where $query "Date" "<" $yesterday }}
 {{ end }}
 
 {{ $count := len $query }}

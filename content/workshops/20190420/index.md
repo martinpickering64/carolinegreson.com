@@ -2,7 +2,8 @@
 title: "1-day Willow Sculpture Workshop"
 date: "2019-04-24T00:00:00Z"
 endDate: ""
-price: 75
+price: 80
+deposit: 50
 places: 2
 venue: "CPAC"
 doi: ""

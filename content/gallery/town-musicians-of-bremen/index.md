@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Town Musicains of Bremen"
+title: "Town Musicians of Bremen"
 summary: "I have undertaken several versions for private clients and for the Nanny McPhee film 'The Big Bang'."
 authors: []
 tags: ["dogs", "birds", "farm or domestic"]

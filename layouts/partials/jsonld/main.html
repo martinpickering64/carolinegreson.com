@@ -20,6 +20,10 @@
 {{ partial "jsonld/project.html" (dict "page" $page "summary" $summary) }}
 {{ end }}
 
+{{ if (eq $page.Type "workshops") }}
+{{ partial "jsonld/workshops.html" (dict "page" $page "summary" $summary) }}
+{{ end }}
+
 {{ if eq $page.Type "talk" }}
 {{ partial "jsonld/event.html" (dict "page" $page "summary" $summary) }}
 {{ end }}

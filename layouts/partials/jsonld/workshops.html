@@ -1,0 +1,107 @@
+{{ $page := .page }}
+{{ $summary := .summary }}
+{{ $featured_image := ($page.Resources.ByType "image").GetMatch "*featured*" }}
+
+{{/* Get schema type. */}}
+{{ $schema := "EducationEvent" }}
+
+{{ $author := partial "functions/get_author_name" $page }}
+{{ $publisher := site.Params.org_name | default site.Title }}
+{{ $logo_url := printf "img/%s" (site.Params.logo | default "icon-512.png") | absURL }}
+{{ $startDate := $page.Date }}
+{{ $endDate := $page.Params.EndDate | default $startDate }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{$schema}},
+  "mainEntityOfPage": {
+	  "@type": "WebPage",
+	  "@id": {{$page.Permalink}}
+  },
+  "name": {{$page.Title}},
+  {{ if $featured_image }}
+  "image": [
+  {{$featured_image.Permalink}}
+  ],
+  {{end}}
+  "about": {{$summary}},
+  "description": {{$summary}},
+  "startDate": {{ $startDate.Format "2006-01-02" }},
+  "endDate": {{ $endDate.Format "2006-01-02" }},
+  "datePublished": {{ $page.PublishDate.Format "2006-01-02T15:04:05Z07:00" }},
+  "dateModified": {{ $page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }},
+  {{ if eq $page.Params.Venue "CPAC" }}
+  "location": {
+     "@type": "Place",
+	 "name": "Castle Park Arts Centre",
+	 "address": {
+	    "@type": "PostalAddress",
+		"streetAddress": "4 Netherton Drive",
+		"addressLocality": "Frodsham",
+		"postalCode": "WA6 6SE",
+		"addressRegion": "Cheshire",
+		"addressCountry": "UK",
+	 },
+  },
+  {{ else if eq $page.Params.Venue "ZANTIUM" }}
+  "location": {
+     "@type": "Place",
+	 "name": "Zantium Studios",
+	 "address": {
+	    "@type": "PostalAddress",
+		"streetAddress": "Godfrey Hole House, 5 Godfrey Hole",
+		"addressLocality": "Wirksworth",
+		"postalCode": "DE4 4DF",
+		"addressRegion": "Derbyshire",
+		"addressCountry": "UK",
+	 },
+  },
+  {{ else if eq $page.Params.Venue "BODFARI" }}
+  "location": {
+     "@type": "Place",
+	 "name": "Woodland Skills Centre",
+	 "address": {
+	    "@type": "PostalAddress",
+		"streetAddress": "The Warren",
+		"addressLocality": "Bodfari",
+		"postalCode": "LL16 4DT",
+		"addressRegion": "Denbigh",
+		"addressCountry": "UK",
+	 },
+  },
+  {{ end }}
+  {{ if gt $page.Params.Price 0 }}
+  "offers": {
+	"@type": "Offer",
+	"priceCurrency": "GBP",
+	"price": {{$page.Params.Price}},
+	{{ if ge $page.Params.Places 0 }}
+	"availability": "http://schema.org/LimitedAvailability"
+	{{ else }}
+	"availability": "http://schema.org/OutOfStock"
+	{{ end }}
+  },
+  {{ end }}  
+  {{with $author}}
+  "copyrightHolder": {
+	  "@type": "Person",
+	  "name": {{.}}
+  },
+  {{end}}
+  {{with $author}}
+  "creator": {
+	  "@type": "Person",
+	  "name": {{.}}
+  },
+  {{end}}
+  "publisher": {
+	  "@type": "Organization",
+	  "name": {{$publisher}},
+	  "logo": {
+		  "@type": "ImageObject",
+		  "url": {{$logo_url}}
+	  }
+  }
+}
+</script>

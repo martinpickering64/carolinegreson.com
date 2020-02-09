@@ -1,0 +1,117 @@
+{{ $page := . }}
+{{ $bg := $page.Params.design.background }}
+
+{{/* Set default titles for node pages */}}
+{{ $title := .Title }}
+{{ if and (not $title) .IsNode }}
+{{ $title = i18n "posts" }}
+{{end}}
+
+{{ $style := "" }}
+
+{{ if $bg.color }}
+{{ $style = printf "background-color: %s;" ($bg.color | default "transparent") }}
+{{ end }}
+
+{{ if and $bg.gradient_start $bg.gradient_end }}
+{{ $style = printf "%sbackground-image: linear-gradient(%s, %s);" $style $bg.gradient_start $bg.gradient_end }}
+{{ end }}
+
+{{ if $bg.image }}
+{{ $darken := "" }}
+{{ if $bg.image_darken }}
+{{ $darken = printf "linear-gradient(rgba(0, 0, 0, %s), rgba(0, 0, 0, %s))," (string $bg.image_darken) (string $bg.image_darken) }}
+{{ end }}
+{{/* See Hugo note on linking assets in styles: https://github.com/gohugoio/hugoThemes#common-permalink-issues */}}
+{{ $style = printf "%sbackground-image: %s url('%s');" $style $darken (printf "img/%s" $bg.image | absURL) }}
+{{ with $bg.image_size }}
+{{/* Allow sizes: actual, cover, and contain. */}}
+{{ $style = printf "%sbackground-size: %s;" $style (replace . "actual" "auto") }}
+{{ end }}
+{{ with $bg.image_position }}
+{{/* Allow valid CSS positions including left, center, and right. */}}
+{{ $style = printf "%sbackground-position: %s;" $style . }}
+{{ end }}
+{{ end }}
+
+{{ with $page.Params.design.spacing.padding }}
+{{ $style_pad := printf "padding: %s;" (delimit . " ") }}
+{{ $style = print $style $style_pad }}
+{{ end }}
+
+{{ with $page.Params.advanced.css_style }}
+{{ $style = print $style . }}
+{{ end }}
+
+{{ $css_classes := $page.Params.advanced.css_class | default "" }}
+{{ $extra_attributes := "" }}
+{{ $use_container := true }}
+
+<section id="hero" class="home-section wg-hero {{if $bg.text_color_light}}dark{{end}} {{if $bg.image}} bg-image{{if ($bg.image_parallax | default true) }} parallax{{end}}{{end}} {{with $css_classes}}{{.}}{{end}}" {{with $style}} style="{{. | safeCSS}}" {{end}} {{print $extra_attributes | safeHTMLAttr}}>
+{{if $use_container}}<div class="container">{{end}}
+  {{ if $page.Params.hero_media }}
+  <div class="row">
+    <div class="col-md-6 order-md-1 text-center text-md-left">
+  {{ end }}
+  {{ if $bg.image_min_height }}
+      <div class="row" style="min-height:{{ $bg.image_min_height }};">
+        <div class="col-md-12">
+  {{ end }}
+          <h1 class="hero-title text-center">{{ with $title }}{{ . | markdownify }}{{ end }}</h1>
+  {{ with $page.Params.subtitle }}
+          <div class="text-center">{{ . }}</div>
+  {{ end }}
+
+            {{/* Call-to-action link */}}
+            {{ if $page.Params.cta.url }}
+            {{ $pack := or $page.Params.cta.icon_pack "fas" }}
+            {{ $pack_prefix := $pack }}
+            {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+            {{ $pack_prefix = "fa" }}
+            {{ end }}
+            {{ $link := $page.Params.cta.url }}
+            {{ $scheme := (urls.Parse $link).Scheme }}
+            {{ $target := "" }}
+            {{ if not $scheme }}
+            {{ $link = $link | relLangURL }}
+            {{ else if in (slice "http" "https") $scheme }}
+            {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+            {{ end }}
+            <p class="cta-btns">
+              <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="btn {{if $bg.text_color_light}}btn-light{{else}}btn-primary{{end}} btn-lg">{{ if $page.Params.cta.icon }}<i class="{{ $pack }} {{ $pack_prefix }}-{{ $page.Params.cta.icon }} pr-1" aria-hidden="true"></i>{{end}}{{ $page.Params.cta.label | markdownify | emojify | safeHTML }}</a>
+              {{/* Alternative Call-to-action link */}}
+              {{ if $page.Params.cta_alt.url }}
+              {{ $link := $page.Params.cta_alt.url }}
+              {{ $scheme := (urls.Parse $link).Scheme }}
+              {{ $target := "" }}
+              {{ if not $scheme }}
+              {{ $link = $link | relLangURL }}
+              {{ else if in (slice "http" "https") $scheme }}
+              {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+              {{ end }}
+              <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="hero-cta-alt pl-4">{{ $page.Params.cta_alt.label | markdownify | emojify | safeHTML }} <i class="fas fa-angle-right"></i></a>
+              {{ end }}
+            </p>
+            {{ end }}
+
+            {{/* Call-to-action note */}}
+            {{ with $page.Params.cta_note }}
+            <p class="hero-note text-muted mb-0 text-center">
+              {{ .label | markdownify | emojify | safeHTML }}
+            </p>
+            {{ end }}
+            {{ if $bg.image_min_height }}
+          </div>
+        </div>
+        {{ end }}
+        {{/* Hero image */}}
+        {{ if $page.Params.hero_media }}
+      </div>
+      <div class="col-6 mx-auto col-md-6 order-md-2 hero-media">
+        <img src="{{ printf "img/%s" $page.Params.hero_media | relURL }}" alt="">
+      </div>
+    </div>
+    {{ end }}
+
+{{if $use_container}}</div>{{end}}
+</section>

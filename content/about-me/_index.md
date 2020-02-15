@@ -15,15 +15,13 @@ organizations:
   url: "https://www.basketmakersco.org/"
 - name: Licentiate of the Society of Designer Craftsmen
   url: "https://societyofdesignercraftsmen.org.uk/"
-- name: "Basketry Tutor, Department of Fashion and Textiles, The University of Huddersfield"
-  url: "https://www.hud.ac.uk/fashion-textiles/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: I have loved and been inspired by the natural world since I was a child and the ability to work as a Willow Artist and make willow sculptures representing the essence of animals, birds and other living forms now brings me great pleasure. I love to represent movement and vitality in my work. My willow sculptures appear to have just paused in their setting before they are ready to move on. One of the nicest things anyone has said about my animal sculptures is that you can always see where they are looking!
 
 interests:
 - Orienteering
-- Gardening
+- Gardening and Forestry
 - Green Woodworking
 - Bronze Age Experimental Archeology
 
@@ -43,13 +41,19 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:mail@carolinegregson.com'  # For a direct email link, use "mailto:test@example.org".
+- icon: phone
+  icon_pack: fas
+  link: 'tel:07989751469'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/tanglewaeve
 - icon: facebook
   icon_pack: fab
   link: https://www.facebook.com/caroline.gregson.7
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/caroline.gregson.willow/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -82,4 +86,4 @@ The excellence of Caroline's work has been recognised by The Worshipful Company 
 
 Caroline has exhibited willow sculptures in many Selected Exhibitions including RHS Tatton Park Flower Show, Childwickbury Arts Fair Hertfordshire, The Bluecoat Display Centre Liverpool, SDC Gallery London, Mount Pleasant Garden Sculpture Exhibition Cheshire, Great Northern Contemporary Craft Fair, Ferrers Gallery Leicestershire.
 
-For more information about recent and future exhibitions look in my [Blog](blog) pages.
+For more information about recent and future exhibitions look in my [Blog](/blog) pages.

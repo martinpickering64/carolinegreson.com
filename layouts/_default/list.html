@@ -10,8 +10,8 @@
   {{ end }}
 
   {{ $paginator := .Paginate .Data.Pages }}
-  {{ range $idx, $item:= $paginator.Pages }}
-  <div>
+  <div class="isotope projects-container js-layout-masonry " style="position: relative; height: 986.156px;">
+    {{ range $idx, $item:= $paginator.Pages }}
     {{ $link := $item.RelPermalink }}
     {{ $target := "" }}
     {{ if $item.Params.external_link }}
@@ -20,10 +20,10 @@
     {{ end }}
     {{ partial "gallery_li_card" (dict "widget" $st "index" $idx "item" $item "link" $link "target" $target) }}
 
+    {{ end }}
   </div>
-  {{ end }}
 
-  {{ partial "pagination" . }}
-</div>
+    {{ partial "pagination" . }}
+  </div>
 
-{{- end -}}
+  {{- end -}}

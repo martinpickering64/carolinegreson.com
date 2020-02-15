@@ -1,19 +1,19 @@
 {{- define "main" -}}
 
-{{ partial "blog_header.html" . }}
+{{ partial "page_header_with_hero" . }}
 
 <div id="blog-roll" class="universal-wrapper">
   {{ with .Content }}<div class="article-style">{{ . }}</div>{{ end }}
 
   {{ $paginator := .Paginate .Data.Pages }}
-    {{ range $paginator.Pages }}
-      {{ if eq $.Params.view 1 }}
-        {{ partial "li_list" . }}
-      {{ else if eq $.Params.view 3 }}
-        {{ partial "li_card" . }}
-      {{ else }}
-        {{ partial "li_compact" . }}
-      {{ end }}
+  {{ range $paginator.Pages }}
+  {{ if eq $.Params.view 1 }}
+  {{ partial "li_list" . }}
+  {{ else if eq $.Params.view 3 }}
+  {{ partial "li_card" . }}
+  {{ else }}
+  {{ partial "li_compact" . }}
+  {{ end }}
   {{ end }}
 
   {{ partial "pagination" . }}

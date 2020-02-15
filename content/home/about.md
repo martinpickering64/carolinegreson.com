@@ -25,8 +25,8 @@ subtitle = "Willow is a fantastic material to use in sculpture. I use one year o
   # color = "navy"
   
   # Background gradient.
-   gradient_start = "navy"
-   gradient_end = "DeepSkyBlue"
+   gradient_start = "#08a284"
+   gradient_end = "#a0e6d8"
   
   # Background image.
   #image = "headers/bubbles-wide.jpg"  # Name of image in `static/img/`.

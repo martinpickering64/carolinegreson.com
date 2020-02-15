@@ -90,7 +90,7 @@ phone = "07989 751 469"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "8 Andrews Closem Tarvin", city = "Chester", region = "Cheshire", postcode = "CH3 8LN", country = "United Kingdom", country_code = "UK"}
+address = {street = "8 Andrews Close, Tarvin", city = "Chester", region = "Cheshire", postcode = "CH3 8LN", country = "United Kingdom", country_code = "UK"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
@@ -109,9 +109,9 @@ appointment_url = ""
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/tangleweave"},
+  {icon = "twitter", icon_pack = "fab", name = "Twitter", link = "https://twitter.com/tangleweave"},
   {icon = "facebook", icon_pack = "fab", name = "Facebook", link = "https://www.facebook.com/caroline.gregson.7"},
-  {icon = "envelope", icon_pack = "fas", name = "email Me", link = "mailto:mail@carolinegregson.com"}
+  {icon = "instagram", icon_pack = "fab", name = "Instagram", link = "https://www.instagram.com/caroline.gregson.willow/"}
   ]
 
 ############################

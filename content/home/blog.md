@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
 title = "Recent Posts"
-subtitle = "The latests news about Willow Sculpture and Basketmaking by Caroline Gregson, Willow Sculptor."
+subtitle = "The latests news about Willow Sculpture and Basketmaking by Caroline Gregson, Willow Sculptor. [More posts...](/blog)"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

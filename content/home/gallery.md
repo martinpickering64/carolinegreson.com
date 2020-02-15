@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
 
 title = "Gallery"
-subtitle = "These images give you a taste of some of the Willow Sculptures I have been working on. To see more of my work please take at look at [my complete Gallery](/gallery)."
+subtitle = "These images give you a taste of some of the Willow Sculptures I have been working on. To see more of my work, please take at look at [my complete Gallery](/gallery)."
 
 [content]
   # Page type to display. E.g. project.

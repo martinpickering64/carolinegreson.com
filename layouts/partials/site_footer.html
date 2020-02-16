@@ -1,20 +1,22 @@
 {{ if site.Params.debug_layout }}<div><i>layout: partials/site_footer</i></div>{{ end }}
 <footer class="site-footer">
-  {{ if or (site.GetPage "terms.md") (site.GetPage "privacy.md") }}
   <p class="powered-by">
     {{ with site.GetPage "privacy.md" }}
     {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
     {{ end }}
+    &middot;
     {{ with site.GetPage "security.md" }}
-    {{ if site.GetPage "privacy.md" }} &middot; {{ end }}
     {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
     {{ end }}
+    &middot;
     {{ with site.GetPage "terms.md" }}
-    {{ if or (site.GetPage "security.md") (site.GetPage "privacy.md") }} &middot; {{ end }}
+    {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
+    {{ end }}
+    &middot;
+    {{ with site.GetPage "delivery.md" }}
     {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
     {{ end }}
   </p>
-  {{ end }}
 
   <p class="powered-by">
     {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} {{ end }}

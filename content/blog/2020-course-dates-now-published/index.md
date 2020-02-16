@@ -3,8 +3,14 @@ title: '2020 Course Dates now published'
 summary: Willow sculpture workshops with Caroline Gregson in 2020 are now available for booking.
 date: "2019-11-10T00:00:00Z"
 lastmod: "2019-11-10T00:00:00Z"
+authors: []
+tags: []
+categories: []
 featured: false
 draft: false
+share: false
+commentable: false
+editable: false
 ---
 
 All the willow sculpture workshop dates which will be taught by Caroline Gregson in 2020 are now listed in the Workshops area of my website.

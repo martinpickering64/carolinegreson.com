@@ -7,9 +7,15 @@ authors: []
 tags: ["dogs", "farm or domestic"]
 categories: []
 date: 2019-12-10T13:21:47Z
+lastmod: 2019-12-10T13:21:47Z
 type: "project"
-featured: false
+featured: true
 weight: 5
+subtitle: ""
+draft: false
+share: false
+commentable: false
+editable: false
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

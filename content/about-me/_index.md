@@ -2,6 +2,11 @@
 # Display name
 name: Caroline Gregson
 
+date: "2014-11-15T00:00:00+01:00"
+lastmod: "2014-11-15T00:00:00+01:00"
+featured: false
+draft: false
+
 # Username (this should match the folder name)
 #authors:
 #- caroline-gregson

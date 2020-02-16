@@ -5,11 +5,18 @@ title: "Caroline at work"
 summary: "Caroline at work outside her studio."
 authors: []
 tags: ["human"]
-categories: ["Featured Work"]
+categories: []
 date: 2019-12-10T13:21:47Z
+lastmod: 2019-12-10T13:21:47Z
 type: "project"
-featured: true
+featured: false
 weight: 1
+subtitle: ""
+draft: false
+share: false
+commentable: false
+editable: false
+
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

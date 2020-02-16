@@ -7,6 +7,17 @@ deposit: 50
 places: 2
 venue: "CPAC"
 doi: ""
+subtitle: ""
+summary: ""
+authors: []
+tags: []
+categories: []
+featured: false
+draft: false
+lastmod: "2014-11-15T00:00:00+01:00"
+share: false
+commentable: false
+editable: false
 
 # Schedule page publish date (NOT workshop's date).
 publishDate: "2017-01-01T00:00:00Z"

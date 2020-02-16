@@ -3,8 +3,14 @@ title: 'Christmas Gift Cards'
 summary: Gift cards can be purchased for any value and can be used to purchase sculptures or to reserve a place on a willow sculpture workshop.
 date: "2019-11-10T00:00:00Z"
 lastmod: "2019-11-10T00:00:00Z"
+authors: []
+tags: []
+categories: []
 featured: false
 draft: false
+share: false
+commentable: false
+editable: false
 ---
 
 If you are stuck for an idea for a special gift for Christmas (or indeed any time of year) why not buy a gift card.

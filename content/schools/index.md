@@ -6,6 +6,16 @@ draft: false
 share: false
 commentable: false
 editable: false
+summary: ""
+authors: []
+tags: []
+categories: []
+featured: false
+lastmod: "2018-06-28T00:00:00+01:00"
+share: false
+commentable: false
+editable: false
+
 
 # Optional header image (relative to `static/img/` folder).
 header:

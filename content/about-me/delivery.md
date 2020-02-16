@@ -1,10 +1,18 @@
 ---
 title: Delivery Information
-date: "2014-11-15T00:00:00+01:00"
+subtitle: ""
+summary: ""
+authors: []
+tags: []
+categories: []
+featured: false
 draft: false
+date: "2014-11-15T00:00:00+01:00"
+lastmod: "2014-11-15T00:00:00+01:00"
 share: false
 commentable: false
 editable: false
+
 
 # Optional header image (relative to `static/img/` folder).
 header:

@@ -21,7 +21,7 @@ subtitle = "These images give you a taste of some of the Willow Sculptures I hav
 # content filters (optional)
 [content.filters]
     tag = ""
-    category = "Featured Work"
+    category = ""
   
 # Filter toolbar (optional).
 # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.

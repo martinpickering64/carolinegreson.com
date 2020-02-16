@@ -5,7 +5,7 @@ title: "Caroline at work"
 summary: "Caroline at work outside her studio."
 authors: []
 tags: ["human"]
-categories: []
+categories: ["Featured Work"]
 date: 2019-12-10T13:21:47Z
 type: "project"
 featured: true

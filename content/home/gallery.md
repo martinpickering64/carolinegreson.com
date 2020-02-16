@@ -13,15 +13,15 @@ subtitle = "These images give you a taste of some of the Willow Sculptures I hav
   page_type = "project"
 
   # only show the first few items
-  count = 10
+  count = 12
   
   # either asc or desc (default)
   order = "asc"
 
 # content filters (optional)
-#  [[content.filters]]
-#    tag = "human"
-#    category = "sculpture"
+[content.filters]
+    tag = ""
+    category = "Featured Work"
   
 # Filter toolbar (optional).
 # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
@@ -30,23 +30,23 @@ subtitle = "These images give you a taste of some of the Willow Sculptures I hav
 # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
    
 # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
-#filter_default = 0
+   filter_default = 0
   
 #  [[content.filter_button]]
-#    name = "Featured"
-#    tag = "featured"
+#    name = "Human"
+#    tag = "human"
   
 #  [[content.filter_button]]
-#    name = "Deep Learning"
-#    tag = "Deep Learning"
+#    name = "Birds"
+#    tag = "birds"
   
 #  [[content.filter_button]]
-#    name = "Other"
-#    tag = "Demo"
+#    name = "Dogs"
+#    tag = "dogs"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
-  columns = "1"
+  columns = "2"
 
   # Toggle between the various page layout types.
   #   1 = List
@@ -76,7 +76,7 @@ subtitle = "These images give you a taste of some of the Willow Sculptures I hav
   # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
-  # text_color_light = true  
+   text_color_light = false  
   
 [advanced]
  # Custom CSS. 

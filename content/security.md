@@ -1,7 +1,7 @@
 ---
-title: Security
-date: "2018-06-28T00:00:00+01:00"
-draft: true
+title: Security Policy
+date: "2014-11-15T00:00:00+01:00"
+draft: false
 share: false
 commentable: false
 editable: false
@@ -12,4 +12,9 @@ header:
   image: ""
 ---
 
-...
+I endeavour to protect any and all of the data you share with me. All sensitive information is 
+restricted. Only I have access to the information you give me.
+
+I try to keep up to date on security and privacy practices. The computers with personally 
+identifiable information are stored in a locked and secure environment. If you have any 
+questions about the security precautions I take, please [contact me](/#contact).

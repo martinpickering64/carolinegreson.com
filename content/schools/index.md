@@ -6,7 +6,7 @@ draft: false
 share: false
 commentable: false
 editable: false
-summary: ""
+summary: "Working with School Groups: I have led many successful workshops over the years, working with groups in schools throughout the age range from pre-school through junior school to high school"
 authors: []
 tags: []
 categories: []

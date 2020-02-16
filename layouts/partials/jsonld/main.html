@@ -1,6 +1,15 @@
 {{ $page := .page }}
 {{ $summary := .summary }}
 {{ $site_type := site.Params.site_type | default "Person" }}
+{{ if site.Params.debug_layout }}
+<div>
+  layout: partials/jsonld/main
+  $page.IsHome = {{$page.IsHome}}
+  $page.IsPage = {{$page.IsPage}}
+  $page.IsNode = {{$page.IsNode}}
+  $page.Type = {{$page.Type}}
+</div>
+{{ end }}
 
 {{- if $page.IsHome -}}
 
@@ -11,6 +20,14 @@
 {{ end }}
 
 {{- else if $page.IsPage -}}
+
+{{ if (eq $page.Type "page") }}
+{{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
+{{ end }}
+
+{{ if (eq $page.Type "about-me") }}
+{{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
+{{ end }}
 
 {{ if (eq $page.Type "post") | or (eq $page.Type "publication") }}
 {{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
@@ -26,6 +43,21 @@
 
 {{ if eq $page.Type "talk" }}
 {{ partial "jsonld/event.html" (dict "page" $page "summary" $summary) }}
+{{ end }}
+
+{{- else if $page.IsNode -}}
+
+
+{{ if (eq $page.Type "blog") }}
+{{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
+{{ end }}
+
+{{ if (eq $page.Type "gallery") }}
+{{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
+{{ end }}
+
+{{ if (eq $page.Type "workshops") }}
+{{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
 {{ end }}
 
 {{- end }}

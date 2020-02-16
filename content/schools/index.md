@@ -56,7 +56,7 @@ design:
 
 # Note. An optional note to show underneath the links.
 cta_note:
-  label: '<a href="#blog-roll"><span class="fa fa-angle-down" style="padding-top:200px;font-size:2.5em;">&nbsp;</span></a>'
+  label: '<a href="#contentStart"><span class="fa fa-angle-down" style="padding-top:200px;font-size:2.5em;">&nbsp;</span></a>'
 
 
 #gallery_item:

@@ -1,3 +1,4 @@
+{{ if site.Params.debug_layout }}<div><i>layout: partials/site_footer</i></div>{{ end }}
 <footer class="site-footer">
   {{ if or (site.GetPage "terms.md") (site.GetPage "privacy.md") }}
   <p class="powered-by">

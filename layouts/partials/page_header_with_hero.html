@@ -1,7 +1,8 @@
 {{ $page := . }}
 {{ $bg := $page.Params.design.background }}
+{{ if site.Params.debug_layout }}<div><i>layout: page_header_with_hero</i></div>{{ end }}
 {{if $bg.image }}
-
+{{ if site.Params.debug_layout }}<div><i>layout: bg.image true</i></div>{{ end }}
 {{/* Set default titles for node pages */}}
 {{ $title := .Title }}
 {{ if and (not $title) .IsNode }}
@@ -120,7 +121,7 @@
 </section>
 
 {{ else }}
-
+{{ if site.Params.debug_layout }}<div><i>layout:bg.image false</i></div>{{ end }}
 {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
 {{ $anchor := $page.Params.image.focal_point | default "Smart" }}
 

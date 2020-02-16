@@ -1,4 +1,5 @@
 {{/* Get album folder or default to `gallery/`. */}}
+{{ if site.Params.debug_layout }}<div><i>layout: shortcodes/gallery</i></div>{{ end }}
 {{ $album := "" }}
 {{ with .Get "album" }}{{ $album = . }}{{else}}{{ $album = "gallery" }}{{end}}
 {{/* Get image resize size */}}

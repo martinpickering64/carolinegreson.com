@@ -1,5 +1,6 @@
 {{/* workshop list page */}}
 {{- define "main" -}}
+{{ if site.Params.debug_layout }}<div><i>layout: workshops/list</i></div>{{ end }}
 
 {{ $st := . }}
 {{ $yesterday := now.AddDate 0 0 -1 }}
@@ -7,9 +8,9 @@
 {{ $items_offset := $st.Params.content.offset | default 0 }}
 {{ $items_count := $st.Params.content.count }}
 {{ if eq $items_count 0 }}
-  {{ $items_count = 65535 }}
+{{ $items_count = 65535 }}
 {{ else }}
-  {{ $items_count = $items_count | default 5 }}
+{{ $items_count = $items_count | default 5 }}
 {{ end }}
 {{ $items_sort := $st.Params.content.order | default "desc" }}
 
@@ -19,21 +20,21 @@
 
 {{/* Filters */}}
 {{ if $st.Params.content.filters.tag }}
-  {{ $archive_page = site.GetPage (printf "tags/%s" (urlize $st.Params.content.filters.tag)) }}
-  {{ $query = $query | intersect $archive_page.Pages }}
+{{ $archive_page = site.GetPage (printf "tags/%s" (urlize $st.Params.content.filters.tag)) }}
+{{ $query = $query | intersect $archive_page.Pages }}
 {{ end }}
 {{ if $st.Params.content.filters.category }}
-  {{ $archive_page = site.GetPage (printf "categories/%s" (urlize $st.Params.content.filters.category)) }}
-  {{ $query = $query | intersect $archive_page.Pages }}
+{{ $archive_page = site.GetPage (printf "categories/%s" (urlize $st.Params.content.filters.category)) }}
+{{ $query = $query | intersect $archive_page.Pages }}
 {{ end }}
 {{ if $st.Params.content.filters.exclude_featured }}
-  {{ $query = where $query "Params.featured" "!=" true }}
+{{ $query = where $query "Params.featured" "!=" true }}
 {{ end }}
 {{ if $st.Params.content.filters.exclude_past }}
-  {{ $query = where $query "Date" ">=" $yesterday }}
+{{ $query = where $query "Date" ">=" $yesterday }}
 {{ end }}
 {{ if $st.Params.content.filters.exclude_future }}
-  {{ $query = where $query "Date" "<" $yesterday }}
+{{ $query = where $query "Date" "<" $yesterday }}
 {{ end }}
 
 {{ $count := len $query }}
@@ -44,44 +45,44 @@
 
 {{/* Offset and Limit */}}
 {{ if gt $items_offset 0 }}
-  {{ $query = first $items_count (after $items_offset $query) }}
+{{ $query = first $items_count (after $items_offset $query) }}
 {{ else }}
-  {{ $query = first $items_count $query }}
+{{ $query = first $items_count $query }}
 {{ end }}
 
-{{ partial "page_header.html" . }}
+{{ partial "page_header_with_hero" . }}
 
-<div class="universal-wrapper">
+<div class="universal-wrapper" id="contentStart">
   {{ with .Content }}
   <div class="article-style">{{ . }}</div>
   {{ end }}
   {{ $paginator := .Paginate $query }}
   {{ range $paginator.Pages }}
-		{{/* Get summary. */}}
-		{{ $summary := "" }}
-		{{ if .Params.summary }}
-		  {{ $summary = .Params.summary | markdownify | emojify }}
-		{{ else if .Params.abstract }}
-		  {{ $summary = .Params.abstract | markdownify | emojify }}
-		{{ else if .Truncated }}
-		  {{ $summary = .Summary }}
-		{{ end }}
+  {{/* Get summary. */}}
+  {{ $summary := "" }}
+  {{ if .Params.summary }}
+  {{ $summary = .Params.summary | markdownify | emojify }}
+  {{ else if .Params.abstract }}
+  {{ $summary = .Params.abstract | markdownify | emojify }}
+  {{ else if .Truncated }}
+  {{ $summary = .Summary }}
+  {{ end }}
   <div class="media stream-item">
-	  <div class="media-body">
-		<h3 class="article-title mb-0 mt-0"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-	   {{ if $summary }}
-		<div class="article-style">
-		  {{ partial "workshopSummary" . }}
-		</div>
-		{{ end }}
-	  </div>
-	  <div class="ml-3">
-		{{ $resource := (.Resources.ByType "image").GetMatch "*featured*" }}
-		{{ with $resource }}
-		{{ $image := .Resize "150x" }}
-		<a href="{{.RelPermalink}}"><img src="{{ $image.RelPermalink }}" alt=""></a>
-		{{end}}
-	  </div>
+    <div class="media-body">
+      <h3 class="article-title mb-0 mt-0"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ if $summary }}
+      <div class="article-style">
+        {{ partial "workshopSummary" . }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="ml-3">
+      {{ $resource := (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ with $resource }}
+      {{ $image := .Resize "150x" }}
+      <a href="{{.RelPermalink}}"><img src="{{ $image.RelPermalink }}" alt=""></a>
+      {{end}}
+    </div>
   </div>
   {{ end }}
 

@@ -1,21 +1,24 @@
 {{- define "main" -}}
+{{ if site.Params.debug_layout }}<div><i>layout: workshops/single</i></div>{{ end }}
 
 <div class="pub">
 
-  {{ partial "page_header.html" . }}
+  {{ partial "page_header_with_hero" . }}
 
-  <div class="article-container">
+  <div class="article-container" id="contentStart">
 
     <div class="space-below"></div>
 
     <div class="article-style">
-	   <h2>
-	   <time datetime="{{.Date.Format "2006-01-02" }}">
-	   <span class="fa fa-calendar-alt" aria-hidden="true"></span> {{ .Date.Format "Monday, 2 January 2006" }}</time></h2>
-	{{ .Content }}
-	{{ partial "workshopPrices" . }}
-	{{ partial "workshopPlaces" . }}
-	</div>
+      <h2>
+        <time datetime="{{.Date.Format "2006-01-02" }}">
+          <span class="fa fa-calendar-alt" aria-hidden="true"></span> {{ .Date.Format "Monday, 2 January 2006" }}
+        </time>
+      </h2>
+      {{ .Content }}
+      {{ partial "workshopPrices" . }}
+      {{ partial "workshopPlaces" . }}
+    </div>
 
     {{ partial "page_footer" . }}
 

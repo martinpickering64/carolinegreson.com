@@ -1,4 +1,5 @@
 {{/* paint the availability of a workshop */}}
+{{ if site.Params.debug_layout }}<div><i>layout: partials/workshopPlaces</i></div>{{ end }}
 
 {{ $item := . }}
 {{ $places := $item.Params.Places }}
@@ -18,4 +19,3 @@
 {{ else }}
 <p>Sorry, this workshop is now over.</p>
 {{ end }}
-	   

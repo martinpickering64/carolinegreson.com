@@ -1,3 +1,4 @@
+{{ if site.Params.debug_layout }}<div><i>layout: partials/gallery_li_card</i></div>{{ end }}
 {{ $item := .item }}
 {{ $widget := .widget }}
 
@@ -7,13 +8,13 @@
 {{/* Get summary. */}}
 {{ $summary := "" }}
 {{ if $item.Params.summary }}
-  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ $summary = $item.Params.summary | markdownify | emojify }}
 {{ else if .Params.abstract }}
-  {{ $summary = .Params.abstract | markdownify | emojify }}
+{{ $summary = .Params.abstract | markdownify | emojify }}
 {{ else if $item.Truncated }}
-  {{ $summary = $item.Summary }}
+{{ $summary = $item.Summary }}
 {{ else }}
-  {{ $summary = $item.Content }}
+{{ $summary = $item.Content }}
 {{ end }}
 
 {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
@@ -29,13 +30,6 @@
     {{ end }}
     <div class="card-text">
       <h4><a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title | markdownify | emojify }}</a></h4>
-      {{/*
-      {{ with $summary }}
-      <div class="article-style">
-        <p>{{ . | truncate 135 }}</p>
-      </div>
-      {{ end }}
-      */}}
     </div>
   </div>
 </div>

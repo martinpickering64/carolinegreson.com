@@ -1,20 +1,21 @@
+{{ if site.Params.debug_layout }}<div><i>layout: partials/widgets/blank</i></div>{{ end }}
 {{ $st := .page }}
 {{ $columns := $st.Params.design.columns | default "2" }}
 
 <div class="row">
   {{ if ne $columns "1" }}
-    <div class="col-12 col-lg-4 section-heading">
-      {{ with $st.Title }}<h1>{{ . | markdownify | emojify }}</h1>{{ end }}
-      {{ with $st.Params.subtitle }}<p class="lead">{{ . | markdownify | emojify }}</p>{{ end }}
-    </div>
-    <div class="col-12 col-lg-8">
-      {{ $st.Content }}
-    </div>
+  <div class="col-12 col-lg-4 section-heading">
+    {{ with $st.Title }}<h1>{{ . | markdownify | emojify }}</h1>{{ end }}
+    {{ with $st.Params.subtitle }}<p class="lead">{{ . | markdownify | emojify }}</p>{{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ $st.Content }}
+  </div>
   {{ else }}
-    <div class="col-lg-12">
-      {{ with $st.Title }}<h1>{{ . | markdownify | emojify }}</h1>{{ end }}
-      {{ with $st.Params.subtitle }}<p class="lead">{{ . | markdownify | emojify }}</p>{{ end }}
-      {{ $st.Content }}
-    </div>
+  <div class="col-lg-12">
+    {{ with $st.Title }}<h1>{{ . | markdownify | emojify }}</h1>{{ end }}
+    {{ with $st.Params.subtitle }}<p class="lead">{{ . | markdownify | emojify }}</p>{{ end }}
+    {{ $st.Content }}
+  </div>
   {{ end }}
 </div>

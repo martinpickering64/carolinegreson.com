@@ -1,9 +1,10 @@
 {{- define "main" -}}
 {{ $st := . }}
+{{ if site.Params.debug_layout }}<div><i>layout: _default/list</i></div>{{ end }}
 
-{{ partial "page_header.html" . }}
+{{ partial "page_header_with_hero" . }}
 
-<div class="universal-wrapper">
+<div class="universal-wrapper" id="contentStart">
 
   {{ with .Content }}
   <div class="article-style">{{ . }}</div>
@@ -23,7 +24,7 @@
     {{ end }}
   </div>
 
-    {{ partial "pagination" . }}
-  </div>
+  {{ partial "pagination" . }}
+</div>
 
-  {{- end -}}
+{{- end -}}

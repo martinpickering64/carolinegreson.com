@@ -1,10 +1,10 @@
 {{- define "main" -}}
-
+{{ if site.Params.debug_layout }}<div><i>layout: _default/single</i></div>{{ end }}
 <article class="article">
 
   {{ partial "page_header_with_hero" . }}
 
-  <div class="article-container">
+  <div class="article-container" id="contentStart">
 
     <div class="article-style">
       {{ .Content }}

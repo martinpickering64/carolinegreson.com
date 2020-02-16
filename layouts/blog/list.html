@@ -1,8 +1,9 @@
 {{- define "main" -}}
+{{ if site.Params.debug_layout }}<div><i>layout: blog/list</i></div>{{ end }}
 
 {{ partial "page_header_with_hero" . }}
 
-<div id="blog-roll" class="universal-wrapper">
+<div id="contentStart" class="universal-wrapper">
   {{ with .Content }}<div class="article-style">{{ . }}</div>{{ end }}
 
   {{ $paginator := .Paginate .Data.Pages }}

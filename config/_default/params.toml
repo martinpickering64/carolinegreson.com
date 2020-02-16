@@ -2,6 +2,12 @@
 # Documentation: https://sourcethemes.com/academic/
 
 ############################
+## debug
+############################
+
+debug_layout = false
+
+############################
 ## Theme
 ############################
 

@@ -5,8 +5,6 @@ endDate: ""
 price: 75
 places: 0
 venue: "CPAC"
-doi: ""
-
 subtitle: ""
 summary: ""
 authors: []

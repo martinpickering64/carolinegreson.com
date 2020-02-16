@@ -1,5 +1,5 @@
 ---
-label: Blog post
+label: Workshop
 hide_body: false
 fields:
 - type: text
@@ -19,11 +19,32 @@ fields:
   name: draft
   label: draft
 - type: datetime
-  name: date
-  label: date
+  name: publishDate
+  label: Publish Date
+  description: the date the workshop should be publicised
 - type: datetime
   name: lastmod
   label: lastmod
+- type: datetime
+  name: date
+  label: date
+  description: the date on which the workshop will be held
+- type: number
+  name: price
+  label: price
+  description: the price for the workshop
+- type: number
+  name: deposit
+  label: deposit
+  description: the amount of any deposit required
+- type: integer
+  name: places
+  label: places
+  description: the number of available places on the workshop
+- type: text
+  name: venue
+  label: venue
+  description: the venue code (CPAC, ZANTIUM, BODFARI)
 - type: field_group
   name: image
   label: image

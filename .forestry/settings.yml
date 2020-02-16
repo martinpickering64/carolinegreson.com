@@ -10,29 +10,24 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/post
+  path: content/blog
   label: Blog posts
   create: all
   match: "**/*"
   templates:
   - blog-post
 - type: directory
-  path: content/project
-  label: Projects
+  path: content/gallery
+  label: Sculptures
   create: all
   match: "**/*"
 - type: directory
-  path: content/talk
-  label: Events
+  path: content/workshops
+  label: Workshops
   create: all
   match: "**/*"
   templates:
-    - event
-- type: directory
-  path: content/publication
-  label: Publications
-  create: all
-  match: "**/*"
+    - workshop
 - type: directory
   path: content
   label: Pages

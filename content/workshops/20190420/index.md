@@ -6,7 +6,6 @@ price: 80
 deposit: 50
 places: 2
 venue: "CPAC"
-doi: ""
 subtitle: ""
 summary: ""
 authors: []

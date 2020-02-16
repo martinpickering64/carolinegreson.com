@@ -6,9 +6,6 @@ fields:
   name: title
   label: title
 - type: text
-  name: subtitle
-  label: subtitle
-- type: text
   name: summary
   label: summary
 - type: boolean

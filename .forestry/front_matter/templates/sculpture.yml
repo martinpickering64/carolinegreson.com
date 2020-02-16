@@ -1,55 +1,23 @@
 ---
-label: Event
-hide_body: true
+label: Sculpture
+hide_body: false
 fields:
 - type: text
   name: title
   label: title
-- name: subtitle
-  type: text
-  config:
-    required: false
-  label: subtitle
 - type: text
-  name: event
-  label: event
-  description: Name of the event (e.g. Academic Conference)
-- type: text
-  name: event_url
-  label: Event Link
-- type: text
-  name: location
-  label: location
-- type: datetime
-  name: publishDate
-  label: publishDate
-  description: When to publish this page (choose today)
+  name: summary
+  label: summary
 - type: datetime
   name: date
   label: date
-  description: Start time
-- type: datetime
-  name: date_end
-  label: date_end
-  description: End time
 - type: boolean
-  name: all_day
-  label: all_day
-- type: list
-  name: authors
-  label: Presenters
-- type: textarea
-  name: abstract
-  label: abstract
-- type: text
-  name: url_slides
-  label: url_slides
-- type: text
-  name: url_video
-  label: url_video
-- type: text
-  name: url_code
-  label: url_code
+  name: draft
+  label: draft
+- type: integer
+  name: weight
+  label: weight
+  description: the sort order for display in the gallery
 - type: field_group
   name: image
   label: image

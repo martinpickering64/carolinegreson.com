@@ -34,7 +34,8 @@ fields:
   - type: text
     name: focal_point
     label: Focal Point
-    description: Image Focal Point (Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight)
+    description: Image Focal Point (Smart, Center, TopLeft, Top, TopRight, Left, Right,
+      BottomLeft, Bottom, BottomRight)
   - type: boolean
     name: preview_only
     label: Preview Only

@@ -5,18 +5,8 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: content/schools
-  label: Schools
-  create: all
-  match: "**/*"
-- type: directory
   path: content/home
   label: Home
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/about-me
-  label: About me
   create: all
   match: "**/*"
 - type: directory
@@ -38,6 +28,16 @@ sections:
   match: "**/*"
   templates:
   - workshop
+- type: directory
+  path: content/about-me
+  label: About me
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/schools
+  label: Schools
+  create: all
+  match: "**/*"
 - type: directory
   path: content
   label: Pages

@@ -34,7 +34,7 @@ fields:
   name: deposit
   label: deposit
   description: the amount of any deposit required
-- type: integer
+- type: number
   name: places
   label: places
   description: the number of available places on the workshop

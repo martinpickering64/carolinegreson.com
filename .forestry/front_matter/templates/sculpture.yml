@@ -87,3 +87,5 @@ fields:
   type: boolean
   label: Editable
   hidden: true
+pages:
+- content/gallery/hunter-horse/hunter-horse.md

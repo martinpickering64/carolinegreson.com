@@ -4,7 +4,7 @@
 {{ $featured_image := "" }}
 {{ $imageNameOverride := $page.Params.image.name }}
 {{ if $imageNameOverride }}
-{{ $featured_image = (($page.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+{{ $featured_image = (($page.Site.GetPage "/uploads").Resources.ByType "image").GetMatch (strings.TrimPrefix "/uploads/" $imageNameOverride) }}
 {{ end }}
 {{ if not $featured_image }}
 {{ $featured_image = ($page.Resources.ByType "image").GetMatch "*featured*" }}

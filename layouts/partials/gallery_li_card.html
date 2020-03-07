@@ -6,7 +6,7 @@
 {{ $resource := "" }}
 {{ $imageNameOverride := $item.Params.image.name }}
 {{ if $imageNameOverride }}
-{{ $resource = (($item.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+{{ $resource = (($item.Site.GetPage "/uploads").Resources.ByType "image").GetMatch (strings.TrimPrefix "/uploads/" $imageNameOverride) }}
 {{ end }}
 {{ if not $resource }}
 {{ $resource = ($item.Resources.ByType "image").GetMatch "*featured*" }}

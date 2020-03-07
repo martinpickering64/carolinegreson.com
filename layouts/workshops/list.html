@@ -81,7 +81,7 @@
       {{ $resource := "" }}
       {{ $imageNameOverride := .Params.image.name }}
       {{ if $imageNameOverride }}
-      {{ $resource = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+      {{ $resource = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch (strings.TrimPrefix "/uploads/" $imageNameOverride) }}
       {{ end }}
       {{ if not $resource }}
       {{ $resource = (.Resources.ByType "image").GetMatch "*featured*" }}

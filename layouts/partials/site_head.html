@@ -132,7 +132,7 @@
   {{ $featured_image := "" }}
   {{ $imageNameOverride := .Params.image.name }}
   {{ if $imageNameOverride }}
-  {{ $featured_image = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+  {{ $featured_image = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch (strings.TrimPrefix "/uploads/" $imageNameOverride) }}
   {{ end }}
   {{ if not $featured_image }}
   {{ $featured_image = (.Resources.ByType "image").GetMatch "*featured*" }}

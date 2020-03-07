@@ -77,7 +77,15 @@
       {{ end }}
     </div>
     <div class="ml-3">
-      {{ $resource := (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{/* image name override? */}}
+      {{ $resource := "" }}
+      {{ $imageNameOverride := .Params.image.name }}
+      {{ if $imageNameOverride }}
+      {{ $resource = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+      {{ end }}
+      {{ if not $resource }}
+      {{ $resource = (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ end }}
       {{ with $resource }}
       {{ $image := .Resize "150x" }}
       <a href="{{.RelPermalink}}"><img src="{{ $image.RelPermalink }}" alt=""></a>

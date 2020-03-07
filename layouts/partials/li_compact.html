@@ -79,7 +79,15 @@
 
   </div>
   <div class="ml-3">
-    {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+    {{/* image name override? */}}
+    {{ $resource := "" }}
+    {{ $imageNameOverride := $item.Params.image.name }}
+    {{ if $imageNameOverride }}
+    {{ $resource = (($item.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+    {{ end }}
+    {{ if not $resource }}
+    {{ $resource = ($item.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ end }}
     {{ with $resource }}
     {{ $image := .Resize "150x" }}
     <a href="{{$link}}">

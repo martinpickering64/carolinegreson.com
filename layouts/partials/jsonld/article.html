@@ -1,6 +1,14 @@
 {{ $page := .page }}
 {{ $summary := .summary }}
-{{ $featured_image := ($page.Resources.ByType "image").GetMatch "*featured*" }}
+{{/* image name override? */}}
+{{ $featured_image := "" }}
+{{ $imageNameOverride := $page.Params.image.name }}
+{{ if $imageNameOverride }}
+{{ $featured_image = (($page.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+{{ end }}
+{{ if not $featured_image }}
+{{ $featured_image = ($page.Resources.ByType "image").GetMatch "*featured*" }}
+{{ end }}
 
 {{/* Get schema type. */}}
 {{ $schema := "Article" }}

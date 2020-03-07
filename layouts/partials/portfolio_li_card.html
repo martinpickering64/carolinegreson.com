@@ -1,7 +1,22 @@
-{{ if site.Params.debug_layout }}<div><i>layout: partials/gallery_li_card</i></div>{{ end }}
+{{ if site.Params.debug_layout }}<div><i>layout: partials/portfolio_li_card</i></div>{{ end }}
 {{ $item := .item }}
+{{ $widget := .widget }}
+
 {{ $link := .link }}
 {{ $target := .target }}
+
+{{/* Get summary. */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+{{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if .Params.abstract }}
+{{ $summary = .Params.abstract | markdownify | emojify }}
+{{ else if $item.Truncated }}
+{{ $summary = $item.Summary }}
+{{ else }}
+{{ $summary = $item.Content }}
+{{ end }}
+
 {{/* image name override? */}}
 {{ $resource := "" }}
 {{ $imageNameOverride := $item.Params.image.name }}
@@ -12,6 +27,7 @@
 {{ $resource = ($item.Resources.ByType "image").GetMatch "*featured*" }}
 {{ end }}
 {{ $js_tag_classes := delimit (apply (apply $item.Params.tags "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
+
 <div class="project-card project-item isotope-item {{ $js_tag_classes | safeHTMLAttr }}">
   <div class="card">
     {{ with $resource }}
@@ -22,6 +38,11 @@
     {{ end }}
     <div class="card-text">
       <h4><a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title | markdownify | emojify }}</a></h4>
+      {{ with $summary }}
+      <div class="article-style">
+        <p>{{ . | truncate 135 }}</p>
+      </div>
+      {{ end }}
     </div>
   </div>
 </div>

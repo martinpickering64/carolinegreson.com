@@ -122,7 +122,15 @@
 
 {{ else }}
 {{ if site.Params.debug_layout }}<div><i>layout:bg.image false</i></div>{{ end }}
-{{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+{{/* image name override? */}}
+{{ $featured := "" }}
+{{ $imageNameOverride := .Params.image.name }}
+{{ if $imageNameOverride }}
+{{ $featured = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch ($imageNameOverride) }}
+{{ end }}
+{{ if not $featured }}
+{{ $featured = (.Resources.ByType "image").GetMatch "*featured*" }}
+{{ end }}
 {{ $anchor := $page.Params.image.focal_point | default "Smart" }}
 
 {{/* Set default titles for node pages */}}

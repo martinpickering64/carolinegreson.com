@@ -97,4 +97,5 @@ fields:
   label: Type
   hidden: true
 pages:
+- content/gallery/foxes.md
 - content/gallery/pigs.md

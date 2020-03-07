@@ -70,3 +70,20 @@ fields:
   - type: boolean
     name: preview_only
     label: Preview Only
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: e.g. "dogs" "farm or domestic"
+- name: share
+  type: boolean
+  label: Share
+  hidden: true
+- name: commentable
+  type: boolean
+  label: Commentable
+  hidden: true
+- name: editable
+  type: boolean
+  label: Editable
+  hidden: true

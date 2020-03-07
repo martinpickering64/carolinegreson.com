@@ -16,3 +16,4 @@ name = "/uploads/monarch-horse-willow-sculpture.jpg"
 preview_only = false
 
 +++
+A willow sculpture of a Hunter Horse.

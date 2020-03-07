@@ -8,11 +8,6 @@ fields:
   config:
     required: true
     min: '3'
-- type: boolean
-  name: draft
-  label: Draft
-  description: Is this content a draft?
-  default: true
 - type: text
   name: summary
   label: Summary
@@ -86,6 +81,20 @@ fields:
 - name: editable
   type: boolean
   label: Editable
+  hidden: true
+- name: type
+  type: select
+  default: project
+  config:
+    required: false
+    options:
+    - project
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
   hidden: true
 pages:
 - content/gallery/hunter-horse/hunter-horse.md

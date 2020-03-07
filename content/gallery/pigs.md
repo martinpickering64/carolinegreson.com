@@ -4,6 +4,7 @@ date = 2020-03-07T18:47:33Z
 editable = false
 featured = true
 share = false
+type = "project"
 summary = "Aren't pigs brilliant?! I have made many willow pigs and all have their own individuality, just like the real thing."
 tags = []
 title = "Pigs"

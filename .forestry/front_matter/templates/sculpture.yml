@@ -4,36 +4,48 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
-- type: text
-  name: summary
-  label: summary
-- type: datetime
-  name: date
-  label: date
+  label: Title
+  config:
+    required: true
+    min: '3'
 - type: boolean
   name: draft
-  label: draft
+  label: Draft
+  description: Is this content a draft?
+  default: true
+- type: text
+  name: summary
+  label: Summary
+  config:
+    required: true
+    min: '3'
+- type: datetime
+  name: date
+  label: Date published
+  default: now
+- type: boolean
+  name: featured
+  label: Is a featured sculpture?
+  description: You can filter by featured content on your homepage
 - type: number
   name: weight
-  label: weight
-  description: the sort order for display in the gallery
+  label: Weight
+  description: The sort order for display in the gallery
+  default: '5'
 - type: field_group
   name: image
-  label: image
+  label: Featured Image
   fields:
   - name: name
     type: file
     config:
       maxSize: 250
     label: Name
+    description: This is optional
   - type: text
     name: caption
     label: Caption
     description: The caption text to add to your image
-  - type: boolean
-    name: preview_only
-    label: Preview Only
   - name: focal_point
     type: select
     default: Smart
@@ -55,9 +67,6 @@ fields:
         file: 
         path: 
     label: Focal Point
-- type: boolean
-  name: featured
-  label: featured
-  description: You can filter by featured content on your homepage
-pages:
-- content/gallery/girl-and-dog/girl-and-dog.md
+  - type: boolean
+    name: preview_only
+    label: Preview Only

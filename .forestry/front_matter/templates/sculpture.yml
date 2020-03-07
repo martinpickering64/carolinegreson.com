@@ -59,3 +59,5 @@ fields:
   name: featured
   label: featured
   description: You can filter by featured content on your homepage
+pages:
+- content/gallery/girl-and-dog/girl-and-dog.md

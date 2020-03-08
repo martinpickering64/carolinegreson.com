@@ -178,3 +178,5 @@ fields:
       required: false
     label: Label
   label: CTA Note
+pages:
+- content/home/hero.md

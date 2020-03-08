@@ -21,6 +21,8 @@ sections:
   label: Sculptures
   create: all
   match: "**/*"
+  templates:
+  - sculpture
 - type: directory
   path: content/workshops
   label: Workshops
@@ -33,6 +35,8 @@ sections:
   label: About me
   create: all
   match: "**/*"
+  templates:
+  - about-me
 - type: directory
   path: content/schools
   label: Schools

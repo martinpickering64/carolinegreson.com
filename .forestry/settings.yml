@@ -24,6 +24,7 @@ sections:
   match: "**/*"
   templates:
   - sculpture
+  - sculpture-gallery
 - type: directory
   path: content/workshops
   label: Workshops

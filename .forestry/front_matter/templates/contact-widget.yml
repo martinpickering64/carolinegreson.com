@@ -1,4 +1,59 @@
 ---
 label: Contact Widget
 hide_body: true
-fields: []
+fields:
+- name: widget
+  type: text
+  config:
+    required: true
+    min: '1'
+  label: Widget
+  hidden: true
+  default: contact
+- name: headless
+  type: boolean
+  label: Headless
+  hidden: true
+  default: true
+- name: activate
+  type: boolean
+  label: Activate
+  default: true
+- name: weight
+  type: number
+  label: Weight
+  description: ''
+  default: '10'
+  required: true
+  config:
+    min: '0'
+    max: 
+    step: '1'
+    required: true
+- name: title
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: autolink
+  type: boolean
+  label: Autolink
+  description: Automatically link email and phone?
+  default: true
+- name: email_form
+  type: number
+  label: Email Form
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: '0'
+    max: '2'
+    step: '1'
+    required: true

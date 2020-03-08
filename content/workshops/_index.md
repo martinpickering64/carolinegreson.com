@@ -3,12 +3,14 @@ commentable = false
 date = "2014-11-15T00:00:00+01:00"
 editable = false
 featured = false
+hero_media = ""
 share = false
 subtitle = "Why not learn how to create your own willow sculptures?"
 summary = ""
 title = "Willow Sculpture Workshops"
 [content]
 count = 0
+filter_button = []
 offset = 0
 order = "asc"
 [content.filters]
@@ -16,17 +18,32 @@ category = ""
 exclude_featured = false
 exclude_future = false
 exclude_past = true
+filter_default = 0
 tag = ""
+[cta]
+icon = ""
+icon_pack = ""
+label = ""
+url = ""
+[cta_alt]
+label = ""
+url = ""
 [cta_note]
 label = "<a href=\"#contentStart\"><span class=\"fa fa-angle-down\" style=\"padding-top:200px;font-size:2.5em;\">&nbsp;</span></a>"
 [design.background]
+color = ""
+gradient_end = ""
+gradient_start = ""
 image = "zantium-workshop.jpg"
+image_darken = 0
 image_min_height = "500px"
 image_parallax = false
 image_position = "center"
 image_size = "cover"
 text_color_light = true
 [header]
+caption = ""
+image = ""
 [image]
 caption = "Why not learn how to create your own willow sculptures?"
 placement = 3

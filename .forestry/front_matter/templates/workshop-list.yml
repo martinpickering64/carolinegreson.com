@@ -8,3 +8,5 @@ fields:
     required: true
     min: '3'
   label: Title
+pages:
+- content/workshops/_index.md

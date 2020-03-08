@@ -193,3 +193,5 @@ fields:
       required: false
     label: CSS Class
   label: Advanced
+pages:
+- content/home/workshops.md

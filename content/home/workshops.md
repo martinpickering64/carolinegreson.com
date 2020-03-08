@@ -1,68 +1,33 @@
 +++
-# An upcoming workshops section
-
-widget = "workshops"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
-weight = 30  # Order that this section will appear.
-
-title = "Upcoming Workshops"
+active = true
+headless = true
 subtitle = "I run courses and workshops in Willow Sculpture and Basketmaking throughout the year, here are some of my upcoming workshops, or you can [see all of them here](/workshops)"
-
-[content]
-  # Page type to display. E.g. post, talk, or publication.
-  page_type = "workshops"
-  
-  # Choose how much pages you would like to display (0 = all pages)
-  count = 3
-  
-  # Choose how many pages you would like to offset by
-  offset = 0
-
-  # Page order. Descending (desc) or ascending (asc) date.
-  order = "asc"
-
-  # Filter posts by a taxonomy term.
-  [content.filters]
-    tag = ""
-    category = ""
-    publication_type = ""
-    exclude_featured = false
-    exclude_past = true
-    exclude_future = false
-    
-[design]
-  # Toggle between the various page layout types.
-  #   1 = List
-  #   2 = Compact
-  #   3 = Card
-  #   4 = Citation (publication only)
-  view = 2
-  
-[design.background]
-  # Apply a background color, gradient, or image.
-  #   Uncomment (by removing `#`) an option to apply it.
-  #   Choose a light or dark text color by setting `text_color_light`.
-  #   Any HTML color name or Hex value is valid.
-
-  # Background color.
-  # color = "navy"
-  
-  # Background gradient.
-  # gradient_start = "DeepSkyBlue"
-  # gradient_end = "SkyBlue"
-  
-  # Background image.
-  # image = "background.jpg"  # Name of image in `static/img/`.
-  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-
-  # Text color (true=light or false=dark).
-  # text_color_light = true  
-  
+title = "Upcoming Workshops"
+weight = 30
+widget = "workshops"
 [advanced]
- # Custom CSS. 
- css_style = ""
- 
- # CSS class.
- css_class = ""
+css_class = ""
+css_style = ""
+[content]
+count = 3
+offset = nil
+order = "asc"
+page_type = "workshops"
+[content.filters]
+category = ""
+exclude_featured = false
+exclude_future = false
+exclude_past = true
+publication_type = ""
+tag = ""
+[design]
+view = 2
+[design.background]
+color = ""
+gradient_end = ""
+gradient_start = ""
+image = ""
+image_darken = nil
+text_color_light = true
+
 +++

@@ -2,7 +2,6 @@
 title: '2020 workshop dates will be available soon'
 summary: I will be updating my willow sculpture workshop schedule in the next few weeks with 2020 dates.
 date: "2019-10-03T00:00:00Z"
-lastmod: "2019-10-03T00:00:00Z"
 authors: []
 tags: []
 categories: []

@@ -14,9 +14,9 @@ fields:
   label: Headless
   hidden: true
   default: true
-- name: activate
+- name: active
   type: boolean
-  label: Activate
+  label: Active
   default: true
 - name: weight
   type: number

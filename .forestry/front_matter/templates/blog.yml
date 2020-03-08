@@ -1,4 +1,69 @@
 ---
 label: Blog
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: summary
+  type: text
+  config:
+    required: false
+  label: Summary
+- name: featured
+  type: boolean
+  label: Featured
+  hidden: true
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: share
+  type: boolean
+  label: Share
+  hidden: true
+- name: commentable
+  type: boolean
+  label: Commentable
+  hidden: true
+- name: editable
+  type: boolean
+  label: Editable
+  hidden: true
+- name: view
+  type: select
+  default: '3'
+  config:
+    required: false
+    options:
+    - '1'
+    - '2'
+    - '3'
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: View
+  description: 1 = List, 2 = Compact, 3 = Card
+- name: hero_media
+  type: text
+  config:
+    required: false
+  label: Hero Media
+  description: Hero image (optional). Enter filename of an image in the `static/img/`
+    folder.

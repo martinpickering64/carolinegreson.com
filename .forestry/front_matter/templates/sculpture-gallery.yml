@@ -51,14 +51,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: page_type
-    type: text
-    config:
-      required: true
-      min: '1'
-    label: Page Type
-    hidden: true
-    default: project
   - name: count
     type: number
     label: Count

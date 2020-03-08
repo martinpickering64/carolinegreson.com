@@ -16,6 +16,7 @@ sections:
   match: "**/*"
   templates:
   - blog-post
+  - blog
 - type: directory
   path: content/gallery
   label: Sculptures

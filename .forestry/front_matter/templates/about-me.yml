@@ -170,3 +170,15 @@ fields:
   label: User Groups
   description: Organizational groups that you belong to (for People widget)
   hidden: true
+- name: share
+  type: boolean
+  label: Share
+  hidden: true
+- name: commentable
+  type: boolean
+  label: Commentable
+  hidden: true
+- name: editable
+  type: boolean
+  label: Editable
+  hidden: true

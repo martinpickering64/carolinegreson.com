@@ -30,7 +30,7 @@ fields:
 - name: endDate
   type: datetime
   label: End Date
-  description: ''
+  description: Leave blank unless this is a multi-day course
   config:
     required: false
     date_format: 

@@ -1,7 +1,7 @@
 +++
 active = true
 autolink = true
-email_form = nil
+email_form = 0
 headless = true
 subtitle = ""
 title = "Contact"

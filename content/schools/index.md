@@ -10,10 +10,6 @@ summary: "Working with School Groups: I have led many successful workshops over 
 authors: []
 tags: []
 categories: []
-featured: false
-share: false
-commentable: false
-editable: false
 
 
 # Optional header image (relative to `static/img/` folder).

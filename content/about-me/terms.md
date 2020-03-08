@@ -34,8 +34,7 @@ setting out all the goods and services to be supplied and the price to be paid.
 1\.6 The Scheduled Date of Manufacturing: means the working day on which any goods
 ordered will begin their construction.
 
-1\.7 Working Day: means any day Monday to Friday between the hours of 10:00am and 4:00pm
-and specifically excluding bank holidays.
+1\.7 Working Day: means any day Monday to Friday between the hours of 10:00AM and 4:00PM and specifically excluding bank holidays.
 
 1\.8 Delivered & Delivery: means the day on which the Buyer collects the goods or
 the day on which the goods are delivered to the Buyer’s address.
@@ -140,8 +139,7 @@ available to the Seller.
 circumstances apply, the Seller will not enter into any guarantees or contracts
 whatsoever with the Buyer for a specific day or time of delivery.
 
-7\.3 The Seller will reserve the right to deliver by instalments, but undertakes
-not to charge the Buyer additional delivery costs from those quoted on the Confirmation of Order.
+7\.3 The Seller will reserve the right to deliver by installments, but undertakes not to charge the Buyer additional delivery costs from those quoted on the Confirmation of Order.
 
 7\.4 The Seller shall not be liable for any further delivery and collection costs
 where the Buyer fails to take delivery at the given delivery address, and after

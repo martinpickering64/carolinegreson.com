@@ -1,4 +1,21 @@
 ---
 label: Gallery Widget
 hide_body: true
-fields: []
+fields:
+- name: widget
+  type: text
+  config:
+    required: true
+    min: '1'
+  label: Widget
+  hidden: true
+  default: gallery
+- name: headless
+  type: boolean
+  label: Headless
+  hidden: true
+  default: true
+- name: active
+  type: boolean
+  label: Active
+  default: true

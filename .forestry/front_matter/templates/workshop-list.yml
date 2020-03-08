@@ -8,5 +8,308 @@ fields:
     required: true
     min: '3'
   label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: header
+  type: field_group
+  config: {}
+  fields:
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+  - name: image
+    type: text
+    config:
+      required: false
+    label: Image
+  label: Header
+- name: image
+  type: field_group
+  config: {}
+  fields:
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+  - name: placement
+    type: number
+    label: Placement
+    description: 1=column width, 2=container width, 3=fluid, any other value article
+      container w
+    default: '3'
+    required: true
+    config:
+      min: '1'
+      max: '4'
+      step: '1'
+      required: true
+  label: Image
+- name: content
+  type: field_group
+  config: {}
+  fields:
+  - name: count
+    type: number
+    label: Count
+    description: Choose how much pages you would like to display (0 = all pages)
+    default: 0
+    required: true
+    config:
+      min: '0'
+      max: 
+      step: '1'
+      required: true
+  - name: offset
+    type: number
+    label: Offset
+    description: Choose how many pages you would like to offset by
+    default: 0
+    required: true
+    config:
+      min: '0'
+      max: 
+      step: 
+      required: true
+  - name: order
+    type: select
+    default: asc
+    config:
+      required: true
+      options:
+      - asc
+      - desc
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Order
+    description: Page Order
+  - name: filters
+    type: field_group
+    config: {}
+    fields:
+    - name: tag
+      type: text
+      config:
+        required: false
+      label: Tag
+    - name: category
+      type: text
+      config:
+        required: false
+      label: Category
+    - name: exclude_featured
+      type: boolean
+      label: Exclude Featured
+    - name: exclude_past
+      type: boolean
+      label: Exclude Past
+      default: true
+    - name: exclude_future
+      type: boolean
+      label: Exclude Future
+    - name: filter_default
+      type: number
+      label: Filter Default
+      description: Default filter index (e.g. 0 corresponds to the first `[[filter_button]]`
+        instance below).
+      default: 0
+      required: true
+      config:
+        min: '0'
+        max: 
+        step: 
+        required: true
+    label: Filters
+    description: Filter by
+  - name: filter_button
+    type: field_group_list
+    fields:
+    - name: name
+      type: text
+      config:
+        required: true
+        min: '3'
+      label: Name
+    - name: tag
+      type: text
+      config:
+        required: true
+        min: '1'
+      label: Tag
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Filter Button
+  label: Content
+- name: hero_media
+  type: text
+  config:
+    required: false
+  label: Hero Media
+  description: Hero image (optional). Enter filename of an image in the `static/img/`
+    folder.
+- name: design
+  type: field_group
+  config: {}
+  fields:
+  - name: background
+    type: field_group
+    config: {}
+    fields:
+    - name: color
+      type: text
+      config:
+        required: false
+      label: Color
+      description: e.g.navy or an RGB or a Hex Colour
+    - name: gradient_start
+      type: text
+      config:
+        required: false
+      label: Gradient Start
+      description: Starting colour of the gradient effect
+    - name: gradient_end
+      type: text
+      config:
+        required: false
+      label: Gradient End
+      description: The end colour of the gradient effect
+    - name: image
+      type: text
+      config:
+        required: false
+      label: Image
+      description: Name of image in `static/img/`.
+    - name: image_darken
+      type: number
+      label: Image Darken
+      description: Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+      default: 0
+      required: true
+      config:
+        min: '0'
+        max: '1'
+        step: '0.1'
+        required: true
+    - name: image_size
+      type: select
+      default: cover
+      config:
+        required: false
+        options:
+        - cover
+        - contain
+        - actual
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Image Size
+    - name: image_position
+      type: select
+      default: center
+      config:
+        required: false
+        options:
+        - left
+        - center
+        - right
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Image Position
+    - name: image_parallax
+      type: boolean
+      label: Image Parallax
+      description: Use a fun parallax-like fixed background effect?
+    - name: image_min_height
+      type: text
+      config:
+        required: true
+        min: '1'
+      label: Image Min Height
+      default: 500px
+    - name: text_color_light
+      type: boolean
+      label: Text Colour Light
+      default: true
+    label: Background
+    description: Apply a background color, gradient, or image.
+  label: Design
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  - name: label
+    type: text
+    config:
+      required: false
+    label: Label
+  - name: icon_pack
+    type: select
+    default: ''
+    config:
+      required: false
+      options:
+      - fa
+      - fas
+      - fab
+      - ai
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Icon Pack
+  - name: icon
+    type: text
+    config:
+      required: false
+    label: Icon
+  label: Call to action
+  description: Call to action links. Display link(s) by specifying a URL and label
+    below. Icon is optional.
+- name: cta_alt
+  type: field_group
+  config: {}
+  fields:
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  - name: label
+    type: text
+    config:
+      required: false
+    label: Label
+  label: CTA Alt
+- name: cta_note
+  type: field_group
+  config: {}
+  fields:
+  - name: label
+    type: text
+    config:
+      required: false
+    label: Label
+  label: CTA Note
 pages:
 - content/workshops/_index.md

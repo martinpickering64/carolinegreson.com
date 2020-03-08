@@ -4,56 +4,127 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
+    min: '3'
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
 - type: text
   name: summary
-  label: summary
+  label: Summary
 - type: boolean
   name: featured
-  label: featured
+  label: Featured
   description: You can filter by featured content on your homepage
-- type: boolean
-  name: draft
-  label: draft
+- type: datetime
+  name: date
+  label: Date
+  description: the date on which the workshop will be held
+  config:
+    required: true
+  default: ''
+- name: endDate
+  type: datetime
+  label: End Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- type: number
+  name: price
+  label: Price
+  description: the price for the workshop
+  config:
+    min: '0.00'
+    step: '1.00'
+- type: number
+  name: deposit
+  label: Deposit
+  description: the amount of any deposit required
+  config:
+    min: '0.00'
+    step: '1.00'
+- type: number
+  name: places
+  label: Places
+  description: the number of available places on the workshop
+  config:
+    min: '0'
+    step: '1'
+- name: venue
+  type: select
+  default: CPAC
+  config:
+    required: true
+    options:
+    - CPAC
+    - ZANTIUM
+    - BODFARI
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Venue
 - type: datetime
   name: publishDate
   label: Publish Date
   description: the date the workshop should be publicised
-- type: datetime
-  name: lastmod
-  label: lastmod
-- type: datetime
-  name: date
-  label: date
-  description: the date on which the workshop will be held
-- type: number
-  name: price
-  label: price
-  description: the price for the workshop
-- type: number
-  name: deposit
-  label: deposit
-  description: the amount of any deposit required
-- type: number
-  name: places
-  label: places
-  description: the number of available places on the workshop
-- type: text
-  name: venue
-  label: venue
-  description: the venue code (CPAC, ZANTIUM, BODFARI)
+  config:
+    required: true
+  default: now
 - type: field_group
   name: image
-  label: image
+  label: Image
   fields:
+  - name: name
+    type: file
+    config:
+      maxSize: 250
+    label: Name
   - type: text
     name: caption
-    label: caption
-  - type: text
-    name: focal_point
+    label: Caption
+  - name: focal_point
+    type: select
+    default: Smart
+    config:
+      required: false
+      options:
+      - Smart
+      - " Center"
+      - TopLeft
+      - Top
+      - TopRight
+      - Left
+      - Right
+      - BottomLeft
+      - Bottom
+      - BottomRight
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
     label: Focal Point
-    description: Image Focal Point (Smart, Center, TopLeft, Top, TopRight, Left, Right,
-      BottomLeft, Bottom, BottomRight)
   - type: boolean
     name: preview_only
     label: Preview Only
+- name: share
+  type: boolean
+  label: Share
+  hidden: true
+- name: commentable
+  type: boolean
+  label: Commentable
+  hidden: true
+- name: editable
+  type: boolean
+  label: Editable
+  hidden: true

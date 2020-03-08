@@ -44,22 +44,18 @@ fields:
   type: boolean
   label: Editable
   hidden: true
-- name: view
-  type: select
-  default: '3'
-  config:
-    required: false
-    options:
-    - '1'
-    - '2'
-    - '3'
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: View
-  description: 1 = List, 2 = Compact, 3 = Card
+  - name: view
+    type: number
+    label: View
+    description: "'Toggle between the various page layout types: 1 = List, 2 = Compact,
+      \      3 = Card"
+    default: '3'
+    required: true
+    config:
+      min: '1'
+      max: '3'
+      step: '1'
+      required: true
 - name: header
   type: field_group
   config: {}

@@ -54,9 +54,18 @@ fields:
   name: image
   label: image
   fields:
-  - type: number
-    name: placement
-    label: placement
+  - name: placement
+    type: number
+    label: Placement
+    description: 1=column width, 2=container width, 3=fluid, any other value article
+      container w
+    default: '3'
+    required: true
+    config:
+      min: '1'
+      max: '4'
+      step: '1'
+      required: true
   - type: text
     name: caption
     label: caption

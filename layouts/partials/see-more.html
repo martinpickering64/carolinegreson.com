@@ -1,12 +1,14 @@
 {{ if site.Params.debug_layout }}<div><i>layout: partials/see-more pageType: {{ .Type }}</i></div>{{ end }}
 {{ if (ne .Type "page") | and (ne .Type "about-me") }}
 {{ $items_type := .Type }}
+{{ $archive_page := site.GetPage "Section" $items_type }}
 {{/* Localisation */}}
 {{ $i18n := "" }}
 {{ if (eq $items_type "post") | or (eq $items_type "blog") }}
 {{ $i18n = "more_posts" }}
 {{ else if eq $items_type "project" }}
 {{ $i18n = "more_projects" }}
+{{ $archive_page = site.GetPage "Section" "/gallery" }}
 {{ else if eq $items_type "workshops" }}
 {{ $i18n = "more_workshops" }}
 {{ else if eq $items_type "talk" }}
@@ -16,7 +18,6 @@
 {{ else }}
 {{ $i18n = "more_pages" }}
 {{ end }}
-{{ $archive_page := site.GetPage "Section" $items_type }}
 <div class="see-all">
   <a href="{{ $archive_page.RelPermalink }}">
     {{ i18n $i18n | default "See all" }}

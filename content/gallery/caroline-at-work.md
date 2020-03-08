@@ -7,7 +7,6 @@ authors: []
 tags: ["human"]
 categories: []
 date: 2019-12-10T13:21:47Z
-lastmod: 2019-12-10T13:21:47Z
 type: "project"
 featured: false
 weight: 1

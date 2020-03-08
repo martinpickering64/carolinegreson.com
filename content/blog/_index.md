@@ -8,7 +8,7 @@ share = false
 subtitle = "Find out about what I am doing..."
 summary = "Find out about what I am doing..."
 title = "News"
-view = ""
+view = "3"
 [cta]
 icon = ""
 icon_pack = ""

@@ -57,3 +57,5 @@ fields:
     max: '2'
     step: '1'
     required: true
+pages:
+- content/home/contact.md

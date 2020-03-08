@@ -43,7 +43,7 @@ url = ""
 [cta_note]
 label = "<a href=\"#contentStart\"><span class=\"fa fa-angle-down\" style=\"padding-top:200px;font-size:2.5em;\">&nbsp;</span></a>"
 [design]
-view = 2
+view = 3
 [design.background]
 color = ""
 gradient_end = ""

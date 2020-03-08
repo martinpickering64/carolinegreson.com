@@ -1,4 +1,180 @@
 ---
 label: Hero Widget
 hide_body: false
-fields: []
+fields:
+- name: widget
+  type: text
+  config:
+    required: true
+    min: '1'
+  label: Widget
+  hidden: true
+  default: hero
+- name: headless
+  type: boolean
+  label: Headless
+  default: true
+- name: active
+  type: boolean
+  label: Active
+  default: true
+- name: weight
+  type: number
+  label: Weight
+  description: ''
+  default: '10'
+  required: true
+  config:
+    min: '0'
+    max: 
+    step: '1'
+    required: true
+- name: title
+  type: text
+  config:
+    required: true
+    min: '1'
+  label: Title
+- name: hero_media
+  type: text
+  config:
+    required: false
+  label: Hero Media
+- name: design
+  type: field_group
+  config: {}
+  fields:
+  - name: background
+    type: field_group
+    config: {}
+    fields:
+    - name: color
+      type: color
+      label: Colour
+      config:
+        required: false
+        color_format: Hex
+    - name: gradient_start
+      type: color
+      label: Gradient Start
+      config:
+        required: false
+        color_format: Hex
+    - name: gradient_end
+      type: color
+      label: Gradient End
+      config:
+        required: false
+        color_format: Hex
+    - name: image
+      type: text
+      config:
+        required: false
+      label: Image
+    - name: image_size
+      type: select
+      default: cover
+      config:
+        required: true
+        options:
+        - cover
+        - contain
+        - actual
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Image Size
+    - name: image_position
+      type: select
+      default: center
+      config:
+        required: true
+        options:
+        - left
+        - center
+        - right
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Image Position
+    - name: image_parallax
+      type: boolean
+      label: Image Parallax
+    - name: image_min_height
+      type: text
+      config:
+        required: false
+      label: Image Min Height
+    - name: text_color_light
+      type: boolean
+      label: Text Colour Light
+      default: true
+    label: Background
+  label: Design
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  - name: label
+    type: text
+    config:
+      required: false
+    label: Label
+  - name: icon_pack
+    type: select
+    default: fa
+    config:
+      required: false
+      options:
+      - fa
+      - fas
+      - fab
+      - ai
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Icon Pack
+  - name: icon
+    type: text
+    config:
+      required: false
+    label: Icon
+    default: angle-down
+  label: CTA
+  description: Call to action
+- name: cta_alt
+  type: field_group
+  config: {}
+  fields:
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  - name: label
+    type: text
+    config:
+      required: false
+    label: Label
+  label: CTA Alt
+- name: cta_note
+  type: field_group
+  config: {}
+  fields:
+  - name: label
+    type: text
+    config:
+      required: false
+    label: Label
+  label: CTA Note

@@ -43,7 +43,7 @@ url = ""
 [cta_note]
 label = "<a href=\"#contentStart\"><span class=\"fa fa-angle-down\" style=\"padding-top:200px;font-size:2.5em;\">&nbsp;</span></a>"
 [design]
-view = 3
+view = 2
 [design.background]
 color = ""
 gradient_end = ""
@@ -60,7 +60,7 @@ caption = ""
 image = ""
 [image]
 caption = "Here are some examples of my Willow Sculptures and other work"
-placement = 2
+placement = 3
 
 +++
 The images in my Gallery are of Willow Sculptures I have made as commissions or 

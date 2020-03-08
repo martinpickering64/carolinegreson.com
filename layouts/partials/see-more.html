@@ -1,0 +1,26 @@
+{{ if site.Params.debug_layout }}<div><i>layout: partials/see-more pageType: {{ .Type }}</i></div>{{ end }}
+{{ if ne .Type "page" }}
+{{ $items_type := .Type }}
+{{/* Localisation */}}
+{{ $i18n := "" }}
+{{ if (eq $items_type "post") | or (eq $items_type "blog") }}
+{{ $i18n = "more_posts" }}
+{{ else if eq $items_type "project" }}
+{{ $i18n = "more_projects" }}
+{{ else if eq $items_type "workshops" }}
+{{ $i18n = "more_workshops" }}
+{{ else if eq $items_type "talk" }}
+{{ $i18n = "more_talks" }}
+{{ else if eq $items_type "publication" }}
+{{ $i18n = "more_publications" }}
+{{ else }}
+{{ $i18n = "more_pages" }}
+{{ end }}
+{{ $archive_page := site.GetPage "Section" $items_type }}
+<div class="see-all">
+  <a href="{{ $archive_page.RelPermalink }}">
+    {{ i18n $i18n | default "See all" }}
+    <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+{{ end }}

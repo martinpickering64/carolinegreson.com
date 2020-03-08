@@ -1,4 +1,179 @@
 ---
 label: Sculpture Gallery
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: header
+  type: field_group
+  config: {}
+  fields:
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+  - name: image
+    type: text
+    config:
+      required: false
+    label: Image
+  label: Header
+- name: image
+  type: field_group
+  config: {}
+  fields:
+  - name: placement
+    type: text
+    config:
+      required: true
+      min: '1'
+    label: Placement
+    description: 1=column width, 2=container width, 3=fluid, any other value article
+      container width
+    default: '3'
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+  label: Image
+- name: content
+  type: field_group
+  config: {}
+  fields:
+  - name: page_type
+    type: text
+    config:
+      required: true
+      min: '1'
+    label: Page Type
+    hidden: true
+    default: project
+  - name: count
+    type: number
+    label: Count
+    description: Choose how much pages you would like to display (0 = all pages)
+    default: 0
+    required: true
+    config:
+      min: '0'
+      max: 
+      step: '1'
+      required: true
+  - name: offset
+    type: number
+    label: Offset
+    description: Choose how many pages you would like to offset by
+    default: 0
+    required: true
+    config:
+      min: '0'
+      max: 
+      step: 
+      required: true
+  - name: order
+    type: select
+    default: asc
+    config:
+      required: true
+      options:
+      - asc
+      - desc
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Order
+    description: Page Order
+  - name: filters
+    type: field_group
+    config: {}
+    fields:
+    - name: tag
+      type: text
+      config:
+        required: false
+      label: Tag
+    - name: category
+      type: text
+      config:
+        required: false
+      label: Category
+    - name: exclude_featured
+      type: boolean
+      label: Exclude Featured
+    - name: exclude_past
+      type: boolean
+      label: Exclude Past
+    - name: exclude_future
+      type: boolean
+      label: Exclude Future
+    - name: filter_default
+      type: number
+      label: Filter Default
+      description: Default filter index (e.g. 0 corresponds to the first `[[filter_button]]`
+        instance below).
+      default: 0
+      required: true
+      config:
+        min: '0'
+        max: 
+        step: 
+        required: true
+    label: Filters
+    description: Filter by
+  - name: filter_button
+    type: field_group_list
+    fields:
+    - name: name
+      type: text
+      config:
+        required: true
+        min: '3'
+      label: Name
+    - name: tag
+      type: text
+      config:
+        required: true
+        min: '1'
+      label: Tag
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Filter Button
+  label: Content
+- name: design
+  type: field_group
+  config: {}
+  fields:
+  - name: view
+    type: select
+    default: '3'
+    config:
+      required: true
+      options:
+      - '1'
+      - '2'
+      - '3'
+      - '5'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: View
+    description: 'Toggle between the various page layout types: 1 = List, 2 = Compact,
+      3 = Card, 5 = Showcase'
+  label: Design

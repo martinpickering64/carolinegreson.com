@@ -43,6 +43,8 @@ sections:
   label: Schools
   create: all
   match: "**/*"
+  templates:
+  - page
 - type: directory
   path: content
   label: Pages

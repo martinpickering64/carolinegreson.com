@@ -1,23 +1,20 @@
 ---
 title: Terms and Conditions
-subtitle: ""
-summary: ""
+subtitle: This is a subtitle
+summary: ''
 authors: []
 tags: []
 categories: []
 featured: false
-draft: false
-date: "2014-11-15T00:00:00+01:00"
+date: 2014-11-15T00:00:00+01:00
 share: false
 commentable: false
 editable: false
-
-# Optional header image (relative to `static/img/` folder).
 header:
-  caption: ""
-  image: ""
----
+  caption: ''
+  image: ''
 
+---
 <p class="lead">THE SELLER INTENDS TO RELY ON THE TERMS SET OUT HERE. TO PROTECT YOUR OWN 
 INTEREST, PLEASE READ THIS DOCUMENT CAREFULLY.</p>
 

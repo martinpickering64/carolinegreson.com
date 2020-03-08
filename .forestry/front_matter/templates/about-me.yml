@@ -37,7 +37,7 @@ fields:
     schema:
       format: markdown
     min: '10'
-    max: '500'
+    max: '700'
   label: Bio
   description: A short bio displyed in user profile at end of posts
 - name: organizations

@@ -7,13 +7,17 @@ authors: []
 tags: []
 categories: []
 featured: false
-date: 2014-11-15T00:00:00+01:00
+date: 2014-11-14T23:00:00.000+00:00
 share: false
 commentable: false
 editable: false
 header:
   caption: ''
   image: ''
+design:
+  background:
+    image_darken: 0
+    image_min_height: 500px
 
 ---
 ## 1 Definitions

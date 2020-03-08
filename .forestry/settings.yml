@@ -32,6 +32,7 @@ sections:
   match: "**/*"
   templates:
   - workshop
+  - workshop-list
 - type: directory
   path: content/about-me
   label: About me

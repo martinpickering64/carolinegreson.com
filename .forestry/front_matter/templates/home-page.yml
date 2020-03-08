@@ -1,4 +1,15 @@
 ---
 label: Home Page
 hide_body: true
-fields: []
+fields:
+- name: type
+  type: text
+  config:
+    required: true
+    min: '5'
+  label: Type
+  default: widget_page
+- name: headless
+  type: boolean
+  label: Headless
+  default: true

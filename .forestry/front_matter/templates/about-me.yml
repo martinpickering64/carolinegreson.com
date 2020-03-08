@@ -182,3 +182,5 @@ fields:
   type: boolean
   label: Editable
   hidden: true
+pages:
+- content/about-me/_index.md

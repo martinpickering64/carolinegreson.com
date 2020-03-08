@@ -1,24 +1,24 @@
 ---
 title: Delivery Information
-subtitle: ""
-summary: ""
+subtitle: ''
+summary: ''
 authors: []
 tags: []
 categories: []
 featured: false
-draft: false
-date: "2014-11-15T00:00:00+01:00"
+date: 2014-11-15T00:00:00+01:00
 share: false
 commentable: false
 editable: false
-
-
-# Optional header image (relative to `static/img/` folder).
 header:
-  caption: ""
-  image: ""
----
+  caption: ''
+  image: ''
+design:
+  background:
+    image_darken: 0
+    image_min_height: 500px
 
+---
 As most of my pieces are made to a commission and all are hand-made individual items, 
 delivery of these items also tends to be a personalised and bespoke arrangement.
 

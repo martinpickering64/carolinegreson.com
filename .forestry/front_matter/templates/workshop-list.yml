@@ -1,4 +1,10 @@
 ---
 label: Workshop List
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Title

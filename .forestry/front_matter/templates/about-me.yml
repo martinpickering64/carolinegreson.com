@@ -1,4 +1,172 @@
 ---
 label: About Me
 hide_body: false
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Name
+- name: featured
+  type: boolean
+  label: Featured
+  hidden: true
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: role
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Role
+- name: bio
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+    min: '10'
+    max: '250'
+  label: Bio
+  description: A short bio displyed in user profile at end of posts
+- name: organizations
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+      min: '3'
+    label: Name
+  - name: url
+    type: text
+    config:
+      required: true
+      min: '8'
+    label: URL
+  config:
+    min: 
+    max: 
+    labelField: name
+  label: Organizations
+  description: Organizations / Affiliations
+- name: interests
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Interests
+- name: education
+  type: field_group
+  config: {}
+  fields:
+  - name: courses
+    type: field_group_list
+    fields:
+    - name: course
+      type: text
+      config:
+        required: true
+        min: '3'
+      label: Course
+    - name: institution
+      type: text
+      config:
+        required: true
+        min: '3'
+      label: Institution
+    - name: year
+      type: number
+      label: Year
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: '1970'
+        max: '2050'
+        step: 
+        required: true
+    config:
+      min: 
+      max: 
+      labelField: course
+    label: Courses
+  label: Education
+- name: social
+  type: field_group_list
+  fields:
+  - name: icon
+    type: select
+    default: envelope
+    config:
+      required: false
+      options:
+      - envelope
+      - phone
+      - twitter
+      - facebook
+      - instagram
+      - cv
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Icon
+    description: Which icon?
+  - name: icon_pack
+    type: select
+    default: fas
+    config:
+      required: false
+      options:
+      - fas
+      - fab
+      - ai
+      - far
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Icon Pack
+    description: From which Font Awesome set?
+  - name: link
+    type: text
+    config:
+      required: true
+      min: '10'
+    label: Link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Social
+- name: email
+  type: text
+  config:
+    required: false
+  label: email
+  description: Enter email to display Gravatar (if Gravatar enabled in Config)
+  hidden: true
+- name: user_groups
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: User Groups
+  description: Organizational groups that you belong to (for People widget)
+  hidden: true

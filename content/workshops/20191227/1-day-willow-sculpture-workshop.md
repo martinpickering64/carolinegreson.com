@@ -1,6 +1,6 @@
 ---
 title: "1-day Willow Sculpture Workshop"
-date: "2020-03-01T00:00:00Z"
+date: "2019-12-27T00:00:00Z"
 endDate: ""
 price: 75
 places: 2
@@ -12,7 +12,6 @@ tags: []
 categories: []
 featured: false
 draft: false
-lastmod: "2014-11-15T00:00:00+01:00"
 share: false
 commentable: false
 editable: false
@@ -36,6 +35,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
+  name: "castle-park-arts-centre.jpg"
   caption: 'Frodsham Arts Centre'
   focal_point: ""
   preview_only: false

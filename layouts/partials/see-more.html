@@ -1,5 +1,5 @@
 {{ if site.Params.debug_layout }}<div><i>layout: partials/see-more pageType: {{ .Type }}</i></div>{{ end }}
-{{ if ne .Type "page" }}
+{{ if (ne .Type "page") | and (ne .Type "about-me") }}
 {{ $items_type := .Type }}
 {{/* Localisation */}}
 {{ $i18n := "" }}

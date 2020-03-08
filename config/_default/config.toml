@@ -73,5 +73,5 @@ pluralizeListTitles = false
 
 [permalinks]
     blog = "/blog/:year/:month/:day/:slug"
-	"workshops" = "/workshops/:year/:month/:day"
+	  workshops = "/workshops/:year/:month/:day/:slug"
 

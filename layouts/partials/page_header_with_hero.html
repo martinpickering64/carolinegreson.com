@@ -126,11 +126,19 @@
 {{ $featured := "" }}
 {{ $imageNameOverride := .Params.image.name }}
 {{ if $imageNameOverride }}
+{{ if site.Params.debug_layout }}<div><i>$imageNameOverride: {{ $imageNameOverride }}</i></div>{{ end }}
 {{ $featured = ((.Site.GetPage "/uploads").Resources.ByType "image").GetMatch (strings.TrimPrefix "/uploads/" $imageNameOverride) }}
 {{ end }}
+{{ if site.Params.debug_layout }}<div><i>$featured: {{ $featured }}</i></div>{{ end }}
 {{ if not $featured }}
+{{ if site.Params.debug_layout }}
+<div><i>resources: <ol>{{ range $idx, $dbgItem := .Resources }}
+   <li>{{ $dbgItem.name }}</li>
+{{ end }}</ol></i></div>
+{{ end }}
 {{ $featured = (.Resources.ByType "image").GetMatch "*featured*" }}
 {{ end }}
+{{ if site.Params.debug_layout }}<div><i>$featured: {{ $featured }}</i></div>{{ end }}
 {{ $anchor := $page.Params.image.focal_point | default "Smart" }}
 
 {{/* Set default titles for node pages */}}

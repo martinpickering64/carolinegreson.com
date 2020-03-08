@@ -36,6 +36,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - page
   - about-me
 - type: directory
   path: content/schools

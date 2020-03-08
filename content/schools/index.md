@@ -1,73 +1,31 @@
 ---
 title: Schools
 subtitle: Working with Schools and Community Groups
-date: "2018-06-28T00:00:00+01:00"
-draft: false
+date: 2018-06-28T00:00:00+01:00
 share: false
 commentable: false
 editable: false
-summary: "Working with School Groups: I have led many successful workshops over the years, working with groups in schools throughout the age range from pre-school through junior school to high school"
+summary: 'Working with School Groups: I have led many successful workshops over the
+  years, working with groups in schools throughout the age range from pre-school through
+  junior school to high school'
 authors: []
 tags: []
 categories: []
-
-
-# Optional header image (relative to `static/img/` folder).
 header:
-  caption: ""
-  image: ""
-
-# Hero image (optional). Enter filename of an image in the `static/img/` folder.
-#hero_media: "making-willow-sculpture.jpg"
-
+  caption: ''
+  image: ''
 design:
- background:
-  # Apply a background color, gradient, or image.
-  #   Uncomment (by removing `#`) an option to apply it.
-  #   Choose a light or dark text color by setting `text_color_light`.
-  #   Any HTML color name or Hex value is valid.
-
-  # Background color.
-  #color: "navy"
-  
-  # Background gradient.
-  #gradient_start: "#4bb4e3"
-  #gradient_end: "#2b94c3"
-  
-  # Background image.
-  image: "longshaw-school.jpg"  # Name of image in `static/img/`.
-   
-  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-  image_size: "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
-  image_position: "center"  # Options include `left`, `center` (default), or `right`.
-  image_parallax: false  # Use a fun parallax-like fixed background effect? true/false
-  image_min_height: "500px"
-  
-  # Text color (true=light or false=dark).
-  text_color_light: true
-
-# Call to action links (optional).
-#   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
-#   Remove a link/note by deleting a cta/note block.
-#cta:
-#  url: "gallery"
-#  label: "art inspired by nature"
-#  icon_pack: "fa"
-#  icon: "angle-down"
-  
-#cta_alt:
-#  url: "https://sourcethemes.com/academic/"
-#  label: "art inspired by nature"
-
-# Note. An optional note to show underneath the links.
+  background:
+    image: longshaw-school.jpg
+    image_size: cover
+    image_position: center
+    image_parallax: false
+    image_min_height: 500px
+    text_color_light: true
+    image_darken: 0
 cta_note:
-  label: '<a href="#contentStart"><span class="fa fa-angle-down" style="padding-top:200px;font-size:2.5em;">&nbsp;</span></a>'
+  label: <a href="#contentStart"><span class="fa fa-angle-down" style="padding-top:200px;font-size:2.5em;">&nbsp;</span></a>
 
-
-#gallery_item:
-#- album: gallery
-#  image: alpaca-school-workshop.jpg
-#  caption: Alpaca School Workshop
 ---
 ## Working with School Groups
 I have led many successful workshops over the years, working with groups in schools throughout the age range 

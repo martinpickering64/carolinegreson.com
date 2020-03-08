@@ -152,7 +152,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: icon
   label: Social
 - name: email
   type: text

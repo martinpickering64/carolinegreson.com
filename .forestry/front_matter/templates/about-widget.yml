@@ -1,4 +1,164 @@
 ---
-label: About Widget
+label: Blank Widget
 hide_body: false
-fields: []
+fields:
+- name: widget
+  type: text
+  config:
+    required: true
+  label: Widget
+  hidden: true
+  default: blank
+- name: headless
+  type: boolean
+  label: Headless
+  hidden: true
+  default: true
+- name: activate
+  type: boolean
+  label: Activate
+  default: true
+- name: weight
+  type: number
+  label: Weight
+  description: ''
+  default: '10'
+  required: true
+  config:
+    min: '1'
+    max: 
+    step: '1'
+    required: true
+- name: title
+  type: text
+  config:
+    required: true
+    min: '3'
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+- name: design
+  type: field_group
+  config: {}
+  fields:
+  - name: columns
+    type: select
+    default: '1'
+    config:
+      required: false
+      options:
+      - '1'
+      - '2'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Columns
+  - name: background
+    type: field_group
+    config: {}
+    fields:
+    - name: color
+      type: color
+      label: Colour
+      config:
+        required: false
+        color_format: RGB
+    - name: gradient_start
+      type: color
+      label: Gradient Start
+      config:
+        required: false
+        color_format: Hex
+    - name: gradient_end
+      type: color
+      label: Gradient End
+      config:
+        required: false
+        color_format: Hex
+    - name: image
+      type: text
+      config:
+        required: false
+      label: Image
+    - name: image_darken
+      type: number
+      description: Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+      default: 0
+      required: true
+      config:
+        min: '0'
+        max: '1'
+        step: '0.1'
+      label: Image Darken
+    - name: image_size
+      type: select
+      default: cover
+      config:
+        required: false
+        options:
+        - cover
+        - contain
+        - actual
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Image Size
+    - name: image_position
+      type: select
+      default: center
+      config:
+        required: false
+        options:
+        - left
+        - center
+        - right
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Image Position
+    - name: image_parallax
+      type: boolean
+      label: Image Parallax
+    - name: text_color_light
+      type: boolean
+      label: Text Colour Light
+      default: true
+    label: Background
+  - name: spacing
+    type: field_group
+    config: {}
+    fields:
+    - name: padding
+      type: list
+      config:
+        use_select: false
+        min: '4'
+        max: '4'
+      label: Padding
+      description: Customize the section spacing. Order is top, right, bottom, left.
+    label: Spacing
+  label: Design
+- name: advanced
+  type: field_group
+  config: {}
+  fields:
+  - name: css_style
+    type: text
+    config:
+      required: false
+    label: CSS Style
+  - name: css_class
+    type: text
+    config:
+      required: false
+    label: CSS Class
+  label: Advanced

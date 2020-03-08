@@ -5,7 +5,7 @@ endDate:
 price: 75
 places: 2
 venue: CPAC
-subtitle: A subtitle
+subtitle: ''
 summary: Willow Sculpture Workshop to learn how to make willow sculptures to be held
   at Castle Park Arts Centre, Frodsham.
 authors: []

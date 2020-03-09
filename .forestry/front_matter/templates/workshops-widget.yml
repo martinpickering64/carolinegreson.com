@@ -172,6 +172,7 @@ fields:
         min: '0'
         max: '1'
         step: '1'
+        required: true
     - name: text_color_light
       type: boolean
       label: Text Colour Light

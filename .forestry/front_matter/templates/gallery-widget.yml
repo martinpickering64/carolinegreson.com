@@ -131,48 +131,48 @@ fields:
   - name: flip_alt_rows
     type: boolean
     label: Flip Alt Rows
+  - name: background
+    type: field_group
+    config: {}
+    fields:
+    - name: color
+	  type: color
+	  label: Colour
+	  config:
+	    required: false
+	    color_format: Hex
+    - name: gradient_start
+	  type: color
+	  label: Gradient Start
+	  config:
+	    required: false
+	    color_format: Hex
+    - name: gradient_end
+	  type: color
+	  label: Gradient End
+	  config:
+	    required: false
+	    color_format: Hex
+    - name: image
+	  type: text
+	  config:
+	    required: false
+	  label: Image
+    - name: image_darken
+	  type: number
+	  label: Image Darken
+	  description: ''
+	  default: 0
+	  required: true
+	  config:
+	    min: '0'
+	    max: '1'
+	    step: '0.1'
+    - name: text_color_light
+	  type: boolean
+	  label: Text Colour Light
+    label: Background
   label: Design
-- name: background
-  type: field_group
-  config: {}
-  fields:
-  - name: color
-    type: color
-    label: Colour
-    config:
-      required: false
-      color_format: Hex
-  - name: gradient_start
-    type: color
-    label: Gradient Start
-    config:
-      required: false
-      color_format: Hex
-  - name: gradient_end
-    type: color
-    label: Gradient End
-    config:
-      required: false
-      color_format: Hex
-  - name: image
-    type: text
-    config:
-      required: false
-    label: Image
-  - name: image_darken
-    type: number
-    label: Image Darken
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: '0'
-      max: '1'
-      step: '0.1'
-  - name: text_color_light
-    type: boolean
-    label: Text Colour Light
-  label: Background
 - name: advanced
   type: field_group
   config: {}

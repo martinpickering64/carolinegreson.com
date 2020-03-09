@@ -3,7 +3,7 @@ hero_media = ""
 subtitle = "Here are some examples of my Willow Sculptures and other work"
 title = "Willow Sculpture Gallery"
 [content]
-count = 0
+count = 12
 offset = 0
 order = "asc"
 page_type = ""

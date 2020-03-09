@@ -73,7 +73,7 @@ fields:
     config:
       min: '0'
       max: 
-      step: 
+      step: '1'
       required: true
   - name: order
     type: select

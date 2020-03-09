@@ -10,7 +10,7 @@ css_class = ""
 css_style = ""
 [content]
 count = 5
-offset = nil
+offset = 0
 order = "desc"
 page_type = "workshops"
 [content.filters]
@@ -26,7 +26,7 @@ color = ""
 gradient_end = ""
 gradient_start = ""
 image = ""
-image_darken = nil
+image_darken = 0
 text_color_light = true
 
 +++

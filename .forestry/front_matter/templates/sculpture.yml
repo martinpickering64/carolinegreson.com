@@ -97,5 +97,6 @@ fields:
   label: Type
   hidden: true
 pages:
+- content/gallery/deer-in-the-woods.md
 - content/gallery/foxes.md
 - content/gallery/pigs.md

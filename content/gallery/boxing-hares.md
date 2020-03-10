@@ -11,9 +11,9 @@ title = "Boxing Hares"
 type = "project"
 weight = 5
 [image]
-caption = ""
+caption = "Boxing Hares"
 focal_point = "Smart"
-name = ""
+name = "/uploads/boxing-hares-willow-sculpture.jpg"
 preview_only = false
 
 +++

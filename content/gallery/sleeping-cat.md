@@ -12,7 +12,7 @@ weight = 5
 [image]
 caption = "Sleeping Cat"
 focal_point = "Smart"
-name = ""
+name = "/uploads/sleeping-cat-willow-sculpture.jpg"
 preview_only = false
 
 +++

@@ -11,10 +11,10 @@ title = "Pair of Sheep"
 type = "project"
 weight = 5
 [image]
-caption = ""
+caption = "A pair of sheep"
 focal_point = "Smart"
-name = ""
+name = "/uploads/chelsea-sheep-willow-sculpture.jpg"
 preview_only = false
 
 +++
-Two life-size sheep enjoying a spring day.
+Two life-size sheep enjoying a spring day. Created for a commission for a Chelsea Flower Show Garden.

@@ -1,7 +1,6 @@
 +++
 commentable = false
 date = 2013-11-19T12:48:34Z
-draft = true
 editable = false
 featured = false
 share = false
@@ -13,7 +12,7 @@ weight = 5
 [image]
 caption = "Schnauzer dog"
 focal_point = "Smart"
-name = ""
+name = "/uploads/schnauzer-dog-willow-sculpture.jpg"
 preview_only = false
 
 +++

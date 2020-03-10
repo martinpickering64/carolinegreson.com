@@ -16,3 +16,4 @@ name = "/uploads/my-bottom-willow-sculpture.jpg"
 preview_only = false
 
 +++
+This sculpture was made for a themed exhibition based around Shakespeare's play. It was great to just let my imagination run riot in making this piece.

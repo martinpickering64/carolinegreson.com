@@ -16,3 +16,8 @@ name = "/uploads/ducks-willow-sculpture.jpg"
 preview_only = false
 
 +++
+Ducks are a popular subject, both for commissions and for my Willow Sculpture Workshops.
+
+As with all my sculptures I can make them to fit in your own site, its amazing the difference a slight tilt of the head can make.
+
+I often have a duck ready made in my studio so it is worth asking me if you need something quickly.

@@ -97,6 +97,7 @@ fields:
   label: Type
   hidden: true
 pages:
+- content/gallery/ariel.md
 - content/gallery/bottom.md
 - content/gallery/boxing-hares.md
 - content/gallery/deer-in-the-woods.md

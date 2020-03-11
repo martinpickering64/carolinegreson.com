@@ -15,6 +15,12 @@ exclude_past = false
 filter_default = 1
 tag = ""
 [[content.filter_button]]
+name = "Other"
+tag = "other"
+[[content.filter_button]]
+name = "Baskets"
+tag = "baskets"
+[[content.filter_button]]
 name = "All"
 tag = "*"
 [[content.filter_button]]

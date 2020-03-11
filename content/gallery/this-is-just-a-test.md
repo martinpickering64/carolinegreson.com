@@ -13,7 +13,7 @@ weight = 5
 [image]
 caption = ""
 focal_point = "Smart"
-name = ""
+name = "/uploads/birds-on-shelf-willow-sculpture.jpg"
 preview_only = false
 
 +++

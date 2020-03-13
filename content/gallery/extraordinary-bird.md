@@ -17,3 +17,5 @@ preview_only = false
 
 +++
 Made using the same technique I use in my larger sculptures, but using chair seating cane that I dip dye.
+
+What a character!

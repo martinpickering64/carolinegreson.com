@@ -4,7 +4,7 @@ date = 2020-03-13T15:53:25Z
 editable = false
 featured = false
 share = false
-summary = "A commission that was made to be a present, using a beautiful old piece of wood that the client already owned."
+summary = "A commission that was made as a present, using a beautiful old piece of wood that the client already owned."
 tags = ["birds", "wildlife"]
 title = "Woodpecker"
 type = "project"
@@ -16,4 +16,4 @@ name = "/uploads/woodpecker-willow-sculpture.jpg"
 preview_only = false
 
 +++
-A commission that was made to be a present, using a beautiful old piece of wood that the client already owned.
+A commission that was made as a present, using a beautiful old piece of wood that the client already owned.

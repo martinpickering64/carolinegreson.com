@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-10T12:32:02Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "This Vizsla was made as a commission using a fantastic photograph given to me by the client as inspiration."
 tags = ["dogs"]

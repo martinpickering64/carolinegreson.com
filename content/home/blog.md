@@ -12,7 +12,7 @@ css_style = ""
 count = 5
 offset = 0
 order = "desc"
-page_type = "workshops"
+page_type = "blog"
 [content.filters]
 category = ""
 exclude_featured = false

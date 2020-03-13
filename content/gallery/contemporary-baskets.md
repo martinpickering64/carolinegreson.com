@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-11T13:06:55Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "These willow baskets are constructed using the same technique I use in my sculptures."
 tags = ["baskets", "other"]

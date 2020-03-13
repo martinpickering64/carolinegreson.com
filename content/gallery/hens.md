@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-13T15:32:46Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "Hens make a great subject they are popular commissions and in my Willow Sculpture Workshops."
 tags = ["birds", " farm or domestic"]

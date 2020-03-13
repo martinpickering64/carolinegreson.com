@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-10T12:25:28Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "I was exhibiting at Norton Priory Walled Garden in Runcorn Cheshire and had the opportunity to photograph these three sheep in this fabulous setting."
 tags = ["farm or domestic"]

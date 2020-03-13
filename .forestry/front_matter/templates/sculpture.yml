@@ -97,6 +97,7 @@ fields:
   label: Type
   hidden: true
 pages:
+- content/gallery/archer-in-the-field.md
 - content/gallery/ariel.md
 - content/gallery/birds-on-a-shelf.md
 - content/gallery/bottom.md

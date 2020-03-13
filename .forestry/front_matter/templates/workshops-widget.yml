@@ -63,7 +63,7 @@ fields:
       min: '0'
       max: 
       step: '1'
-      required: true
+      required: false
   - name: offset
     type: number
     label: Offset
@@ -74,7 +74,7 @@ fields:
       min: '0'
       max: 
       step: '1'
-      required: true
+      required: false
   - name: order
     type: select
     default: asc

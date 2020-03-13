@@ -1,7 +1,6 @@
 +++
 commentable = false
 date = 2020-03-13T15:30:30Z
-draft = true
 editable = false
 featured = false
 share = false

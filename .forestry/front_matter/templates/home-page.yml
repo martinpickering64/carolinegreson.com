@@ -13,3 +13,5 @@ fields:
   type: boolean
   label: Headless
   default: true
+pages:
+- content/home/index.md

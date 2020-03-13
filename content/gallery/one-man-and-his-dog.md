@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-13T15:22:06Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "I love the silent conversation master and dog are having here."
 tags = ["dogs", "human"]

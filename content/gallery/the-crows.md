@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-13T15:51:06Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "I made this sculpture for an exhibition in commemoration of the centenary of the outbreak of WW1."
 tags = ["birds", "wildlife"]

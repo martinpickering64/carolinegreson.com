@@ -9,15 +9,7 @@
   {{ end }}
   {{ if not (in (slice "talk" "page" "project" "workshops" " gallery") $page.Type) }}
   <span class="article-date">
-    {{ $date := $page.Lastmod.Format site.Params.date_format }}
-    {{ if eq $page.Type "publication" }}
-    {{ $date = $page.Date.Format (site.Params.publications.date_format | default "January, 2006") }}
-    {{ else }}
-    {{ if ne $page.Params.Lastmod $page.Params.Date }}
-    {{ i18n "last_updated" }}
-    {{ end }}
-    {{ end }}
-    {{ $date }}
+    <time datetime="{{$page.Date.Format "2006-01-02" }}"><span class="fa fa-calendar-alt" aria-hidden="true"></span> {{ $page.Date.Format "Monday, 2 January 2006" }}</time>
   </span>
   {{ end }}
 

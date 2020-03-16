@@ -63,6 +63,7 @@ fields:
     name: preview_only
     label: Preview Only
 pages:
+- content/blog/2018/07/alder-hey-residency-2018.md
 - content/blog/2018/09/kelsall-hill-equestrian-centre.md
 - content/blog/2018/10/2019-workshop-dates-finalised.md
 - content/blog/2018/12/gift-cards.md

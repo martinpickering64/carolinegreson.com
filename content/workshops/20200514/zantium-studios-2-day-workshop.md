@@ -1,12 +1,12 @@
 +++
 commentable = false
 date = 2020-05-13T23:00:00Z
-deposit = nil
+deposit = 0
 editable = false
 endDate = 2020-05-14T23:00:00Z
 featured = false
-places = nil
-price = nil
+places = 0
+price = 0
 publishDate = 2020-03-16T21:30:07Z
 share = false
 subtitle = ""

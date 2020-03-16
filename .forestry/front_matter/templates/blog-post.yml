@@ -62,6 +62,7 @@ fields:
     name: preview_only
     label: Preview Only
 pages:
+- content/blog/2018/10/2019-workshop-dates-finalised.md
 - content/blog/2018/12/gift-cards.md
 - content/blog/2019/01/happy-new-year.md
 - content/blog/2019/01/willow-sculpture-course.md

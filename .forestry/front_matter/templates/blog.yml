@@ -28,7 +28,7 @@ fields:
   description: ''
   config:
     required: true
-    date_format: 
+    date_format: DD/MM/YYYY
     time_format: 
     display_utc: false
   default: now
@@ -122,7 +122,7 @@ fields:
         min: '0'
         max: '1'
         step: '0.1'
-        required: true
+        required: false
     - name: image_size
       type: select
       default: cover

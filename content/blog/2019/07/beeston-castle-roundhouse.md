@@ -17,4 +17,4 @@ The building is very nearly complete, with only the top of the roof to thatch an
 
 That won't be the end because we still have to furnish the roundhouse, a lifetime of jobs coming up. My willow skills will be called upon then I think.
 
-You can visit the roundhouse any time Beeston Castle is open (see [english-heritage.org.uk]() for details)
+You can visit the roundhouse any time Beeston Castle is open (see [english-heritage.org.uk](https://english-heritage.org.uk) for details)

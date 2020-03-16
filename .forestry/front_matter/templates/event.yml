@@ -24,32 +24,43 @@ fields:
   name: publishDate
   label: publishDate
   description: When to publish this page (choose today)
+  config:
+    date_format: DD/MM/YYYY
 - type: datetime
   name: date
   label: date
   description: Start time
+  config:
+    date_format: DD/MM/YYYY
 - type: datetime
   name: date_end
   label: date_end
   description: End time
+  config:
+    date_format: DD/MM/YYYY
 - type: boolean
   name: all_day
   label: all_day
 - type: list
   name: authors
   label: Presenters
+  hidden: true
 - type: textarea
   name: abstract
   label: abstract
+  hidden: true
 - type: text
   name: url_slides
   label: url_slides
+  hidden: true
 - type: text
   name: url_video
   label: url_video
+  hidden: true
 - type: text
   name: url_code
   label: url_code
+  hidden: true
 - type: field_group
   name: image
   label: image

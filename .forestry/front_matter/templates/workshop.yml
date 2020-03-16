@@ -26,6 +26,7 @@ fields:
   description: the date on which the workshop will be held
   config:
     required: true
+    date_format: DD/MM/YYYY
   default: ''
 - name: endDate
   type: datetime

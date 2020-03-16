@@ -24,7 +24,6 @@ sections:
   match: "**/*"
   templates:
   - blog-post
-  - blog
 - type: directory
   path: content/gallery
   label: Sculptures
@@ -32,7 +31,6 @@ sections:
   match: "**/*"
   templates:
   - sculpture
-  - sculpture-gallery
 - type: directory
   path: content/workshops
   label: Workshops
@@ -40,7 +38,6 @@ sections:
   match: "**/*"
   templates:
   - workshop
-  - workshop-list
 - type: directory
   path: content/about-me
   label: About me

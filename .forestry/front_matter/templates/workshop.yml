@@ -129,5 +129,3 @@ fields:
   type: boolean
   label: Editable
   hidden: true
-pages:
-- content/workshops/zantium-studios-2-day-workshop.md

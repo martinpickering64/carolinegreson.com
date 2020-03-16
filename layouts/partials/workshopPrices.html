@@ -2,6 +2,8 @@
 {{ if site.Params.debug_layout }}<div><i>layout: partials/workshopPrices</i></div>{{ end }}
 
 {{ $item := . }}
+{{ if $item.Params.HidePrice }}
+{{ else }}
 {{ $price := $item.Params.Price | default 75 }}
 {{ $deposit := $item.Params.Deposit | default 35 }}
 
@@ -15,4 +17,5 @@
 <p>Price: £{{$price}}</p>
 {{ else }}
 {{/* need something here? */}}
+{{ end }}
 {{ end }}

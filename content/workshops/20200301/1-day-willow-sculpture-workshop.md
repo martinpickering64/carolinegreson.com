@@ -2,6 +2,8 @@
 title: "1-day Willow Sculpture Workshop"
 date: "2020-03-01T00:00:00Z"
 endDate: ""
+hidePrice: false
+hidePlaces: false
 price: 75
 places: 2
 venue: "CPAC"

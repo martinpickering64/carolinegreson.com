@@ -2,6 +2,8 @@
 {{ if site.Params.debug_layout }}<div><i>layout: partials/workshopPlaces</i></div>{{ end }}
 
 {{ $item := . }}
+{{ if $item.Params.HidePlaces }}
+{{ else }}
 {{ $places := $item.Params.Places }}
 {{ $today := now.Format "20060102" }}
 {{ $workshopDate := $item.Date.Format "20060102" }}
@@ -18,4 +20,5 @@
 <p>This workshop is being held today!</p>
 {{ else }}
 <p>Sorry, this workshop is now over.</p>
+{{ end }}
 {{ end }}

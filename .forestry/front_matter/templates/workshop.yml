@@ -37,6 +37,9 @@ fields:
     date_format: DD/MM/YYYY
     time_format: 
     display_utc: false
+- name: hidePrices
+  type: boolean
+  label: Hide Price Display
 - type: number
   name: price
   label: Price
@@ -44,6 +47,10 @@ fields:
   config:
     min: '0.00'
     step: '1.00'
+    required: false
+  default: '75'
+  showOnly:
+    field: hidePrices
 - type: number
   name: deposit
   label: Deposit
@@ -51,6 +58,10 @@ fields:
   config:
     min: '0.00'
     step: '1.00'
+  default: '35'
+- name: hidePlaces
+  type: boolean
+  label: Hide Places
 - type: number
   name: places
   label: Places
@@ -58,6 +69,9 @@ fields:
   config:
     min: '0'
     step: '1'
+  default: '6'
+  showOnly:
+    field: hidePlaces
 - name: venue
   type: select
   default: CPAC

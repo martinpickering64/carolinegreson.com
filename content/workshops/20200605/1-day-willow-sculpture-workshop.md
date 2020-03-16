@@ -12,7 +12,7 @@ price = 75
 publishDate = 2020-03-16T22:10:39Z
 share = false
 subtitle = ""
-summary = "Workshop to learn how to make willow sculptures. You can choose what you make. This one-day workshop shows you the techniques and materials I use in my own work to create sculptures from willow. The group is kept small so you will get help when you need it."
+summary = "Workshop to learn how to make willow sculptures. You can choose what you make. This one-day workshop shows you the techniques and materials I use in my own work to create sculptures from willow."
 title = "1-day Willow Sculpture Workshop"
 venue = "CPAC"
 [image]

@@ -1,59 +1,31 @@
 ---
-title: "1-day Willow Sculpture Workshop"
-date: "2020-04-24T00:00:00Z"
-endDate: ""
+title: 1-day Willow Sculpture Workshop
+date: 2020-04-24T00:00:00Z
+endDate: 
 price: 75
-places: 0
-venue: "CPAC"
-subtitle: ""
-summary: ""
+places: 2
+venue: CPAC
+subtitle: ''
+summary: Willow Sculpture Workshop to learn how to make willow sculptures to be held
+  at Castle Park Arts Centre, Frodsham.
 authors: []
-tags: []
+tags: 
 categories: []
 featured: false
-draft: false
 share: false
 commentable: false
 editable: false
-
-
-# Schedule page publish date (NOT workshop's date).
-publishDate: "2017-01-01T00:00:00Z"
-
-# Summary. An optional shortened abstract.
-summary: "Willow Sculpture Workshop to learn how to make willow sculptures to be held at Castle Park Arts Centre, Frodsham."
-
-
-tags:
-
-featured: false
-
-links:
-#- name: Custom Link
-#  url: http://example.org
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+publishDate: 2017-01-01T00:00:00Z
+links: 
 image:
-  name: "castle-park-arts-centre.jpg"
-  caption: 'Castle Park Arts Centre, Frodsham'
-  focal_point: ""
+  name: castle-park-arts-centre.jpg
+  caption: Castle Park Arts Centre, Frodsham
+  focal_point: ''
   preview_only: false
-
-# Associated Projects (optional).
-#   Associate this workshop with one or more of your sculptures.
-#   Simply enter your sculpture's folder or file name without extension.
-#   E.g. `sandpipers` references `content/gallery/sandpipers/index.md`.
-#   Otherwise, set `projects: []`.
 projects:
 - sandpipers
+slides: ''
 
-# Slides (optional).
-#   Associate this workshop with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides: "example"` references `content/slides/example/index.md`.
-#   Otherwise, set `slides: ""`.
-slides: ""
 ---
 Workshop to learn how to make willow sculptures. 
 You can choose what you make. 

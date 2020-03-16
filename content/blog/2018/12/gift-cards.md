@@ -17,4 +17,4 @@ I can make up a gift card for any monetary value you wish. This can then be rede
 
 Just to be clear, the gift card costs you nothing, all your payment can be redeemed against a future purchase.
 
-\[/#contact\](Contact me) for more details.
+[Contact me](/#contact) for more details.

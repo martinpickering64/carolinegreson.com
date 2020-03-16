@@ -18,6 +18,8 @@ fields:
   name: date
   label: Date published
   default: now
+  config:
+    date_format: DD/MM/YYYY
 - type: boolean
   name: featured
   label: Is a featured sculpture?

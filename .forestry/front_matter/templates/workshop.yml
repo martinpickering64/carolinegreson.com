@@ -27,6 +27,7 @@ fields:
   config:
     required: true
     date_format: DD/MM/YYYY
+    time_format: h:mm A ZZ
   default: ''
 - name: endDate
   type: datetime
@@ -35,7 +36,7 @@ fields:
   config:
     required: false
     date_format: DD/MM/YYYY
-    time_format: 
+    time_format: h:mm A ZZ
     display_utc: false
 - name: hidePrices
   type: boolean

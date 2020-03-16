@@ -23,6 +23,7 @@ fields:
   label: Date
   config:
     required: true
+    date_format: DD/MM/YYYY
   default: now
 - type: field_group
   name: image

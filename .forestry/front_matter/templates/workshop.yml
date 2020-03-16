@@ -38,7 +38,7 @@ fields:
     date_format: DD/MM/YYYY
     time_format: h:mm A ZZ
     display_utc: false
-- name: hidePrices
+- name: hidePrice
   type: boolean
   label: Hide Price Display
 - type: number
@@ -60,9 +60,11 @@ fields:
     min: '0.00'
     step: '1.00'
   default: '35'
+  showOnly:
+    field: hidePrices
 - name: hidePlaces
   type: boolean
-  label: Hide Places
+  label: Hide Place Display
 - type: number
   name: places
   label: Places

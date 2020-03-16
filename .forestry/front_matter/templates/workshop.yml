@@ -51,7 +51,7 @@ fields:
     required: false
   default: '75'
   showOnly:
-    field: hidePrices
+    field: hidePrice
 - type: number
   name: deposit
   label: Deposit
@@ -61,7 +61,7 @@ fields:
     step: '1.00'
   default: '35'
   showOnly:
-    field: hidePrices
+    field: hidePrice
 - name: hidePlaces
   type: boolean
   label: Hide Place Display

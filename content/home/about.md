@@ -13,9 +13,9 @@ css_style = ""
 [design]
 columns = "1"
 [design.background]
-color = ""
-gradient_end = "#a0e6d8"
-gradient_start = "#08a284"
+color = "rgb(199, 202, 202)"
+gradient_end = ""
+gradient_start = ""
 image = ""
 image_darken = 0
 image_parallax = false

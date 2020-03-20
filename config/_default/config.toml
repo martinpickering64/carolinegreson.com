@@ -15,6 +15,8 @@ baseurl = "https://carolinegregson.com/"
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
 copyright = "&copy; {year}, Caroline Gregson."
 
+enableRobotsTXT = true
+
 ############################
 ## Advanced options below ##
 ############################

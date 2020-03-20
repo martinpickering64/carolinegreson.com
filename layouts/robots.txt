@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /404.html
+
+Sitemap: {{ "sitemap.xml" | absURL }}

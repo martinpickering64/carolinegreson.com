@@ -100,7 +100,7 @@ address = {street = "8 Andrews Close, Tarvin", city = "Chester", region = "Chesh
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "53.195288", longitude = "-2.765913"}
+coordinates = {latitude = 53.195288, longitude = -2.765913}
 
 # Directions for visitors to locate you.
 directions = ""

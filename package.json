@@ -1,0 +1,23 @@
+{
+  "name": "carolinegregson.com",
+  "version": "1.0.0",
+  "description": "carolinengregson.com website",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "firebase-tools": "^7.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinpickering64/carolinegregson.com.git"
+  },
+  "author": "Martin Pickering",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinpickering64/carolinegregson.com/issues"
+  },
+  "homepage": "https://github.com/martinpickering64/carolinegregson.com#readme"
+}

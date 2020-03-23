@@ -1,0 +1,50 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:0.58.3
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+      - run: 
+          name: install git
+          command: apk update && apk add git
+      - run:
+          name: add node and npm
+          command: apk add --update npm
+      - checkout
+      - run:
+          name: make public dir
+          command: mkdir public && ls
+      - restore_cache:
+          keys:
+            # Find a cache corresponding to this specific package-lock.json
+            - v1-npm-deps-{{ checksum "package-lock.json" }}
+            # Fallback cache to be used
+            - v1-npm-deps-
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: v1-npm-deps-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run: 
+          name: sync git submodules
+          command: git submodule sync && git submodule update --init
+      - run: 
+          name: run hugo
+          command: HUGO_ENV=production hugo -v -s ~/hugo
+          #-d $HUGO_BUILD_DIR
+      - run:
+          name: look at build
+          command: ls && ls -l public
+#      - run:
+#          name: test our generated HTML files
+#          command: |
+#            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+#            --empty-alt-ignore --disable-external
+      - deploy:
+          name: deploy to Firebase
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"

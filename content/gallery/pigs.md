@@ -8,7 +8,7 @@ summary = "Aren't pigs brilliant?! I have made many willow pigs and all have the
 tags = ["farm or domestic"]
 title = "Pigs"
 type = "project"
-weight = 5
+weight = 60
 [image]
 caption = "Pigs"
 focal_point = "Smart"

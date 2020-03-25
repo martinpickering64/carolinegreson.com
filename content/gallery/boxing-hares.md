@@ -8,7 +8,7 @@ summary = "I usually make Boxing Hares roughly lifesize, but if you want somethi
 tags = ["wildlife"]
 title = "Boxing Hares"
 type = "project"
-weight = 5
+weight = 140
 [image]
 caption = "Boxing Hares"
 focal_point = "Smart"

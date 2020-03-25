@@ -8,7 +8,7 @@ summary = "I was exhibiting at Norton Priory Walled Garden in Runcorn Cheshire a
 tags = ["farm or domestic"]
 title = "Sheep"
 type = "project"
-weight = 5
+weight = 110
 [image]
 caption = "Sheep at Norton Priory"
 focal_point = "Smart"

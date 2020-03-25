@@ -5,7 +5,7 @@ headless = true
 subtitle = ""
 title = "Caroline Gregson - Willow Sculptor"
 type = "widget_page"
-weight = 15
+weight = 16
 widget = "blank"
 [advanced]
 css_class = ""

@@ -125,7 +125,7 @@ fields:
         min: '0'
         max: 
         step: 
-        required: true
+        required: false
     label: Filters
     description: Filter by
   - name: filter_button

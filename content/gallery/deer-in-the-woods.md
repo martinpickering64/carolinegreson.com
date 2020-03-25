@@ -8,7 +8,7 @@ summary = "These two sculptures are both made from willow but the right hand one
 tags = ["wildlife"]
 title = "Deer in the woods"
 type = "project"
-weight = 5
+weight = 40
 [image]
 caption = "Deer in the woods"
 focal_point = "Smart"

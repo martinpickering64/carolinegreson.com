@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-13T15:02:02Z
 editable = false
-featured = true
+featured = false
 share = false
 summary = "This pair of hares stands about 6 feet tall! They were commissioned by a private collector and now reside in their stunning garden."
 tags = ["wildlife"]

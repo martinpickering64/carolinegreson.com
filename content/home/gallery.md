@@ -16,7 +16,7 @@ image = ""
 image_darken = 0
 text_color_light = false
 [content]
-count = 12
+count = 20
 filter_button = []
 order = "asc"
 page_type = "project"

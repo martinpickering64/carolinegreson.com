@@ -10,11 +10,10 @@ organizations:
   url: https://societyofdesignercraftsmen.org.uk/
 bio: I have loved and been inspired by the natural world since I was a child and the
   ability to work as a Willow Artist and make willow sculptures representing the essence
-  of animals, birds and other living forms now brings me great pleasure. I love to
-  represent movement and vitality in my work. My willow sculptures appear to have
-  just paused in their setting before they are ready to move on. One of the nicest
-  things anyone has said about my animal sculptures is that you can always see where
-  they are looking!
+  of animals, birds and other living forms brings me great pleasure. I love to represent
+  movement and vitality in my work. My willow sculptures appear to have just paused
+  in their setting before they are ready to move on. One of the nicest things anyone
+  has said about my animal sculptures is that you can always see where they are looking!
 interests:
 - Orienteering
 - Gardening and Forestry

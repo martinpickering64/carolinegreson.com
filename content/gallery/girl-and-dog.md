@@ -6,10 +6,10 @@ featured = true
 share = false
 subtitle = ""
 summary = "A client's granddaughter along with the family dog playing in the woods."
+tags = ["dogs", "human"]
 title = "Girl and Dog"
 type = "project"
-weight = 5
-tags = ["dogs", "human"]
+weight = 30
 [image]
 caption = "Girl and Dog"
 focal_point = "Smart"

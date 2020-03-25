@@ -8,7 +8,7 @@ summary = "These willow baskets are constructed using the same technique I use i
 tags = ["baskets", "other"]
 title = "Contemporary Baskets"
 type = "project"
-weight = 5
+weight = 130
 [image]
 caption = "Contemporary Baskets"
 focal_point = "Smart"

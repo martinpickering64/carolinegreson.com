@@ -8,7 +8,7 @@ summary = "The naturally red-coloured willow that I use when I make foxes is per
 tags = ["wildlife"]
 title = "Foxes"
 type = "project"
-weight = 5
+weight = 70
 [image]
 caption = "Foxes"
 focal_point = "Smart"

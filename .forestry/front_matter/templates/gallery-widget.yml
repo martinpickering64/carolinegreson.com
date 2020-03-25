@@ -30,6 +30,16 @@ fields:
   config:
     required: false
   label: Subtitle
+- name: weight
+  type: number
+  label: Weight
+  description: ''
+  default: '20'
+  required: true
+  config:
+    min: '0'
+    max: 
+    step: '1'
 - name: content
   type: field_group
   config: {}

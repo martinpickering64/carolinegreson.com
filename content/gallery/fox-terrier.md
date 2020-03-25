@@ -8,7 +8,7 @@ summary = "Pedigree dogs are great subjects. They have such distinct silhouettes
 tags = ["dogs"]
 title = "Fox Terrier"
 type = "project"
-weight = 5
+weight = 80
 [image]
 caption = "Fox Terrier"
 focal_point = "Smart"

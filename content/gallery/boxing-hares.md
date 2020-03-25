@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-10T12:41:12Z
 editable = false
-featured = false
+featured = true
 share = false
 summary = "I usually make Boxing Hares roughly lifesize, but if you want something bigger.. no problem."
 tags = ["wildlife"]

@@ -8,7 +8,7 @@ summary = "I can make sculptures of any breed of dog although those with distinc
 tags = ["dogs"]
 title = "Labrador and friend"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Drum and his pal"
 focal_point = "Smart"

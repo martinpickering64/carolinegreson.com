@@ -8,7 +8,7 @@ summary = "I made this sculpture for someone who just loves their hound!"
 tags = ["dogs"]
 title = "Hound"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Hound"
 focal_point = "Smart"

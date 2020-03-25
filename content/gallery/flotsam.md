@@ -8,7 +8,7 @@ summary = "Made using the same technique I use in my sculptures this basket is a
 tags = ["baskets"]
 title = "Flotsam"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Flotsam"
 focal_point = "Smart"

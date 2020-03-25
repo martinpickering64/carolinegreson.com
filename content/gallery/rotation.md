@@ -8,7 +8,7 @@ summary = "Natural and dyed centre cane with a turned wooden bowl."
 tags = ["baskets"]
 title = "Rotation"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Rotation"
 focal_point = "Smart"

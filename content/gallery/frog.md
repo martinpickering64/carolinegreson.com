@@ -8,7 +8,7 @@ summary = "Frogs are very suitable willow sculpture subjects - clear recognisabl
 tags = ["wildlife"]
 title = "Frog"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Frog"
 focal_point = "Smart"

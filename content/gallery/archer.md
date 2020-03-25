@@ -8,7 +8,7 @@ summary = "I had to include this photo of the archer in his final home - the lig
 tags = ["human"]
 title = "Archer"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Archer"
 focal_point = "Smart"

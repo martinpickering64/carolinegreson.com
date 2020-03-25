@@ -8,7 +8,7 @@ summary = "This design was inspired from a favourite book belonging to the child
 tags = ["other"]
 title = "Birth of a Dragon"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "A real, life-size Dragon!"
 focal_point = "Smart"

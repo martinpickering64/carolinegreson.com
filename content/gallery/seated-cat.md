@@ -8,7 +8,7 @@ summary = "Cats make great subjects for willow sculpture."
 tags = ["farm or domestic"]
 title = "Seated Cat"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Seated Cat"
 focal_point = "Smart"

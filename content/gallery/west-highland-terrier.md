@@ -8,7 +8,7 @@ summary = "A typical terrier, full of character, Westies make great subjects for
 tags = ["dogs"]
 title = "West Highland Terrier"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "The Westie"
 focal_point = "Smart"

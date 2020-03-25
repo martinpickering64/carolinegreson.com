@@ -8,7 +8,7 @@ summary = "Willow Sculptures of Abstract Columns set in a Cheshire meadow."
 tags = ["other"]
 title = "Abstract Columns"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Abstract Columns"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "This willow sculpture was commissioned as a present for a schnauzer o
 tags = ["dogs"]
 title = "Schnauzer dog"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Schnauzer dog"
 focal_point = "Smart"

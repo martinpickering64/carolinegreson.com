@@ -8,7 +8,7 @@ summary = "This photo was taken after the deer was installed in its new home in 
 tags = ["wildlife"]
 title = "Grazing Deer"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Grazing Deer"
 focal_point = "Smart"

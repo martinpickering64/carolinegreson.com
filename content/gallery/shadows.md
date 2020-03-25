@@ -8,7 +8,7 @@ summary = "An abstract piece that plays with light and shade."
 tags = ["other"]
 title = "Shadows"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Shadows"
 focal_point = "Smart"

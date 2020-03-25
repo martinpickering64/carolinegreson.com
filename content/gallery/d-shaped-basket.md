@@ -8,7 +8,7 @@ summary = "This is a traditional willow basket made with a leather shoulder stra
 tags = ["baskets"]
 title = "D-Shaped Basket"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "D-Shaped Basket"
 focal_point = "Smart"

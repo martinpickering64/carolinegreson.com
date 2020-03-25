@@ -8,7 +8,7 @@ summary = "I always enjoy the challenge of making something with such a sense of
 tags = ["dogs", " wildlife"]
 title = "Deer chased by a Hound"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Deer chased by a Hound"
 focal_point = "Smart"

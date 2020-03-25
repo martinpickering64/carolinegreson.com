@@ -8,7 +8,7 @@ summary = "Made using the same technique I use in my larger sculptures, but usin
 tags = ["birds"]
 title = "Extraordinary Bird"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Paradise bird"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "Cats are fabulous subjects for sculpture and I always enjoy making th
 tags = ["farm or domestic"]
 title = "Stalking Cat"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Stalking Cat"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "Made for the Cheshire Artists Network touring exhibition \"WW1 Reflec
 tags = ["baskets", "other"]
 title = "If It Has Your Name..."
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "If it has your name..."
 focal_point = "Smart"

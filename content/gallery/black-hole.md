@@ -8,7 +8,7 @@ summary = "A contemporary basket made with dyed cane and a hand-raised copper bo
 tags = ["baskets"]
 title = "Black Hole"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Black Hole"
 focal_point = "Smart"

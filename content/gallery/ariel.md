@@ -8,7 +8,7 @@ summary = "The May Ball Committee at Pembroke College, University of Cambridge c
 tags = ["human"]
 title = "Ariel"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Ariel"
 focal_point = "Smart"

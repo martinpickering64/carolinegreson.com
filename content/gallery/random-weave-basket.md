@@ -8,7 +8,7 @@ summary = "This basket was made using the same random weave technique I use in m
 tags = ["baskets"]
 title = "Random weave basket"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Random Weave"
 focal_point = "Smart"

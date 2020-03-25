@@ -8,7 +8,7 @@ summary = "This is a great example of a commission where I am asked to do someth
 tags = ["birds", "wildlife"]
 title = "Kiwi"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Kiwi"
 focal_point = "Smart"

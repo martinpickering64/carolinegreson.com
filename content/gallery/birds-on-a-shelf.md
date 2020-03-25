@@ -8,7 +8,7 @@ summary = "More of my extraordinary birds. If you know what breed then you are d
 tags = ["birds"]
 title = "Birds on a shelf"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Birds on a shelf"
 focal_point = "Smart"

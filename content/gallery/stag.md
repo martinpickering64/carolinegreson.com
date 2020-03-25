@@ -8,7 +8,7 @@ summary = "This sculpture is made entirely from willow and was commissioned by t
 tags = ["wildlife"]
 title = "Stag"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "The Glen Fiddich Stag"
 focal_point = "Smart"

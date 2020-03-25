@@ -8,7 +8,7 @@ summary = "This is such a classic cat pose, I just had to make a sculpture."
 tags = ["farm or domestic"]
 title = "Arched Cat"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Arched Cat"
 focal_point = "Smart"

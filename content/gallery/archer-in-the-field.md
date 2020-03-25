@@ -8,7 +8,7 @@ summary = "A great example of a collaboration between me and Pete Wilson at Bart
 tags = ["human"]
 title = "Archer in the field"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Archer in the field"
 focal_point = "Smart"

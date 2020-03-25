@@ -8,7 +8,7 @@ summary = "It's always a bit easier to catch a glimpse of the elusive Red Fox wh
 tags = ["wildlife"]
 title = "Fox glimpsed by the mere"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Fox glimpsed by the mere"
 focal_point = "Smart"

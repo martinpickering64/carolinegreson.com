@@ -28,7 +28,7 @@ fields:
   name: weight
   label: Weight
   description: The sort order for display in the gallery
-  default: '5'
+  default: '500'
 - name: tags
   type: tag_list
   default: []

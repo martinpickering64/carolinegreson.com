@@ -8,7 +8,7 @@ summary = "I love making these large soft shaped baskets using willow from my ow
 tags = ["baskets"]
 title = "Log Basket"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Log Basket"
 focal_point = "Smart"

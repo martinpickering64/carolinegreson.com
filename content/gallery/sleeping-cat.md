@@ -8,7 +8,7 @@ summary = "This sculpture is based on a much loved pet and was commissioned as a
 tags = ["farm or domestic"]
 title = "Sleeping Cat"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Sleeping Cat"
 focal_point = "Smart"

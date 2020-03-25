@@ -8,7 +8,7 @@ summary = "These two sheep were made for the Hospice of the Good Shepherd Garden
 tags = ["farm or domestic"]
 title = "Grazing Sheep"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Grazing sheep at RHS Tatton Park"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "This basket was made for a small Cheshire Artists Network exhibition 
 tags = ["baskets"]
 title = "Mixed-media Basket"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Mixed-media basket"
 focal_point = "Smart"

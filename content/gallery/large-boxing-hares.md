@@ -8,7 +8,7 @@ summary = "This pair of hares stands about 6 feet tall! They were commissioned b
 tags = ["wildlife"]
 title = "Large Boxing Hares"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Boxing Hares - 6' tall!"
 focal_point = "Smart"

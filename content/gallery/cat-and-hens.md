@@ -8,7 +8,7 @@ summary = "A group of small sculptures like these can make a real statement in t
 tags = ["farm or domestic", "birds"]
 title = "Cat and hens"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "A surprise encounter"
 focal_point = "Smart"

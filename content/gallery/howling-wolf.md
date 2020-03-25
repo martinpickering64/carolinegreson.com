@@ -8,7 +8,7 @@ summary = "This wolf now lives at The Wolf Conservation Trust headquarters in Be
 tags = ["wildlife"]
 title = "Howling Wolf"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Wolf"
 focal_point = "Smart"

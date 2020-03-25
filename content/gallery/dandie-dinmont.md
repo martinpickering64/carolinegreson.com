@@ -8,7 +8,7 @@ summary = "When I was asked to make a Dandie Dinmont I had to spend quite some t
 tags = ["dogs"]
 title = "Dandie Dinmont"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Dandie Dinmont"
 focal_point = "Smart"

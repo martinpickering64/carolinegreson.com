@@ -8,7 +8,7 @@ summary = "Stags prove to be one of the most popular willow sculptures I make. T
 tags = ["wildlife"]
 title = "Monarch of the Glen"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Monarch of the Glen"
 focal_point = "Smart"

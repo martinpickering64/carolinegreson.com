@@ -8,7 +8,7 @@ summary = "My tribute to a wonderful basketmaker, Kari Lonning from the USA."
 tags = ["baskets"]
 title = "Urchin"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Urchin"
 focal_point = "Smart"

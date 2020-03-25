@@ -8,7 +8,7 @@ summary = "This basket is made using a coiling technique from Pine Needles which
 tags = ["baskets"]
 title = "Pine Swirl"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "My pine swirl basket"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "This Vizsla was made as a commission using a fantastic photograph giv
 tags = ["dogs"]
 title = "Wire Haired Vizsla"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Wire Haired Vizsla"
 focal_point = "Smart"

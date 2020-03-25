@@ -8,7 +8,7 @@ summary = "Children playing and other willow sculptures on display at the RHS Ta
 tags = ["human"]
 title = "Children playing"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Children playing"
 focal_point = "Smart"

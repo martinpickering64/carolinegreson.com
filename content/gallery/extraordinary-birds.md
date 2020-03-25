@@ -8,7 +8,7 @@ summary = "These little birds are not based on any particular bird, as they are 
 tags = ["birds"]
 title = "Extraordinary Birds"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Extraordinary Birds"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "This photo was taken by one of the students at Pembroke College, Univ
 tags = ["human"]
 title = "Ariel ascending"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Ariel at Pembroke College"
 focal_point = "Smart"

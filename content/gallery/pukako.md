@@ -8,7 +8,7 @@ summary = "The Pukako is one of the most amazing birds from New Zealand."
 tags = ["birds", "wildlife"]
 title = "Pukako"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Pukako"
 focal_point = "Smart"

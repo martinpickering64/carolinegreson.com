@@ -8,7 +8,7 @@ summary = "If you have the space for more than one sculpture the resulting scene
 tags = ["wildlife"]
 title = "Deer and Fawn"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Deer and Fawn"
 focal_point = "Smart"

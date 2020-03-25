@@ -8,7 +8,7 @@ summary = "Two life-size sheep enjoying a spring day."
 tags = ["farm or domestic"]
 title = "Pair of Sheep"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "A pair of sheep"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "The willow sculpture of a seated terrier was made for a private garde
 tags = ["dogs"]
 title = "Patterdale Terrier"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Pipa the Patterdale Terrier"
 focal_point = "Smart"

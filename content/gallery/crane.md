@@ -8,7 +8,7 @@ summary = "The Crane is popular subject for my Willow Sculpture Workshops."
 tags = ["birds", "wildlife"]
 title = "Crane"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Crane"
 focal_point = "Smart"

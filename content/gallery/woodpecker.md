@@ -8,7 +8,7 @@ summary = "A commission that was made as a present, using a beautiful old piece 
 tags = ["birds", "wildlife"]
 title = "Woodpecker"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Woodpecker"
 focal_point = "Smart"

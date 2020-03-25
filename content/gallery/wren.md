@@ -8,7 +8,7 @@ summary = "This little wren sculpture is slightly bigger than life-size."
 tags = ["birds", "wildlife"]
 title = "Wren"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Wren"
 focal_point = "Smart"

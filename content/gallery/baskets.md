@@ -8,7 +8,7 @@ summary = "Although I don't make as many baskets now as I used to I know it is r
 tags = []
 title = "Baskets"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Basket collection"
 focal_point = "Smart"

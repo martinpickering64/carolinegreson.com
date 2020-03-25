@@ -8,7 +8,7 @@ summary = "This willow sculpture was made as a surprise present for someone who 
 tags = ["farm or domestic"]
 title = "Horse"
 type = "project"
-weight = 5
+weight = 500
 [image]
 caption = "Horse"
 focal_point = "Smart"

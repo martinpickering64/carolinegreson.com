@@ -8,7 +8,7 @@ summary = "This gorgeous pair were made for a North London Primary School to enh
 tags = ["wildlife"]
 title = "Giraffe and Elephant"
 type = "project"
-weight = 5
+weight = 150
 [image]
 caption = "Giraffe and Elephant"
 focal_point = "Smart"

@@ -8,7 +8,7 @@ summary = "Ducks are a popular subject, both for commissions and for my Willow S
 tags = ["birds", "farm or domestic"]
 title = "Ducks"
 type = "project"
-weight = 5
+weight = 90
 [image]
 caption = "Ducks"
 focal_point = "Smart"

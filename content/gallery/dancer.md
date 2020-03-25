@@ -8,7 +8,7 @@ summary = "I have made several dancers in a similar pose to this. Each was a dif
 tags = ["human"]
 title = "Dancer"
 type = "project"
-weight = 5
+weight = 190
 [image]
 caption = "Dancer"
 focal_point = "Smart"

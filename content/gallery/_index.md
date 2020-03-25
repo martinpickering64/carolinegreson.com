@@ -3,8 +3,8 @@ hero_media = ""
 subtitle = "Here are some examples of my Willow Sculptures and other work"
 title = "Willow Sculpture Gallery"
 [content]
-count = 0
-offset = 0
+count = nil
+offset = nil
 order = "asc"
 page_type = ""
 [content.filters]

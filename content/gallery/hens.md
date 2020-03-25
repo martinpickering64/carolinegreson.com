@@ -8,7 +8,7 @@ summary = "Hens make a great subject they are popular commissions and in my Will
 tags = ["birds", " farm or domestic"]
 title = "Hens"
 type = "project"
-weight = 5
+weight = 180
 [image]
 caption = "Hens"
 focal_point = "Smart"

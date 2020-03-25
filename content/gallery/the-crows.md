@@ -8,7 +8,7 @@ summary = "I made this sculpture for an exhibition in commemoration of the cente
 tags = ["birds", "wildlife"]
 title = "The Crows"
 type = "project"
-weight = 5
+weight = 160
 [image]
 caption = "The Crows"
 focal_point = "Smart"

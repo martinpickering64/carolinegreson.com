@@ -1,0 +1,7 @@
+{{/* paint the cancelled bit of a workshop */}}
+{{ if site.Params.debug_layout }}<div><i>layout: partials/workshopCancelled</i></div>{{ end }}
+{{ $item := . }}
+{{ if $item.Params.Cancelled }}
+{{ $cancelText := $item.Params.cancellation_text | default site.Params.cancelledWorkshop }}
+<p><strong>{{ $cancelText }}</strong></p>
+{{ end }}

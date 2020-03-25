@@ -4,8 +4,9 @@
 {{ $item := . }}
 
 <h4><time datetime="{{$item.Date.Format "2006-01-02" }}"><span class="fa fa-calendar-alt" aria-hidden="true"></span> {{ $item.Date.Format "Monday, 2 January 2006" }}</time></h4>
+{{ partial "workshopCancelled" $item }}
 {{ with $item.Summary }}
-{{ . | truncate 200 }}
+   {{ . | truncate 200 }}
 {{ end }}
 {{ partial "workshopPlaces" $item }}
 

@@ -88,7 +88,7 @@ fields:
     - name: image_darken
       type: number
       description: Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-      default: 0
+      default: '0'
       required: true
       config:
         min: '0'

@@ -2,7 +2,7 @@
 commentable = false
 date = 2020-03-13T15:57:26Z
 editable = false
-featured = true
+featured = false
 share = false
 summary = "This sculpture is made entirely from willow and was commissioned by the Glen Fiddich distillary in Scotland."
 tags = ["wildlife"]

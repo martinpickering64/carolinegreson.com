@@ -29,6 +29,11 @@ columns = "2"
 flip_alt_rows = false
 view = 3
 [design.background]
+color = ""
+gradient_end = ""
+gradient_start = ""
+image = ""
+image_darken = nil
 text_color_light = false
 
 +++

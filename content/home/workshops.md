@@ -27,7 +27,7 @@ color = ""
 gradient_end = ""
 gradient_start = ""
 image = ""
-image_darken = 0
+image_darken = nil
 text_color_light = false
 
 +++

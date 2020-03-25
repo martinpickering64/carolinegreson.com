@@ -94,7 +94,7 @@ fields:
         min: '0'
         max: '1'
         step: '0.1'
-        required: true
+        required: false
       label: Image Darken
     - name: image_size
       type: select

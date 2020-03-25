@@ -7,8 +7,8 @@ share = false
 summary = "A willow sculpture of a Hunter Horse"
 tags = ["farm or domestic"]
 title = "Hunter Horse"
-weight = 5
 type = "project"
+weight = 12
 [image]
 caption = "Monarch Hunter Horse"
 focal_point = "Smart"

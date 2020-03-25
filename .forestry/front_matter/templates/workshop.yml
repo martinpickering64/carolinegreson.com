@@ -38,6 +38,19 @@ fields:
     date_format: DD/MM/YYYY
     time_format: h:mm A ZZ
     display_utc: false
+- name: cancelled
+  type: boolean
+  label: Cancelled
+  description: Has this workshop been cancelled?
+- name: cancellation_text
+  type: text
+  config:
+    required: false
+  label: Cancellation Text
+  description: A message about the cancellation
+  showOnly:
+    field: cancelled
+    value: true
 - name: hidePrice
   type: boolean
   label: Hide Price Display

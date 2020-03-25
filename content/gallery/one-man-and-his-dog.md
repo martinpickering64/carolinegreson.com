@@ -8,7 +8,7 @@ summary = "I love the silent conversation master and dog are having here."
 tags = ["dogs", "human"]
 title = "One man and his dog"
 type = "project"
-weight = 5
+weight = 170
 [image]
 caption = "One man and his dog"
 focal_point = "Smart"

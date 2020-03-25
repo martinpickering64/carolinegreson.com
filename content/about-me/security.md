@@ -15,7 +15,7 @@ header:
   image: ''
 design:
   background:
-    image_darken: 0.2
+    image_darken: 0
     image_min_height: 500px
 
 ---

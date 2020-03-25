@@ -1,6 +1,6 @@
 ---
 name: Caroline Gregson
-date: 2014-11-15T00:00:00+01:00
+date: 2014-11-14T23:00:00.000+00:00
 featured: false
 role: Willow Sculpture Artist
 organizations:
@@ -59,7 +59,7 @@ Over time Caroline's interest moved away from the functional toward a concentrat
 
 On graduation, her work was noticed at the New Designers exhibition in London by The Society of Designer Craftsmen and she was invited to become a Licentiate Member.
 
-It wasn't long before her enthusiasm and skill in teaching was recognised and she started tutoring basketry at The University of Huddersfield's Textiles Department. This success led to further tutoring opportunities at West Cheshire College in Chester and to Caroline gaining C & G Level 4 qualifications in FE Teaching.
+It wasn't long before her enthusiasm and skill in teaching was recognised and she started tutoring basketry at The University of Huddersfield's Textiles Department. This success led to further tutoring opportunities at West Cheshire College in Chester and to Caroline gaining C&G Level 4 qualifications in FE Teaching.
 
 Caroline served for several years on the Executive Committee of The Basketmakers' Association with particular responsibility for the Association's tuition.
 

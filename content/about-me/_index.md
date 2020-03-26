@@ -36,7 +36,7 @@ social:
   link: tel:07989751469
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/tanglewaeve
+  link: https://twitter.com/tangleweave
 - icon: facebook
   icon_pack: fab
   link: https://www.facebook.com/caroline.gregson.7

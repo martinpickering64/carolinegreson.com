@@ -1,4 +1,6 @@
 +++
+cancellation_text = ""
+cancelled = false
 commentable = false
 date = 2020-07-03T09:00:00Z
 deposit = 35
@@ -7,7 +9,7 @@ endDate = ""
 featured = false
 hidePlaces = false
 hidePrice = false
-places = 6
+places = 5
 price = 75
 publishDate = 2020-03-16T22:19:52Z
 share = false

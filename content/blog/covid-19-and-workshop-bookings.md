@@ -1,6 +1,5 @@
 +++
 date = 2020-03-26T13:26:15Z
-draft = true
 featured = false
 subtitle = ""
 summary = "What are my plans?"

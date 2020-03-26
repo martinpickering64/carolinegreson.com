@@ -1,11 +1,11 @@
 ---
 title: 1-day Willow Sculpture Workshop
-date: 2020-04-24T00:00:00Z
+date: 2020-04-24T00:00:00.000+00:00
 endDate: 
 hidePrice: false
 hidePlaces: false
 price: 75
-places: 2
+places: 0
 venue: CPAC
 subtitle: ''
 summary: Willow Sculpture Workshop to learn how to make willow sculptures to be held
@@ -17,7 +17,7 @@ featured: false
 share: false
 commentable: false
 editable: false
-publishDate: 2017-01-01T00:00:00Z
+publishDate: 2017-01-01T00:00:00.000+00:00
 links: 
 image:
   name: castle-park-arts-centre.jpg

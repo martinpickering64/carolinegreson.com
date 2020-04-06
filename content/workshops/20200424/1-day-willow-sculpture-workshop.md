@@ -7,7 +7,7 @@ hidePlaces: false
 price: 75
 places: 0
 venue: CPAC
-subtitle: ''
+subtitle: CANCELLED due to Covid-19 restrictions
 summary: Willow Sculpture Workshop to learn how to make willow sculptures to be held
   at Castle Park Arts Centre, Frodsham.
 authors: []

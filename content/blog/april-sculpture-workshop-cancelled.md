@@ -1,6 +1,5 @@
 +++
 date = 2020-04-06T09:16:33Z
-draft = true
 featured = false
 subtitle = "CANCELLED due to Covid-19 restrictions"
 summary = "Sorry but I have had to cancel my sculpture workshop on 24/04/2020"

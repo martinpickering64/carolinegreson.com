@@ -11,7 +11,7 @@ title = "Time to read"
 type = "project"
 weight = 499
 [image]
-caption = ""
+caption = "Man reading a book"
 focal_point = "Smart"
 name = "/uploads/IMG_5213.JPG"
 preview_only = false

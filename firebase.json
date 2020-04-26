@@ -38,6 +38,6 @@
         ]
       }
     ],
-    "trailingSlash": false
+    "trailingSlash": true
   }
 }

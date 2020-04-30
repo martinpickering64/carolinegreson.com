@@ -1,6 +1,5 @@
 +++
 date = 2020-04-30T13:46:53Z
-draft = true
 featured = false
 subtitle = "but the garden is looking great!"
 summary = "Life under lockdown for a willow sculptor"

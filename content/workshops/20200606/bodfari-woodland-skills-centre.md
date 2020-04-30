@@ -1,4 +1,6 @@
 +++
+cancellation_text = "In the light of Government Advice concerning Covid-19, this workshop has been cancelled."
+cancelled = true
 commentable = false
 date = 2020-06-06T09:00:00Z
 deposit = 35

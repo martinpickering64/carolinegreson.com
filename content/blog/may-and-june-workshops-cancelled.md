@@ -11,3 +11,4 @@ name = ""
 preview_only = false
 
 +++
+Sorry, but I suspect it will come as no surprise to anyone, but my workshops at Zantium Studios, The Woodland Skills Centre and at Castle Park Arts Centre in May and June are all cancelled. If anyone has any questions or concerns then please don't hesitate to contact me.

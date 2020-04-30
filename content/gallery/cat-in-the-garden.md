@@ -8,7 +8,7 @@ summary = "A willow sculpture of a cat "
 tags = []
 title = "Cat in the garden"
 type = "project"
-weight = 1
+weight = 20
 [image]
 caption = "Cat in the garden"
 focal_point = "Smart"

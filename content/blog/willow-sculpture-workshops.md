@@ -1,6 +1,5 @@
 +++
 date = 2020-07-22T10:04:49Z
-draft = true
 featured = false
 subtitle = "plans for the rest of 2020"
 summary = "I will be running willow sculpture workshops starting in September."

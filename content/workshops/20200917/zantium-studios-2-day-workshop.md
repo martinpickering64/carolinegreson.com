@@ -1,12 +1,14 @@
 +++
+cancellation_text = "In the light of Government Advice concerning Covid-19, this workshop has been cancelled."
+cancelled = true
 commentable = false
 date = 2020-09-17T23:00:00Z
 deposit = 0
 editable = false
 endDate = 2020-09-18T23:00:00Z
 featured = false
-hidePrice = true
 hidePlaces = true
+hidePrice = true
 places = 0
 price = 0
 publishDate = 2020-03-16T21:30:07Z

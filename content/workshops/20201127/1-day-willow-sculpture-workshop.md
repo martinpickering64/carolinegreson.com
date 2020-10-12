@@ -7,7 +7,7 @@ endDate = ""
 featured = false
 hidePlaces = false
 hidePrice = false
-places = 4
+places = 2
 price = 75
 publishDate = 2020-03-16T22:21:41Z
 share = false
@@ -24,7 +24,7 @@ preview_only = false
 +++
 **Covid-19 Additional information:**
 
-_I have limited student numbers for this workshop to a maximum of 4 people, so social distancing can be maintained, and I will ask that students do not attend if they are feeling at all unwell or have been asked to isolate. It will be possible to run the workshop from my home studio in Tarvin in the event of the Arts Centre being unavailable, using both studio space and a gazebo covered lawn. You should bring your own refreshments/lunch. In the event of necessary late cancellation due to movement restrictions, all reservations can be either refunded or moved to a later date. Please contact me if you have any questions._
+_I will be running this workshop from my studio in the garden of my home in Tarvin, using both studio space and a gazebo covered outdoor area. I have limited student numbers for this workshop to a maximum of 2 people, so social distancing can be maintained, and I will ask that students do not attend if they are feeling at all unwell or have been asked to isolate. Face coverings should be worn while moving around and I will wear a mask and visor and use hand sanitizer if it is necessary to touch your sculpture. You should bring your own refreshments/lunch. In the event of necessary late cancellation due to movement restrictions, all reservations can be either refunded or moved to a later date. Please contact me if you have any questions._
 
 Workshop to learn how to make willow sculptures. You can choose what you make. This one-day workshop shows you the techniques and materials I use in my own work to create sculptures from willow. The group is kept small so you will get help when you need it.
 

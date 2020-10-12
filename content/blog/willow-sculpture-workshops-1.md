@@ -1,6 +1,5 @@
 +++
 date = 2020-10-12T14:31:58Z
-draft = true
 featured = false
 subtitle = "Flexible workshop bookings"
 summary = "I am happy to teach small groups or individuals at my home studio."

@@ -16,7 +16,7 @@ publishDate = 2020-11-23T11:31:34Z
 share = false
 subtitle = ""
 summary = "Caroline will again be teaching her popular 2-day workshops at Zantium Studios near Wirksworth, Derbyshire."
-title = "Zantium Studios 2-day Workshop-(copy)"
+title = "Zantium Studios 2-day Workshop"
 venue = "ZANTIUM"
 [image]
 caption = ""

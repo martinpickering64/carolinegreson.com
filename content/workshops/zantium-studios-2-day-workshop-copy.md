@@ -2,11 +2,11 @@
 cancellation_text = ""
 cancelled = false
 commentable = false
-date = 2021-09-16T09:00:00Z
+date = 2021-06-17T09:00:00Z
 deposit = 35
 draft = true
 editable = false
-endDate = 2021-09-17T15:00:00Z
+endDate = 2021-06-18T15:00:00Z
 featured = false
 hidePlaces = true
 hidePrice = true
@@ -25,7 +25,7 @@ name = "/uploads/zantium-studios.jpg"
 preview_only = false
 
 +++
-Caroline will again be teaching her popular 2-day workshops at Zantium Studios near Wirksworth, Derbyshire on 16th and 17th September 2021.
+Caroline will again be teaching her popular 2-day workshops at Zantium Studios near Wirksworth, Derbyshire on 17th and 18th June 2021.
 
 With having a full 2 days, we have the opportunity to make bigger sculptures, deer or sheep are always popular but other animals are also possible. Caroline will always try and help you create what you want.
 

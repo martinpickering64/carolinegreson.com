@@ -2,11 +2,11 @@
 cancellation_text = ""
 cancelled = false
 commentable = false
-date = 2021-05-13T23:00:00Z
+date = 2021-05-13T09:00:00Z
 deposit = 35
 draft = true
 editable = false
-endDate = 2021-05-13T23:00:00Z
+endDate = 2021-05-14T15:00:00Z
 featured = false
 hidePlaces = true
 hidePrice = true

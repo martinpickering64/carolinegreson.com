@@ -1,6 +1,5 @@
 +++
 date = 2021-02-17T16:06:33Z
-draft = true
 featured = false
 subtitle = "What are my plans?"
 summary = "These are difficult times for us all. I am unable to run my workshops at the present time but I can't wait for things to change and to get back into the teaching environment."

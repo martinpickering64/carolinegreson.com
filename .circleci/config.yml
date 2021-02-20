@@ -23,6 +23,9 @@ jobs:
       - run:
           name: make public dir
           command: mkdir public && ls
+      - run:
+          name: chmod
+          command: sudo chmod 777 /root/hugo/node_modules
       - restore_cache:
           keys:
             # Find a cache corresponding to this specific package-lock.json

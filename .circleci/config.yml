@@ -12,13 +12,13 @@ jobs:
           command: apt update 
       - run: 
           name: install git
-          command: apt install git-all
+          command: apt-get install -y git-all
       - run:
           name: add node 
-          command: apt install nodejs 
+          command: apt-get install -y nodejs 
       - run:
           name: add npm
-          command: apt install npm
+          command: apt-get install -y npm
       - checkout
       - run:
           name: make public dir

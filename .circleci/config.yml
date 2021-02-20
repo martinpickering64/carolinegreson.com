@@ -7,9 +7,9 @@ jobs:
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
-      - run: 
-          name: apt update
-          command: apt update 
+#      - run: 
+#          name: apt update
+#          command: apt update 
       - run: 
           name: install git
           command: apt-get install -y git-all

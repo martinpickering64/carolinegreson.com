@@ -2,23 +2,23 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.60
+      - image: cibuilds/hugo:0.80
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
       - run: 
           name: apt update
-          command: apt update 
+          command: sudo apt update 
       - run: 
           name: install git
-          command: apt-get install -y git-all
+          command: sudo apt-get install -y git
       - run:
           name: add node 
-          command: apt-get install -y nodejs 
+          command: sudo apt-get install -y nodejs 
       - run:
           name: add npm
-          command: apt-get install -y npm
+          command: sudo apt-get install -y npm
       - checkout
       - run:
           name: make public dir

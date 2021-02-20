@@ -28,7 +28,7 @@ jobs:
             # Find a cache corresponding to this specific package-lock.json
             - 'v1-npm-deps-{{ checksum "package-lock.json" }}-{{ arch}}'
             # Fallback cache to be used
-            - v1-npm-deps-
+            #- v1-npm-deps-
       - run:
           name: Install Dependencies
           command: npm install

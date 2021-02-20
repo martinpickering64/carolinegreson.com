@@ -9,16 +9,16 @@ jobs:
     steps:
       - run: 
           name: apt update
-          command: sudo apt update 
+          command: apt update 
       - run: 
           name: install git
-          command: sudo apt-get install -y git-all
+          command: apt-get install -y git-all
       - run:
           name: add node 
-          command: sudo apt-get install -y nodejs 
+          command: apt-get install -y nodejs 
       - run:
           name: add npm
-          command: sudo apt-get install -y npm
+          command: apt-get install -y npm
       - checkout
       - run:
           name: make public dir

@@ -2,14 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.80
+      - image: cibuilds/hugo:0.60
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
-#      - run: 
-#          name: apt update
-#          command: apt update 
+      - run: 
+          name: apt update
+          command: apt update 
       - run: 
           name: install git
           command: apt-get install -y git-all

@@ -8,11 +8,17 @@ jobs:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
       - run: 
+          name: apt update
+          command: apt update 
+      - run: 
           name: install git
-          command: apt update && apt-get install git-all
+          command: apt install git-all
       - run:
-          name: add node and npm
-          command: apt install nodejs && apt install npm
+          name: add node 
+          command: apt install nodejs 
+      - run:
+          name: add npm
+          command: apt install npm
       - checkout
       - run:
           name: make public dir

@@ -1,6 +1,6 @@
 +++
-cancellation_text = ""
-cancelled = false
+cancellation_text = "In the light of Government Ruling concerning Covid-19, this workshop has been cancelled."
+cancelled = true
 commentable = false
 date = 2021-06-17T09:00:00Z
 deposit = 35

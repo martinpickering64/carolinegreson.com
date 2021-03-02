@@ -10,7 +10,7 @@ css_class = ""
 css_style = ""
 [content]
 count = 3
-offset = nil
+offset = 0
 order = "asc"
 page_type = "workshops"
 [content.filters]

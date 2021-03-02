@@ -8,7 +8,7 @@ summary = "Willow sculptures depicting the children of the family"
 tags = []
 title = "Ring-a-roses"
 type = "project"
-weight = 1
+weight = 2
 [image]
 caption = ""
 focal_point = "Smart"

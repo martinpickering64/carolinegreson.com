@@ -12,7 +12,7 @@ weight = 1
 [image]
 caption = ""
 focal_point = "Smart"
-name = "/uploads/y.JPG"
+name = "/uploads/p1030552.JPG"
 preview_only = false
 
 +++

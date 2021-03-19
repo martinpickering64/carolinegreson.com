@@ -16,7 +16,7 @@ Caroline will be teaching her popular 2 day willow sculpture workshop at Bodfari
 
 We will be working outside with beautiful views of the hills and woodland and have access to a large airy space undercover should the elements be unkind.
 
-We are looking forward to welcoming you back after this long challenging time and Caroline is looking forward to sharing her skills and knowledge of willow once again. Roll on May!
+We are looking forward to welcoming you back after this long challenging time and Caroline can't wait to be able to share her skills and knowledge of willow once again. Roll on May!
 
 Further details in the Workshops page of the website.
 

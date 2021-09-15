@@ -160,6 +160,7 @@ fields:
   label: Editable
   hidden: true
 pages:
+- content/workshops/2-day-willow-sculpture-workshop.md
 - content/workshops/20200514/zantium-studios-2-day-workshop.md
 - content/workshops/20200605/1-day-willow-sculpture-workshop.md
 - content/workshops/20200606/bodfari-woodland-skills-centre.md
@@ -171,6 +172,7 @@ pages:
 - content/workshops/20211119/1-day-willow-sculpture-workshop.md
 - content/workshops/2022/20220522/bodfari-woodland-skills-centre.md
 - content/workshops/2022/20220701/zantium-studios-2-day-workshop.md
+- content/workshops/20220218/1-day-willow-sculpture-workshop.md
 - content/workshops/20220318/1-day-willow-sculpture-workshop.md
 - content/workshops/bodfari-woodland-skills-centre.md
 - content/workshops/zantium-studios-2-day-workshop-copy.md

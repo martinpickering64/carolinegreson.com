@@ -49,7 +49,7 @@ caption = "Why not learn how to create your own willow sculptures?"
 placement = 3
 
 +++
-<p class="lead">I run my own Willow Sculpture Workshops and Basketry Workshops from time to time to assist those who are interested in exploring working with Willow to create their own Sculptures and Baskets.</p>
+<p class="lead">I regularly run my own Willow Sculpture Workshops and Basketry Workshops to assist those who are interested in exploring working with Willow to create their own Sculptures and Baskets.</p>
 
 My workshops are quite informal and are structured around the needs and
 interests of those who attend. You won't be limited to making something

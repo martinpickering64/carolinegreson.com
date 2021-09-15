@@ -9,9 +9,9 @@ subtitle = "Why not learn how to create your own willow sculptures?"
 summary = ""
 title = "Willow Sculpture Workshops"
 [content]
-count = nil
+count = 0
 filter_button = []
-offset = nil
+offset = 0
 order = "asc"
 [content.filters]
 category = ""
@@ -35,7 +35,7 @@ color = ""
 gradient_end = ""
 gradient_start = ""
 image = "zantium-workshop.jpg"
-image_darken = nil
+image_darken = 0
 image_min_height = "500px"
 image_parallax = false
 image_position = "center"

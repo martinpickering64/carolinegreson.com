@@ -1,6 +1,5 @@
 +++
 date = 2021-09-27T09:58:41Z
-draft = true
 featured = false
 subtitle = ""
 summary = "New December workshop released"

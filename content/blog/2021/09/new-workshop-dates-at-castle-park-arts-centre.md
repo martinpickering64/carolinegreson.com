@@ -18,3 +18,5 @@ The new dates for the first few of my 1-day Willow Sculpture Workshops are now i
 The room we use is well ventilated, with an outside door we will leave open and opening skylights along the length of the room. There is plenty of space to work in a socially distanced way.
 
 Contact me if you have any questions or would like to reserve a place.
+
+Update: Places are starting to fill so don't delay if you would like to come along.

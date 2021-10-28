@@ -4,6 +4,14 @@
 # This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
+# timeout value for Hugo's Page Builder.
+# From the Hugo docs...
+# Timeout for generating page contents, in milliseconds (defaults to 10 seconds). 
+# Note: this is used to bail out of recursive content generation, if your pages are slow to generate 
+# (e.g., because they require large image processing or depend on remote contents) you might 
+# need to raise this limit.
+timeout = 60000
+
 # Title of your site
 title = "Caroline Gregson"
 

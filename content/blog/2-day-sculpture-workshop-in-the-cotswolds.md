@@ -1,9 +1,8 @@
 +++
 date = 2022-04-28T10:14:37Z
-draft = true
 featured = false
 subtitle = "Willow Sculpture at Starlight Cottage"
-summary = ""
+summary = "Caroline will be teaching 2 days of Willow Sculpture on 9th and 10th August"
 title = "2 day Sculpture Workshop in the Cotswolds"
 [image]
 caption = "Shepherds Hut at Starlight Cottage"

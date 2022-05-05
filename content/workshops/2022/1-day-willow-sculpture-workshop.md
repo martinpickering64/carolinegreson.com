@@ -4,7 +4,6 @@ cancelled = false
 commentable = false
 date = 2022-07-15T21:00:00Z
 deposit = 40
-draft = true
 editable = false
 endDate = ""
 featured = false
@@ -15,7 +14,7 @@ price = 80
 publishDate = 2022-05-05T11:07:44Z
 share = false
 subtitle = ""
-summary = ""
+summary = "Willow Sculpture Workshop to learn how to make willow sculptures to be held at Castle Park Arts Centre, Frodsham."
 title = "1-day Willow Sculpture Workshop"
 venue = "CPAC"
 [image]

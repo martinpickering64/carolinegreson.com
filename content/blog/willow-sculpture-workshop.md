@@ -16,3 +16,5 @@ I have been running Willow Sculpture Workshops at various new venues over the la
 I never invite more then 6 people to attend and don't dictate what people make, so as long as it is achievable in the day I am up for a challenge. We can decide after the first hour whether we need to be a little less ambitious in order to finish but it is rare that we ever have to change plan. If you would like to discuss ideas before hand please feel free to contact me.
 
 Castle Park Arts Centre is easily accessible by car, bus or train, contact me for more details.
+
+I will be teaching there on Fri 23rd September, Fri 18th November and Fri 2nd December 2022. Email me if you would like to book a place.

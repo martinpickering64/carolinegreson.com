@@ -15,7 +15,7 @@ publishDate = 2022-11-15T12:35:27Z
 share = false
 subtitle = ""
 summary = "Caroline will again be teaching a 2-day Willow Sculpture Workshop at The Woodland Skills Centre at Bodfari, Denbighshire.  This is a beautiful venue overlooking the Clwydian mountains with its own campsite if you fancy staying over.  The workshop will take place over the weekend of 12th/13th September 2020. Ideal for tackling a bigger sculpture such as deer, sheep or a small flock of birds. For further details and booking go to www.woodlandskillscentre.co.uk."
-title = "Woodland Skills Centre"
+title = "Bodfari Woodland Skills Centre"
 venue = "BODFARI"
 [image]
 caption = ""

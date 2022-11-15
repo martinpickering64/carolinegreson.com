@@ -16,7 +16,7 @@ publishDate = 2022-11-15T12:06:18Z
 share = false
 subtitle = ""
 summary = "Willow Sculpture Workshop to learn how to make willow sculptures to be held at Castle Park Arts Centre, Frodsham."
-title = "1- Day Willow Sculpture Workshop"
+title = "1-day Willow Sculpture Workshop"
 venue = "CPAC"
 [image]
 caption = ""

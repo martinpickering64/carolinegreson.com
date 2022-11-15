@@ -4,7 +4,6 @@ cancelled = false
 commentable = false
 date = 2023-03-24T10:00:00Z
 deposit = 45
-draft = true
 editable = false
 endDate = ""
 featured = false

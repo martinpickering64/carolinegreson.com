@@ -1,6 +1,6 @@
 +++
-cancellation_text = ""
-cancelled = false
+cancellation_text = "Sorry due to circumstances beyond my control this workshop has been cancelled. "
+cancelled = true
 commentable = false
 date = 2022-12-02T10:00:00Z
 deposit = 45

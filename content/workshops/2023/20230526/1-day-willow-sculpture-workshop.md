@@ -1,6 +1,6 @@
 +++
-cancellation_text = ""
-cancelled = false
+cancellation_text = "This workshop has been moved to Friday 19th May. Sorry for any inconvenience caused."
+cancelled = true
 commentable = false
 date = 2023-05-26T09:00:00Z
 deposit = 40

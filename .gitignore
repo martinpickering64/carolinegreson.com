@@ -73,3 +73,5 @@ public
 resources/_gen/
 
 .firebase/
+
+node_modules

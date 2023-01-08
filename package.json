@@ -3,7 +3,10 @@
   "version": "2.0.0",
   "description": "carolinengregson.com website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@tinacms/cli": "^1.0.5",
+    "tinacms": "^1.1.2"
+  },
   "devDependencies": {
     "firebase-tools": "^10.1.0"
   },

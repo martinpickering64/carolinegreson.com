@@ -1,13 +1,14 @@
 ---
 title: Privacy Policy
-subtitle: I INTEND TO RELY ON THE TERMS SET OUT HERE. TO PROTECT YOUR OWN INTERESTS
+subtitle: >-
+  I INTEND TO RELY ON THE TERMS SET OUT HERE. TO PROTECT YOUR OWN INTERESTS
   PLEASE READ THIS DOCUMENT CAREFULLY.
 summary: ''
 authors: []
 tags: []
 categories: []
 featured: false
-date: 2014-11-14T23:00:00.000+00:00
+date: '2014-11-14T23:00:00.000Z'
 share: false
 commentable: false
 editable: false
@@ -20,6 +21,7 @@ design:
     image_min_height: 500px
 _template: page
 ---
+
 The following provides details about my Privacy and Cookie Policy.
 
 In short, I treat your privacy seriously and I use the personal information that I collect from you in accordance with this Privacy and Cookie Policy.

@@ -1602,13 +1602,183 @@ export default defineConfig({
         path: "content/schools",
         fields: [
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
+            name: "title",
+            label: "Title",
+            type: "string",
+            isTitle: true,
+            required: true,
           },
-        ],
+          {
+            name: "subtitle",
+            label: "Sub-Title",
+            type: "string",
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            name: "summary",
+            label: "Summary",
+            type: "string",
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            name: "featured",
+            label: "Featured",
+            type: "boolean"
+          },
+          {
+            name: "date",
+            label: "Date",
+            type: "datetime",
+            required: true,
+            ui: {
+              dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+            }
+          },
+          {
+            name: "authors",
+            label: "Authors",
+            type: "string",
+            list: true,
+          },
+          {
+            name: "categories",
+            label: "Categories",
+            type: "string",
+            list: true
+          },
+          {
+            name: "tags",
+            label: "Tags",
+            type: "string",
+            list: true
+          },
+          {
+            name: "share",
+            label: "Share",
+            type: "boolean"
+          },
+          {
+            name: "commentable",
+            label: "Commentable",
+            type: "boolean"
+          },
+          {
+            name: "editable",
+            label: "Editable",
+            type: "boolean"
+          },
+          {
+            name: "header",
+            label: "Header",
+            type: "object",
+            fields: [
+              {
+                name: "caption",
+                label: "Caption",
+                type: "string"
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "design",
+            label: "Design",
+            type: "object",
+            fields: [
+              {
+                name: "background",
+                label: "Background",
+                type: "object",
+                fields: [
+                  {
+                    name: "image",
+                    label: "Image",
+                    type: "string"
+                  },
+                  {
+                    name: "image_darken",
+                    label: "Image Darken",
+                    type: "number",
+                    description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                  },
+                  {
+                    name: "image_size",
+                    label: "Image Size",
+                    type: "string",
+                    options: [
+                      {
+                        value: "cover"
+                      },
+                      {
+                        value: "contain"
+                      },
+                      {
+                        value: "actual"
+                      }
+                    ]
+                  },
+                  {
+                    name: "image_position",
+                    label: "Image Position",
+                    type: "string",
+                    options: [
+                      {
+                        value: "left"
+                      },
+                      {
+                        value: "center"
+                      },
+                      {
+                        value: "right"
+                      }
+                    ]
+                  },
+                  {
+                    name: "image_parallax",
+                    label: "Image Parallax",
+                    type: "boolean"
+                  },
+                  { 
+                    name: "image_min_height",
+                    label: "Image Minumum Height",
+                    type: "string"
+                  },
+                  {
+                    name: "text_color_light",
+                    label: "Text Colour Light",
+                    type: "boolean"
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            name: "cta_note",
+            label: "CTA Note",
+            type: "object",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                type: "string"
+              }
+            ]
+          },
+          {
+            label: "Body",
+            name: "body",
+            isBody: true,
+            type: "rich-text"
+          }
+        ]
       },
       {// Pages Collection
         label: "Pages",

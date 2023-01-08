@@ -1,21 +1,22 @@
-+++
-commentable = false
-date = 2014-02-12T18:47:33Z
-editable = false
-featured = true
-share = false
-summary = "Aren't pigs brilliant?! I have made many willow pigs and all have their own individuality, just like the real thing."
-tags = ["farm or domestic"]
-title = "Pigs"
-type = "project"
-weight = 60
-[image]
-caption = "Pigs"
-focal_point = "Smart"
-name = "/uploads/pigs-willow-sculpture.jpg"
-preview_only = false
+---
+commentable: false
+date: 2014-02-12T18:47:33Z
+editable: false
+featured: true
+share: false
+summary: "Aren't pigs brilliant?! I have made many willow pigs and all have their own individuality, just like the real thing."
+tags: ["farm or domestic"]
+title: "Pigs"
+type: "project"
+weight: 60
+image: 
+    caption: "Pigs"
+    focal_point: "Smart"
+    name: "/uploads/pigs-willow-sculpture.jpg"
+    preview_only: false
+_template: sculpture
 
-+++
+---
 Aren't pigs brilliant?!
 
 I have made many willow pigs and all have their own individuality, just like the real thing.

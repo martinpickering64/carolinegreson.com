@@ -1,21 +1,22 @@
-+++
-commentable = false
-date = 2020-03-13T14:47:27Z
-editable = false
-featured = false
-share = false
-summary = "Stags prove to be one of the most popular willow sculptures I make. They look fantastic in the garden and create an impressive focal point to any situation."
-tags = ["wildlife"]
-title = "Monarch of the Glen"
-type = "project"
-weight = 500
-[image]
-caption = "Monarch of the Glen"
-focal_point = "Smart"
-name = "/uploads/stag-willow-sculpture.jpg"
-preview_only = false
+---
+commentable: false
+date: 2020-03-13T14:47:27Z
+editable: false
+featured: false
+share: false
+summary: "Stags prove to be one of the most popular willow sculptures I make. They look fantastic in the garden and create an impressive focal point to any situation."
+tags: ["wildlife"]
+title: "Monarch of the Glen"
+type: "project"
+weight: 500
+image: 
+    caption: "Monarch of the Glen"
+    focal_point: "Smart"
+    name: "/uploads/stag-willow-sculpture.jpg"
+    preview_only: false
+_template: sculpture
 
-+++
+---
 Stags prove to be one of the most popular willow sculptures I make. They look fantastic in the garden and create an impressive focal point to any situation.
 
 I can make the stag to fit your site so don't worry if this example wont work for you.

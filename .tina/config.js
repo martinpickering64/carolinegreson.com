@@ -19,6 +19,932 @@ export default defineConfig({
   },
   schema: {
     collections: [
+      {// Blog Posts Collection
+        label: "Blog posts",
+        name: "blog_posts",
+        path: "content/blog",
+        format: "md",
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body of Document",
+            description: "This is the markdown body",
+            isBody: true,
+          },
+        ],
+      },
+      {// Sculptures Collection
+        label: "Sculptures",
+        name: "sculptures",
+        path: "content/gallery",
+        format: "md",
+        templates: [
+          {// gallery index page
+            name: "index_page",
+            label: "Index Page",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                }
+              },
+              {
+                name: "hero_media",
+                label: "Hero Media",
+                type: "string"
+              },
+              {
+                name: "content",
+                label: "Content",
+                type: "object",
+                fields: [
+                  {
+                    name: "count",
+                    label: "Count",
+                    type: "number"
+                  },
+                  {
+                    name: "offset",
+                    label: "Offset",
+                    type: "number"
+                  },
+                  {
+                    name: "order",
+                    Label: "Order",
+                    type: "string",
+                    options: [
+                      {
+                        value: "asc",
+                        label: "Ascending"
+                      },
+                      {
+                        value: "desc",
+                        label: "Descending"
+                      }
+                    ]
+                  },
+                  {
+                    name: "page_type",
+                    label: "Page Type",
+                    type: "string"
+                  },
+                  {
+                    name: "filter_button",
+                    label: "Filter Button",
+                    type: "object",
+                    list: true,
+                    fields: [
+                      {
+                        name: "name",
+                        label: "Name",
+                        type: "string",
+                        required: true
+                      },
+                      {
+                        name: "tag",
+                        label: "Tag",
+                        type: "string",
+                        required: true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: "cta",
+                label: "Call to Action",
+                type: "object",
+                fields: [
+                  {
+                    name: "url",
+                    label: "URL",
+                    type: "string"
+                  },
+                  {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                  },
+                  {
+                    name: "icon_pack",
+                    label: "Icon Pack",
+                    type: "string",
+                    options: [
+                      {
+                        value: "fa"
+                      },
+                      {
+                        value: "fas"
+                      },
+                      {
+                        value: "fab"
+                      },
+                      {
+                        value: "ai"
+                      }
+                    ]
+                  },
+                  {
+                    name: "icon",
+                    label: "Icon",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "cta_alt",
+                label: "CTA ALT",
+                type: "object",
+                fields: [
+                  {
+                    name: "url",
+                    label: "URL",
+                    type: "string"
+                  },
+                  {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "cta_note",
+                label: "CTA Note",
+                type: "object",
+                fields: [
+                  {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "design",
+                label: "Design",
+                type: "object",
+                fields: [
+                  {
+                    name: "view",
+                    label: "View",
+                    type: "number"
+                  },
+                  {
+                    name: "background",
+                    label: "Background",
+                    type: "object",
+                    fields: [
+                      {
+                        name: "color",
+                        label: "Colour",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      {
+                        name: "gradient_start",
+                        label: "Gradient Start",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      {
+                        name: "gradient_end",
+                        label: "Gradient End",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      {
+                        name: "image",
+                        label: "Image",
+                        type: "string"
+                      },
+                      {
+                        name: "image_darken",
+                        label: "Image Darken",
+                        type: "number",
+                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                      },
+                      {
+                        name: "image_size",
+                        label: "Image Size",
+                        type: "string",
+                        options: [
+                          {
+                            value: "cover"
+                          },
+                          {
+                            value: "contain"
+                          },
+                          {
+                            value: "actual"
+                          }
+                        ]
+                      },
+                      {
+                        name: "image_position",
+                        label: "Image Position",
+                        type: "string",
+                        options: [
+                          {
+                            value: "left"
+                          },
+                          {
+                            value: "center"
+                          },
+                          {
+                            value: "right"
+                          }
+                        ]
+                      },
+                      {
+                        name: "image_parallax",
+                        label: "Image Parallax",
+                        type: "boolean"
+                      },
+                      {
+                        name: "image_min_height",
+                        label: "Image Min Height",
+                        type: "string"
+                      },
+                      {
+                        name: "text_color_light",
+                        label: "Text Colour Light",
+                        type: "boolean"
+                      }
+                    ]
+                  },
+                ]
+              },
+              {
+                name: "header",
+                label: "Header",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string",
+                  },
+                  {
+                    name: "image",
+                    label: "Image",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string",
+                    required: true
+                  },
+                  {
+                    name: "placement",
+                    label: "Placement",
+                    type: "number"
+                  }
+                ]
+              },
+              {
+                label: "Body",
+                name: "body",
+                isBody: true,
+                type: "rich-text"
+              }
+            ]
+          },
+          {// sculpture page
+            name: "sculpture",
+            label: "Sculpture",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "summary",
+                label: "Summary",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                }
+              },
+              {
+                name: "type",
+                label: "Type",
+                type: "string"
+              },
+              {
+                name: "weight",
+                label: "Weight",
+                type: "number",
+                required: true
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              {
+                name: "tags",
+                label: "Tags",
+                type: "string",
+                list: true
+              },
+              {
+                name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              {
+                name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              {
+                name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string",
+                    required: true
+                  },
+                  {
+                    name: "focal_point",
+                    label: "Focal Point",
+                    type: "string"
+                  },
+                  {
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
+                  },
+                  {
+                    name: "preview_only",
+                    label: "Preview Only",
+                    type: "boolean"
+                  }
+                ]
+              },
+              {
+                label: "Body",
+                name: "body",
+                isBody: true,
+                type: "rich-text"
+              }
+            ]
+          }
+        ],
+      },
+      {// Workshops Collection
+        label: "Workshops",
+        name: "workshops",
+        path: "content/workshops",
+        format: "md",
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body of Document",
+            description: "This is the markdown body",
+            isBody: true,
+          },
+        ],
+      },
+      {// About Me Collection
+        label: "About me",
+        name: "about_me",
+        path: "content/about-me",
+        format: "md",
+        templates: [
+          {// about_me_page
+            name: "about_me_page",
+            label: "About Me",
+            fields: [
+              {
+                name: "name",
+                label: "Name",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                }
+              },
+              {
+                name: "role",
+                label: "Role",
+                type: "string",
+                required: true,
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "bio",
+                label: "Bio",
+                type: "rich-text",
+                description: "A short bio displyed in user profile at end of posts. Between 10 and 700 characters long.",
+              },
+              {
+                name: "organizations",
+                label: "Organizations",
+                type: "object",
+                list: true,
+                fields: [
+                  {
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
+                  },
+                  {
+                    name: "url",
+                    label : "URL",
+                    type: "string",
+                    required: true
+                  }
+                ]
+              },
+              {
+                name: "interests",
+                label: "Interests",
+                type: "string",
+                list: true
+              },
+              {
+                name: "education",
+                label: "Education",
+                type: "object",
+                fields: [
+                  {
+                    name: "courses",
+                    label: "Courses",
+                    type: "object",
+                    list: true,
+                    fields: [
+                      {
+                        name: "course",
+                        label: "Course",
+                        type: "string",
+                        required: true
+                      },
+                      {
+                        name: "institution",
+                        label: "Instritution",
+                        type: "string",
+                        required: true
+                      },
+                      {
+                        name: "year",
+                        label: "Year",
+                        type: "number",
+                        required: true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: "social",
+                label: "Social Media",
+                type: "object",
+                list: true,
+                fields: [
+                  {
+                    name: "icon",
+                    label: "Icon",
+                    type: "string",
+                    description: "Which icon?",
+                    options: [
+                      { value: "envelope" },
+                      { value: "phone" },
+                      { value: "twitter" },
+                      { value: "facebook" },
+                      { value: "instagram" },
+                      { value: "cv" }
+                    ]
+                  },
+                  {
+                    name: "icon_pack",
+                    label: "Icon Pack",
+                    type: "string",
+                    description: "From which Font Awesome set?",
+                    options: [
+                      { value: "fas" },
+                      { value: "fab" },
+                      { value: "ai" },
+                      { value: "far" },                      
+                    ]
+                  },
+                  {
+                    name: "link",
+                    label: "Link",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "email",
+                label: "Email",
+                type: "string",
+                description: "Enter email to display Gravatar (if Gravatar enabled in Config)"
+              },
+              {
+                name: "user_groups",
+                label: "User Groups",
+                type: "string",
+                list: true
+              },
+              {
+                name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              {
+                name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              {
+                name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              {
+                name: "body",
+                label: "Body",
+                type: "rich-text",
+                isBody: true
+              }
+            ]
+          },
+          {// page
+            name: "page",
+            label: "Page",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "summary",
+                label: "Summary",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                }
+              },
+              {
+                name: "authors",
+                label: "Authors",
+                type: "string",
+                list: true,
+              },
+              {
+                name: "categories",
+                label: "Categories",
+                type: "string",
+                list: true
+              },
+              {
+                name: "tags",
+                label: "Tags",
+                type: "string",
+                list: true
+              },
+              {
+                name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              {
+                name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              {
+                name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              {
+                name: "header",
+                label: "Header",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string"
+                  },
+                  {
+                    name: "image",
+                    label: "Image",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "design",
+                label: "Design",
+                type: "object",
+                fields: [
+                  {
+                    name: "background",
+                    label: "Background",
+                    type: "object",
+                    fields: [
+                      {
+                        name: "image_darken",
+                        label: "Image Darken",
+                        type: "number"
+                      },
+                      { 
+                        name: "image_min_height",
+                        label: "Image Minumum Height",
+                        type: "string"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: "body",
+                label: "Body",
+                type: "rich-text",
+                isBody: true
+              }
+            ]
+          }
+        ],
+      },
+      {// Schools Collection
+        label: "Schools",
+        name: "schools",
+        path: "content/schools",
+        format: "md",
+        fields: [
+          {
+            name: "title",
+            label: "Title",
+            type: "string",
+            isTitle: true,
+            required: true,
+          },
+          {
+            name: "subtitle",
+            label: "Sub-Title",
+            type: "string",
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            name: "summary",
+            label: "Summary",
+            type: "string",
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            name: "featured",
+            label: "Featured",
+            type: "boolean"
+          },
+          {
+            name: "date",
+            label: "Date",
+            type: "datetime",
+            required: true,
+            ui: {
+              dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+            }
+          },
+          {
+            name: "authors",
+            label: "Authors",
+            type: "string",
+            list: true,
+          },
+          {
+            name: "categories",
+            label: "Categories",
+            type: "string",
+            list: true
+          },
+          {
+            name: "tags",
+            label: "Tags",
+            type: "string",
+            list: true
+          },
+          {
+            name: "share",
+            label: "Share",
+            type: "boolean"
+          },
+          {
+            name: "commentable",
+            label: "Commentable",
+            type: "boolean"
+          },
+          {
+            name: "editable",
+            label: "Editable",
+            type: "boolean"
+          },
+          {
+            name: "header",
+            label: "Header",
+            type: "object",
+            fields: [
+              {
+                name: "caption",
+                label: "Caption",
+                type: "string"
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "design",
+            label: "Design",
+            type: "object",
+            fields: [
+              {
+                name: "background",
+                label: "Background",
+                type: "object",
+                fields: [
+                  {
+                    name: "image",
+                    label: "Image",
+                    type: "string"
+                  },
+                  {
+                    name: "image_darken",
+                    label: "Image Darken",
+                    type: "number",
+                    description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                  },
+                  {
+                    name: "image_size",
+                    label: "Image Size",
+                    type: "string",
+                    options: [
+                      {
+                        value: "cover"
+                      },
+                      {
+                        value: "contain"
+                      },
+                      {
+                        value: "actual"
+                      }
+                    ]
+                  },
+                  {
+                    name: "image_position",
+                    label: "Image Position",
+                    type: "string",
+                    options: [
+                      {
+                        value: "left"
+                      },
+                      {
+                        value: "center"
+                      },
+                      {
+                        value: "right"
+                      }
+                    ]
+                  },
+                  {
+                    name: "image_parallax",
+                    label: "Image Parallax",
+                    type: "boolean"
+                  },
+                  { 
+                    name: "image_min_height",
+                    label: "Image Minumum Height",
+                    type: "string"
+                  },
+                  {
+                    name: "text_color_light",
+                    label: "Text Colour Light",
+                    type: "boolean"
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            name: "cta_note",
+            label: "CTA Note",
+            type: "object",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                type: "string"
+              }
+            ]
+          },
+          {
+            label: "Body",
+            name: "body",
+            isBody: true,
+            type: "rich-text"
+          }
+        ]
+      },
       {// Home Collection
         label: "Home",
         name: "home",
@@ -1251,549 +2177,7 @@ export default defineConfig({
             ]
           },
         ],
-      },
-      {// Blog Posts Collection
-        label: "Blog posts",
-        name: "blog_posts",
-        path: "content/blog",
-        fields: [
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
-          },
-        ],
-      },
-      {//Sculptures Collection
-        label: "Sculptures",
-        name: "sculptures",
-        path: "content/gallery",
-        fields: [
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
-          },
-        ],
-      },
-      {// Workshops Collection
-        label: "Workshops",
-        name: "workshops",
-        path: "content/workshops",
-        fields: [
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
-          },
-        ],
-      },
-      {// About Me Collection
-        label: "About me",
-        name: "about_me",
-        path: "content/about-me",
-        templates: [
-          {// about_me_page
-            name: "about_me_page",
-            label: "About Me",
-            fields: [
-              {
-                name: "name",
-                label: "Name",
-                type: "string",
-                required: true,
-              },
-              {
-                name: "featured",
-                label: "Featured",
-                type: "boolean"
-              },
-              {
-                name: "date",
-                label: "Date",
-                type: "datetime",
-                required: true,
-                ui: {
-                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
-                }
-              },
-              {
-                name: "role",
-                label: "Role",
-                type: "string",
-                required: true,
-                ui: {
-                  component: "textarea"
-                }
-              },
-              {
-                name: "bio",
-                label: "Bio",
-                type: "rich-text",
-                description: "A short bio displyed in user profile at end of posts. Between 10 and 700 characters long.",
-              },
-              {
-                name: "organizations",
-                label: "Organizations",
-                type: "object",
-                list: true,
-                fields: [
-                  {
-                    name: "name",
-                    label: "Name",
-                    type: "string",
-                    required: true
-                  },
-                  {
-                    name: "url",
-                    label : "URL",
-                    type: "string",
-                    required: true
-                  }
-                ]
-              },
-              {
-                name: "interests",
-                label: "Interests",
-                type: "string",
-                list: true
-              },
-              {
-                name: "education",
-                label: "Education",
-                type: "object",
-                fields: [
-                  {
-                    name: "courses",
-                    label: "Courses",
-                    type: "object",
-                    list: true,
-                    fields: [
-                      {
-                        name: "course",
-                        label: "Course",
-                        type: "string",
-                        required: true
-                      },
-                      {
-                        name: "institution",
-                        label: "Instritution",
-                        type: "string",
-                        required: true
-                      },
-                      {
-                        name: "year",
-                        label: "Year",
-                        type: "number",
-                        required: true
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                name: "social",
-                label: "Social Media",
-                type: "object",
-                list: true,
-                fields: [
-                  {
-                    name: "icon",
-                    label: "Icon",
-                    type: "string",
-                    description: "Which icon?",
-                    options: [
-                      { value: "envelope" },
-                      { value: "phone" },
-                      { value: "twitter" },
-                      { value: "facebook" },
-                      { value: "instagram" },
-                      { value: "cv" }
-                    ]
-                  },
-                  {
-                    name: "icon_pack",
-                    label: "Icon Pack",
-                    type: "string",
-                    description: "From which Font Awesome set?",
-                    options: [
-                      { value: "fas" },
-                      { value: "fab" },
-                      { value: "ai" },
-                      { value: "far" },                      
-                    ]
-                  },
-                  {
-                    name: "link",
-                    label: "Link",
-                    type: "string"
-                  }
-                ]
-              },
-              {
-                name: "email",
-                label: "Email",
-                type: "string",
-                description: "Enter email to display Gravatar (if Gravatar enabled in Config)"
-              },
-              {
-                name: "user_groups",
-                label: "User Groups",
-                type: "string",
-                list: true
-              },
-              {
-                name: "share",
-                label: "Share",
-                type: "boolean"
-              },
-              {
-                name: "commentable",
-                label: "Commentable",
-                type: "boolean"
-              },
-              {
-                name: "editable",
-                label: "Editable",
-                type: "boolean"
-              },
-              {
-                name: "body",
-                label: "Body",
-                type: "rich-text",
-                isBody: true
-              }
-            ]
-          },
-          {// page
-            name: "page",
-            label: "Page",
-            fields: [
-              {
-                name: "title",
-                label: "Title",
-                type: "string",
-                isTitle: true,
-                required: true,
-              },
-              {
-                name: "subtitle",
-                label: "Sub-Title",
-                type: "string",
-                ui: {
-                  component: "textarea"
-                }
-              },
-              {
-                name: "summary",
-                label: "Summary",
-                type: "string",
-                ui: {
-                  component: "textarea"
-                }
-              },
-              {
-                name: "featured",
-                label: "Featured",
-                type: "boolean"
-              },
-              {
-                name: "date",
-                label: "Date",
-                type: "datetime",
-                required: true,
-                ui: {
-                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
-                }
-              },
-              {
-                name: "authors",
-                label: "Authors",
-                type: "string",
-                list: true,
-              },
-              {
-                name: "categories",
-                label: "Categories",
-                type: "string",
-                list: true
-              },
-              {
-                name: "tags",
-                label: "Tags",
-                type: "string",
-                list: true
-              },
-              {
-                name: "share",
-                label: "Share",
-                type: "boolean"
-              },
-              {
-                name: "commentable",
-                label: "Commentable",
-                type: "boolean"
-              },
-              {
-                name: "editable",
-                label: "Editable",
-                type: "boolean"
-              },
-              {
-                name: "header",
-                label: "Header",
-                type: "object",
-                fields: [
-                  {
-                    name: "caption",
-                    label: "Caption",
-                    type: "string"
-                  },
-                  {
-                    name: "image",
-                    label: "Image",
-                    type: "string"
-                  }
-                ]
-              },
-              {
-                name: "design",
-                label: "Design",
-                type: "object",
-                fields: [
-                  {
-                    name: "background",
-                    label: "Background",
-                    type: "object",
-                    fields: [
-                      {
-                        name: "image_darken",
-                        label: "Image Darken",
-                        type: "number"
-                      },
-                      { 
-                        name: "image_min_height",
-                        label: "Image Minumum Height",
-                        type: "string"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                name: "body",
-                label: "Body",
-                type: "rich-text",
-                isBody: true
-              }
-            ]
-          }
-        ],
-      },
-      {// Schools Collection
-        label: "Schools",
-        name: "schools",
-        path: "content/schools",
-        fields: [
-          {
-            name: "title",
-            label: "Title",
-            type: "string",
-            isTitle: true,
-            required: true,
-          },
-          {
-            name: "subtitle",
-            label: "Sub-Title",
-            type: "string",
-            ui: {
-              component: "textarea"
-            }
-          },
-          {
-            name: "summary",
-            label: "Summary",
-            type: "string",
-            ui: {
-              component: "textarea"
-            }
-          },
-          {
-            name: "featured",
-            label: "Featured",
-            type: "boolean"
-          },
-          {
-            name: "date",
-            label: "Date",
-            type: "datetime",
-            required: true,
-            ui: {
-              dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
-            }
-          },
-          {
-            name: "authors",
-            label: "Authors",
-            type: "string",
-            list: true,
-          },
-          {
-            name: "categories",
-            label: "Categories",
-            type: "string",
-            list: true
-          },
-          {
-            name: "tags",
-            label: "Tags",
-            type: "string",
-            list: true
-          },
-          {
-            name: "share",
-            label: "Share",
-            type: "boolean"
-          },
-          {
-            name: "commentable",
-            label: "Commentable",
-            type: "boolean"
-          },
-          {
-            name: "editable",
-            label: "Editable",
-            type: "boolean"
-          },
-          {
-            name: "header",
-            label: "Header",
-            type: "object",
-            fields: [
-              {
-                name: "caption",
-                label: "Caption",
-                type: "string"
-              },
-              {
-                name: "image",
-                label: "Image",
-                type: "string"
-              }
-            ]
-          },
-          {
-            name: "design",
-            label: "Design",
-            type: "object",
-            fields: [
-              {
-                name: "background",
-                label: "Background",
-                type: "object",
-                fields: [
-                  {
-                    name: "image",
-                    label: "Image",
-                    type: "string"
-                  },
-                  {
-                    name: "image_darken",
-                    label: "Image Darken",
-                    type: "number",
-                    description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
-                  },
-                  {
-                    name: "image_size",
-                    label: "Image Size",
-                    type: "string",
-                    options: [
-                      {
-                        value: "cover"
-                      },
-                      {
-                        value: "contain"
-                      },
-                      {
-                        value: "actual"
-                      }
-                    ]
-                  },
-                  {
-                    name: "image_position",
-                    label: "Image Position",
-                    type: "string",
-                    options: [
-                      {
-                        value: "left"
-                      },
-                      {
-                        value: "center"
-                      },
-                      {
-                        value: "right"
-                      }
-                    ]
-                  },
-                  {
-                    name: "image_parallax",
-                    label: "Image Parallax",
-                    type: "boolean"
-                  },
-                  { 
-                    name: "image_min_height",
-                    label: "Image Minumum Height",
-                    type: "string"
-                  },
-                  {
-                    name: "text_color_light",
-                    label: "Text Colour Light",
-                    type: "boolean"
-                  },
-                ]
-              }
-            ]
-          },
-          {
-            name: "cta_note",
-            label: "CTA Note",
-            type: "object",
-            fields: [
-              {
-                name: "label",
-                label: "Label",
-                type: "string"
-              }
-            ]
-          },
-          {
-            label: "Body",
-            name: "body",
-            isBody: true,
-            type: "rich-text"
-          }
-        ]
-      },
-      {// Pages Collection
-        label: "Pages",
-        name: "pages",
-        path: "content",
-        fields: [
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
-          },
-        ],
-      },
+      }
     ],
   },
 });

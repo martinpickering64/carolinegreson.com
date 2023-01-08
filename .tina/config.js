@@ -1252,7 +1252,7 @@ export default defineConfig({
           },
         ],
       },
-/*      {
+      {// Blog Posts Collection
         label: "Blog posts",
         name: "blog_posts",
         path: "content/blog",
@@ -1266,7 +1266,7 @@ export default defineConfig({
           },
         ],
       },
-      {
+      {//Sculptures Collection
         label: "Sculptures",
         name: "sculptures",
         path: "content/gallery",
@@ -1280,7 +1280,7 @@ export default defineConfig({
           },
         ],
       },
-      {
+      {// Workshops Collection
         label: "Workshops",
         name: "workshops",
         path: "content/workshops",
@@ -1294,20 +1294,309 @@ export default defineConfig({
           },
         ],
       },
-      {
+      {// About Me Collection
         label: "About me",
         name: "about_me",
         path: "content/about-me",
-        fields: [
-          {
-            type: "rich-text",
-            name: "bio",
-            label: "BBio",
-            description: "Your Biography",
+        templates: [
+          {// about_me_page
+            name: "about_me_page",
+            label: "About Me",
+            fields: [
+              {
+                name: "name",
+                label: "Name",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                }
+              },
+              {
+                name: "role",
+                label: "Role",
+                type: "string",
+                required: true,
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "bio",
+                label: "Bio",
+                type: "rich-text",
+                description: "A short bio displyed in user profile at end of posts. Between 10 and 700 characters long.",
+              },
+              {
+                name: "organizations",
+                label: "Organizations",
+                type: "object",
+                list: true,
+                fields: [
+                  {
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
+                  },
+                  {
+                    name: "url",
+                    label : "URL",
+                    type: "string",
+                    required: true
+                  }
+                ]
+              },
+              {
+                name: "interests",
+                label: "Interests",
+                type: "string",
+                list: true
+              },
+              {
+                name: "education",
+                label: "Education",
+                type: "object",
+                fields: [
+                  {
+                    name: "courses",
+                    label: "Courses",
+                    type: "object",
+                    list: true,
+                    fields: [
+                      {
+                        name: "course",
+                        label: "Course",
+                        type: "string",
+                        required: true
+                      },
+                      {
+                        name: "institution",
+                        label: "Instritution",
+                        type: "string",
+                        required: true
+                      },
+                      {
+                        name: "year",
+                        label: "Year",
+                        type: "number",
+                        required: true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: "social",
+                label: "Social Media",
+                type: "object",
+                list: true,
+                fields: [
+                  {
+                    name: "icon",
+                    label: "Icon",
+                    type: "string",
+                    description: "Which icon?",
+                    options: [
+                      { value: "envelope" },
+                      { value: "phone" },
+                      { value: "twitter" },
+                      { value: "facebook" },
+                      { value: "instagram" },
+                      { value: "cv" }
+                    ]
+                  },
+                  {
+                    name: "icon_pack",
+                    label: "Icon Pack",
+                    type: "string",
+                    description: "From which Font Awesome set?",
+                    options: [
+                      { value: "fas" },
+                      { value: "fab" },
+                      { value: "ai" },
+                      { value: "far" },                      
+                    ]
+                  },
+                  {
+                    name: "link",
+                    label: "Link",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "email",
+                label: "Email",
+                type: "string",
+                description: "Enter email to display Gravatar (if Gravatar enabled in Config)"
+              },
+              {
+                name: "user_groups",
+                label: "User Groups",
+                type: "string",
+                list: true
+              },
+              {
+                name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              {
+                name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              {
+                name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              {
+                name: "body",
+                label: "Body",
+                type: "rich-text",
+                isBody: true
+              }
+            ]
           },
+          {// page
+            name: "page",
+            label: "Page",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "summary",
+                label: "Summary",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                }
+              },
+              {
+                name: "authors",
+                label: "Authors",
+                type: "string",
+                list: true,
+              },
+              {
+                name: "categories",
+                label: "Categories",
+                type: "string",
+                list: true
+              },
+              {
+                name: "tags",
+                label: "Tags",
+                type: "string",
+                list: true
+              },
+              {
+                name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              {
+                name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              {
+                name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              {
+                name: "header",
+                label: "Header",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string"
+                  },
+                  {
+                    name: "image",
+                    label: "Image",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "design",
+                label: "Design",
+                type: "object",
+                fields: [
+                  {
+                    name: "background",
+                    label: "Background",
+                    type: "object",
+                    fields: [
+                      {
+                        name: "image_darken",
+                        label: "Image Darken",
+                        type: "number"
+                      },
+                      { 
+                        name: "image_min_height",
+                        label: "Image Minumum Height",
+                        type: "string"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: "body",
+                label: "Body",
+                type: "rich-text",
+                isBody: true
+              }
+            ]
+          }
         ],
       },
-      {
+      {// Schools Collection
         label: "Schools",
         name: "schools",
         path: "content/schools",
@@ -1320,8 +1609,8 @@ export default defineConfig({
             isBody: true,
           },
         ],
-      },*/
-      {
+      },
+      {// Pages Collection
         label: "Pages",
         name: "pages",
         path: "content",

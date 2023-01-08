@@ -2,34 +2,35 @@
 activate: true
 active: true
 headless: true
-subtitle: ""
-title: "Caroline Gregson - Willow Sculptor"
-type: "widget_page"
+subtitle: ''
+title: Caroline Gregson - Willow Sculptor
+type: widget_page
 weight: 16
-widget: "blank"
+widget: blank
 advanced:
-    css_class: ""
-    css_style: ""
+  css_style: ''
+  css_class: ''
 design:
-    columns: "1"
-    background:
-        color: "rgb(236, 244, 232)"
-        gradient_end: "#F4F6F3"
-        gradient_start: "#ECF4E8"
-        image: ""
-        image_darken: 0
-        image_parallax: false
-        image_position: "center"
-        image_size: "cover"
-        text_color_light: false
-    spacing:
-        padding: 
-        - "20px"
-        - "0"
-        - "20px"
-        - "0"
-_template: "about_widget"
+  columns: '1'
+  background:
+    color: 'rgb(236, 244, 232)'
+    gradient_start: '#ECF4E8'
+    gradient_end: '#F4F6F3'
+    image: ''
+    image_darken: 0
+    image_size: cover
+    image_position: center
+    image_parallax: false
+    text_color_light: false
+  spacing:
+    padding:
+      - 20px
+      - '0'
+      - 20px
+      - '0'
+_template: about_widget
 ---
+
 Willow is a fantastic material to use in sculpture. I use one year old growth (withies or rods) from coppiced willow trees, some of which I grow and harvest locally myself. It would be hard to think of a more sustainable material.
 
 I have loved and been inspired by the natural world since I was a child

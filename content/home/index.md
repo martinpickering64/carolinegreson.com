@@ -1,6 +1,6 @@
 ---
 headless: true
-type: "widget_page"
-_template: "home_page"
-
+type: widget_page
+_template: home_page
 ---
+

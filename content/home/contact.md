@@ -3,9 +3,10 @@ active: true
 autolink: true
 email_form: 0
 headless: true
-subtitle: ""
-title: "Contact"
+subtitle: ''
+title: Contact
 weight: 130
-widget: "contact"
-_template: "contact_widget"
+widget: contact
+_template: contact_widget
 ---
+

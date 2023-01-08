@@ -786,6 +786,22 @@ export default defineConfig({
                     type: "boolean"
                   },
                   {
+                    name: "columns",
+                    label: "Columns",
+                    type: "string",
+                    required: true,
+                    options: [
+                      {
+                        value: "1",
+                        label: "1 column"
+                      },
+                      {
+                        value: "2",
+                        label: "2 columns"
+                      }
+                    ]
+                  },
+                  {
                     name: "background",
                     label: "Background",
                     type: "object",

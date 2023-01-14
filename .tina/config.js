@@ -65,7 +65,8 @@ export default defineConfig({
                 type: "datetime",
                 required: true,
                 ui: {
-                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
                 }
               },
               {
@@ -151,16 +152,16 @@ export default defineConfig({
                     type: "string",
                     options: [
                       {
-                        value: "fa"
+                        value: "fa", label: "fa"
                       },
                       {
-                        value: "fas"
+                        value: "fas", label: "fas"
                       },
                       {
-                        value: "fab"
+                        value: "fab", label: "fab"
                       },
                       {
-                        value: "ai"
+                        value: "ai", label: "ai"
                       }
                     ]
                   },
@@ -250,13 +251,13 @@ export default defineConfig({
                         type: "string",
                         options: [
                           {
-                            value: "cover"
+                            value: "cover", label: "cover"
                           },
                           {
-                            value: "contain"
+                            value: "contain", label: "contain"
                           },
                           {
-                            value: "actual"
+                            value: "actual", label: "actual"
                           }
                         ]
                       },
@@ -266,13 +267,13 @@ export default defineConfig({
                         type: "string",
                         options: [
                           {
-                            value: "left"
+                            value: "left", label: "left"
                           },
                           {
-                            value: "center"
+                            value: "center", label: "center"
                           },
                           {
-                            value: "right"
+                            value: "right", label: "right"
                           }
                         ]
                       },
@@ -320,8 +321,7 @@ export default defineConfig({
                   {
                     name: "caption",
                     label: "Caption",
-                    type: "string",
-                    required: true
+                    type: "string"
                   },
                   {
                     name: "placement",
@@ -363,7 +363,8 @@ export default defineConfig({
                 type: "datetime",
                 required: true,
                 ui: {
-                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
                 }
               },
               {
@@ -411,8 +412,7 @@ export default defineConfig({
                   {
                     name: "caption",
                     label: "Caption",
-                    type: "string",
-                    required: true
+                    type: "string"
                   },
                   {
                     name: "focal_point",
@@ -447,15 +447,516 @@ export default defineConfig({
         name: "workshops",
         path: "content/workshops",
         format: "md",
-        fields: [
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
+        templates: [
+          {// workshops index page
+            name: "index_page",
+            label: "Index Page",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                }
+              },
+              {
+                name: "hero_media",
+                label: "Hero Media",
+                type: "string"
+              },
+              {
+                name: "content",
+                label: "Content",
+                type: "object",
+                fields: [
+                  {
+                    name: "count",
+                    label: "Count",
+                    type: "number"
+                  },
+                  {
+                    name: "offset",
+                    label: "Offset",
+                    type: "number"
+                  },
+                  {
+                    name: "order",
+                    Label: "Order",
+                    type: "string",
+                    options: [
+                      {
+                        value: "asc",
+                        label: "Ascending"
+                      },
+                      {
+                        value: "desc",
+                        label: "Descending"
+                      }
+                    ]
+                  },
+                  {
+                    name: "filter_button",
+                    label: "Filter Button",
+                    type: "object",
+                    list: true,
+                    fields: [
+                      {
+                        name: "name",
+                        label: "Name",
+                        type: "string",
+                        required: true
+                      },
+                      {
+                        name: "tag",
+                        label: "Tag",
+                        type: "string",
+                        required: true
+                      }
+                    ]
+                  },
+                  {
+                    name: "filters",
+                    label: "Filters",
+                    type: "object",
+                    fields: [
+                      {
+                        name: "category",
+                        label: "Category",
+                        type: "string"
+                      },
+                      {
+                        name: "exclude_featured",
+                        label: "Exclude Featured Workshops",
+                        type: "boolean"
+                      },
+                      {
+                        name: "exclude_future",
+                        label: "Exclude workshops dated in the future",
+                        type: "boolean"
+                      },
+                      {
+                        name: "exclude_past",
+                        label: "Exclude workshops from the past",
+                        type: "boolean"
+                      },
+                      {
+                        name: "filter_default",
+                        label: "Show how many?",
+                        type: "number",
+                        description: "0 (zero) means show them all"
+                      },
+                      {
+                        name: "tag",
+                        label: "Filter by a Tag",
+                        type: "string"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: "cta",
+                label: "Call to Action",
+                type: "object",
+                fields: [
+                  {
+                    name: "url",
+                    label: "URL",
+                    type: "string"
+                  },
+                  {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                  },
+                  {
+                    name: "icon_pack",
+                    label: "Icon Pack",
+                    type: "string",
+                    options: [
+                      {
+                        value: "fa", label: "fa"
+                      },
+                      {
+                        value: "fas", label: "fas"
+                      },
+                      {
+                        value: "fab", label: "fab"
+                      },
+                      {
+                        value: "ai", label: "ai"
+                      }
+                    ]
+                  },
+                  {
+                    name: "icon",
+                    label: "Icon",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "cta_alt",
+                label: "CTA ALT",
+                type: "object",
+                fields: [
+                  {
+                    name: "url",
+                    label: "URL",
+                    type: "string"
+                  },
+                  {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "cta_note",
+                label: "CTA Note",
+                type: "object",
+                fields: [
+                  {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "design",
+                label: "Design",
+                type: "object",
+                fields: [
+                  {
+                    name: "view",
+                    label: "View",
+                    type: "number"
+                  },
+                  {
+                    name: "background",
+                    label: "Background",
+                    type: "object",
+                    fields: [
+                      {
+                        name: "color",
+                        label: "Colour",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      {
+                        name: "gradient_start",
+                        label: "Gradient Start",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      {
+                        name: "gradient_end",
+                        label: "Gradient End",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      {
+                        name: "image",
+                        label: "Image",
+                        type: "string"
+                      },
+                      {
+                        name: "image_darken",
+                        label: "Image Darken",
+                        type: "number",
+                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                      },
+                      {
+                        name: "image_size",
+                        label: "Image Size",
+                        type: "string",
+                        options: [
+                          {
+                            value: "cover", label: "cover"
+                          },
+                          {
+                            value: "contain", label: "contain"
+                          },
+                          {
+                            value: "actual", label: "actual"
+                          }
+                        ]
+                      },
+                      {
+                        name: "image_position",
+                        label: "Image Position",
+                        type: "string",
+                        options: [
+                          {
+                            value: "left", label: "left"
+                          },
+                          {
+                            value: "center", label: "center"
+                          },
+                          {
+                            value: "right", label: "right"
+                          }
+                        ]
+                      },
+                      {
+                        name: "image_parallax",
+                        label: "Image Parallax",
+                        type: "boolean"
+                      },
+                      {
+                        name: "image_min_height",
+                        label: "Image Min Height",
+                        type: "string"
+                      },
+                      {
+                        name: "text_color_light",
+                        label: "Text Colour Light",
+                        type: "boolean"
+                      }
+                    ]
+                  },
+                ]
+              },
+              {
+                name: "header",
+                label: "Header",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string",
+                  },
+                  {
+                    name: "image",
+                    label: "Image",
+                    type: "string"
+                  }
+                ]
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "object",
+                fields: [
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string"
+                  },
+                  {
+                    name: "placement",
+                    label: "Placement",
+                    type: "number"
+                  }
+                ]
+              },
+              {
+                label: "Body",
+                name: "body",
+                isBody: true,
+                type: "rich-text"
+              }
+            ]
           },
-        ],
+          {// workshop
+            name: "workshop",
+            label: "Workshop",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "summary",
+                label: "Summary",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                description: "The date on which the workshop will be held",
+                ui: {
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                }
+              },
+              {
+                name: "endDate",
+                label: "End Date",
+                type: "datetime",
+                required: false,
+                description: "Leave blank unless this is a multi-day course",
+                ui: {
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                }
+              },
+              {
+                name: "publishDate",
+                label: "Publish Date",
+                type: "datetime",
+                required: true,
+                description: "the date the workshop should be publicised",
+                ui: {
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                }
+              },
+              {
+                name: "cancelled",
+                label: "Cancelled",
+                type: "boolean",
+                description: "Has this workshop been cancelled?"
+              },
+              {
+                name: "cancellation_text",
+                label: "Cancellation Text",
+                type: "string",
+                description: "A message about the cancellation"
+              },
+              {
+                name: "hidePrice",
+                label: "Hide Price Display",
+                type: "boolean"
+              },
+              {
+                name: "price",
+                label: "Price",
+                type: "number",
+                description: "The price of the workshop"
+              },
+              {
+                name: "deposit",
+                label: "Deposit",
+                type: "number",
+                description: "The amount of deposit required"
+              },
+              {
+                name: "hidePlaces",
+                label: "Hide Place Display",
+                type: "boolean"
+              },
+              {
+                name: "places",
+                label: "Places",
+                type: "number",
+                description: "The number of available places on the workshop"
+              },
+              {
+                name: "venue",
+                label: "Venue",
+                type: "string",
+                options:[
+                  { value: "CPAC", label: "Castle Park" },
+                  { value: "ZANTIUM", label: "Zantium" },
+                  { value: "BODFARI", label: "Bodfari" }
+                ]
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "object",
+                fields: [
+                  {
+                    name: "name",
+                    label: "Name",
+                    type: "string"
+                  },
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string"
+                  },
+                  {
+                    name: "focal_point",
+                    label: "Focal Point",
+                    type: "string",
+                    options: [
+                      { value: "Smart", label: "Smart" },
+                      { value: "Center", label: "Center" },
+                      { value: "TopLeft", label: "Top Left" },
+                      { value: "Top", label: "Top" },
+                      { value: "TopRight", label: "Top Right" },
+                      { value: "Left", label: "Left" },
+                      { value: "Right", label: "Right" },
+                      { value: "BottomLeft", label: "Bottom Left" },
+                      { value: "Bottom", label: "Bottom" },
+                      { value: "BottomRight", label: "Bottom Right" }
+                    ]
+                  },
+                  {
+                    name: "preview_only",
+                    label: "Preview Only",
+                    type: "boolean"
+                  }
+                ]
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean",
+                description: "You can filter by featured content on your homepage"
+              },
+              {
+                name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              {
+                name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              {
+                name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              {
+                label: "Body",
+                name: "body",
+                isBody: true,
+                type: "rich-text"
+              }
+            ]
+          }        ],
       },
       {// About Me Collection
         label: "About me",
@@ -484,7 +985,8 @@ export default defineConfig({
                 type: "datetime",
                 required: true,
                 ui: {
-                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
                 }
               },
               {
@@ -573,12 +1075,12 @@ export default defineConfig({
                     type: "string",
                     description: "Which icon?",
                     options: [
-                      { value: "envelope" },
-                      { value: "phone" },
-                      { value: "twitter" },
-                      { value: "facebook" },
-                      { value: "instagram" },
-                      { value: "cv" }
+                      { value: "envelope", label: "envelope" },
+                      { value: "phone", label: "phone" },
+                      { value: "twitter", label: "twitter" },
+                      { value: "facebook", label: "facebook" },
+                      { value: "instagram", label: "instagram" },
+                      { value: "cv", label: "cv" }
                     ]
                   },
                   {
@@ -587,10 +1089,10 @@ export default defineConfig({
                     type: "string",
                     description: "From which Font Awesome set?",
                     options: [
-                      { value: "fas" },
-                      { value: "fab" },
-                      { value: "ai" },
-                      { value: "far" },                      
+                      { value: "fas", label: "fas" },
+                      { value: "fab", label: "fab" },
+                      { value: "ai", label: "ai" },
+                      { value: "far", label: "far" },                      
                     ]
                   },
                   {
@@ -673,7 +1175,8 @@ export default defineConfig({
                 type: "datetime",
                 required: true,
                 ui: {
-                  dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
                 }
               },
               {
@@ -800,7 +1303,8 @@ export default defineConfig({
             type: "datetime",
             required: true,
             ui: {
-              dateFormat: 'DD/MM/YYYY hh:mm A ZZ'
+              dateFormat: 'DD/MM/YYYY',
+              parse: (val)=>{ val.utc(true); return val.toISOString(); }
             }
           },
           {
@@ -880,13 +1384,13 @@ export default defineConfig({
                     type: "string",
                     options: [
                       {
-                        value: "cover"
+                        value: "cover", label: "cover"
                       },
                       {
-                        value: "contain"
+                        value: "contain", label: "contain"
                       },
                       {
-                        value: "actual"
+                        value: "actual", label: "actual"
                       }
                     ]
                   },
@@ -896,13 +1400,13 @@ export default defineConfig({
                     type: "string",
                     options: [
                       {
-                        value: "left"
+                        value: "left", label: "left"
                       },
                       {
-                        value: "center"
+                        value: "center", label: "center"
                       },
                       {
-                        value: "right"
+                        value: "right", label: "right"
                       }
                     ]
                   },
@@ -1449,13 +1953,13 @@ export default defineConfig({
                         type: "string",
                         options: [
                           {
-                            value: "cover"
+                            value: "cover", label: "cover"
                           },
                           {
-                            value: "contain"
+                            value: "contain", label: "contain"
                           },
                           {
-                            value: "actual"
+                            value: "actual", label: "actual"
                           }
                         ]
                       },
@@ -1465,13 +1969,13 @@ export default defineConfig({
                         type: "string",
                         options: [
                           {
-                            value: "left"
+                            value: "left", label: "left"
                           },
                           {
-                            value: "center"
+                            value: "center", label: "center"
                           },
                           {
-                            value: "right"
+                            value: "right", label: "right"
                           }
                         ]
                       },
@@ -1903,13 +2407,13 @@ export default defineConfig({
                         type: "string",
                         options: [
                           {
-                            value: "cover"
+                            value: "cover", label: "cover"
                           },
                           {
-                            value: "contain"
+                            value: "contain", label: "contain"
                           },
                           {
-                            value: "actual"
+                            value: "actual", label: "actual"
                           }
                         ]
                       },
@@ -1919,13 +2423,13 @@ export default defineConfig({
                         type: "string",
                         options: [
                           {
-                            value: "left"
+                            value: "left", label: "left"
                           },
                           {
-                            value: "center"
+                            value: "center", label: "center"
                           },
                           {
-                            value: "right"
+                            value: "right", label: "right"
                           }
                         ]
                       },
@@ -1969,16 +2473,16 @@ export default defineConfig({
                     type: "string",
                     options: [
                       {
-                        value: "fa"
+                        value: "fa", label: "fa"
                       },
                       {
-                        value: "fas"
+                        value: "fas", label: "fas"
                       },
                       {
-                        value: "fab"
+                        value: "fab", label: "fab"
                       },
                       {
-                        value: "ai"
+                        value: "ai", label: "ai"
                       }
                     ]
                   },

@@ -36,7 +36,7 @@
   "about": {{$summary}},
   "description": {{$summary}},
   "startDate": {{ $startDate.Format "2006-01-02" }},
-  "endDate": {{ $endDate.Format "2006-01-02" }},
+  "endDate": {{ dateFormat "2006-01-02" $endDate }},
   "eventAttendanceMode": "http://schema.org/OfflineEventAttendanceMode",
   {{ if $page.Params.Cancelled }}
   "eventStatus": "http://schema.org/EventCancelled",

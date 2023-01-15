@@ -24,15 +24,339 @@ export default defineConfig({
         name: "blog_posts",
         path: "content/blog",
         format: "md",
-        fields: [
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body of Document",
-            description: "This is the markdown body",
-            isBody: true,
+        templates: [
+          {// Blog Index Page
+            name: "blog_index",
+            label: "Blog Index Page",
+            fields: [
+              { name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+                ui: {
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(fieldLength < 3 || fieldLength > 100) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
+              },
+              { name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              { name: "summary",
+                label: "Summary",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              { name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              { name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                }
+              },
+              { name: "view",
+                label: "View",
+                type: "number",
+                description: "Toggle between the various page layout types: 1 = List, 2 = Compact, 3 = Card",
+                required: true
+              },
+              { name: "header",
+                label: "Header",
+                type: "object",
+                fields: [
+                  { name: "caption",
+                    label: "Caption",
+                    type: "string",
+                  },
+                  { name: "image",
+                    label: "Image",
+                    type: "string"
+                  }
+                ]
+              },
+              { name: "hero_media",
+                label: "Hero Media",
+                type: "string",
+                description: "Hero image (optional). Enter filename of an image in the `static/img/` folder."
+              },
+              { name: "design",
+                label: "Design",
+                type: "object",
+                fields: [
+                  { name: "background",
+                    label: "Background",
+                    type: "object",
+                    description: "Apply a background color, gradient, or image.",
+                    fields: [
+                      { name: "color",
+                        label: "Colour",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      { name: "gradient_start",
+                        label: "Gradient Start",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      { name: "gradient_end",
+                        label: "Gradient End",
+                        description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
+                        type: "string"
+                      },
+                      { name: "image",
+                        label: "Image",
+                        type: "string",
+                        description: "Name of image in `static/img/`"
+                      },
+                      { name: "image_darken",
+                        label: "Image Darken",
+                        type: "number",
+                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                      },
+                      { name: "image_size",
+                        label: "Image Size",
+                        type: "string",
+                        options: [
+                          {
+                            value: "cover", label: "cover"
+                          },
+                          {
+                            value: "contain", label: "contain"
+                          },
+                          {
+                            value: "actual", label: "actual"
+                          }
+                        ]
+                      },
+                      { name: "image_position",
+                        label: "Image Position",
+                        type: "string",
+                        options: [
+                          {
+                            value: "left", label: "left"
+                          },
+                          {
+                            value: "center", label: "center"
+                          },
+                          {
+                            value: "right", label: "right"
+                          }
+                        ]
+                      },
+                      { name: "image_parallax",
+                        label: "Image Parallax",
+                        type: "boolean"
+                      },
+                      { name: "image_min_height",
+                        label: "Image Min Height",
+                        type: "string"
+                      },
+                      { name: "text_color_light",
+                        label: "Text Colour Light",
+                        type: "boolean",
+                        description: "Apply a background color, gradient, or image."
+                      }
+                    ]
+                  },
+                ]
+              },
+              { name: "cta",
+                label: "Call to Action",
+                type: "object",
+                description: "Call to action links. Display link(s) by specifying a URL and label. Icon is optional.",
+                fields: [
+                  { name: "url",
+                    label: "URL",
+                    type: "string"
+                  },
+                  { name: "label",
+                    label: "Label",
+                    type: "string"
+                  },
+                  { name: "icon_pack",
+                    label: "Icon Pack",
+                    type: "string",
+                    options: [
+                      {
+                        value: "fa", label: "fa"
+                      },
+                      {
+                        value: "fas", label: "fas"
+                      },
+                      {
+                        value: "fab", label: "fab"
+                      },
+                      {
+                        value: "ai", label: "ai"
+                      }
+                    ]
+                  },
+                  { name: "icon",
+                    label: "Icon",
+                    type: "string"
+                  }
+                ]
+              },
+              { name: "cta_alt",
+                label: "CTA ALT",
+                type: "object",
+                fields: [
+                  { name: "url",
+                    label: "URL",
+                    type: "string"
+                  },
+                  { name: "label",
+                    label: "Label",
+                    type: "string"
+                  }
+                ]
+              },
+              { name: "cta_note",
+                label: "CTA Note",
+                type: "object",
+                fields: [
+                  { name: "label",
+                    label: "Label",
+                    type: "string"
+                  }
+                ]
+              },
+              { name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              { name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              { name: "editable",
+                label: "Editable",
+                type: "boolean"
+              },
+              { name: "body",
+                label: "Body of Document",
+                type: "rich-text",
+                description: "This is the markdown body",
+                isBody: true,
+              }
+            ]
           },
-        ],
+          {// Blog Post
+            name: "blog_post",
+            label: "Blog Post",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                isTitle: true,
+                required: true,
+                ui: {
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(fieldLength < 3 || fieldLength > 100) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
+              },
+              {
+                name: "subtitle",
+                label: "Sub-Title",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "summary",
+                label: "Summary",
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                name: "featured",
+                label: "Featured",
+                type: "boolean"
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+                ui: {
+                  dateFormat: 'DD/MM/YYYY',
+                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                }
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "object",
+                fields: [
+                  {
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
+                  },
+                  {
+                    name: "caption",
+                    label: "Caption",
+                    type: "string"
+                  },
+                  {
+                    name: "focal_point",
+                    label: "Focal Point",
+                    type: "string",
+                    options: [
+                      { value: "Smart", label: "Smart" },
+                      { value: "Center", label: "Center" },
+                      { value: "TopLeft", label: "Top Left" },
+                      { value: "Top", label: "Top" },
+                      { value: "TopRight", label: "Top Right" },
+                      { value: "Left", label: "Left" },
+                      { value: "Right", label: "Right" },
+                      { value: "BottomLeft", label: "Bottom Left" },
+                      { value: "Bottom", label: "Bottom" },
+                      { value: "BottomRight", label: "Bottom Right" }
+                    ]
+                  },
+                  {
+                    name: "preview_only",
+                    label: "Preview Only",
+                    type: "boolean"
+                  }
+                ]
+              },
+              {
+                type: "rich-text",
+                name: "body",
+                label: "Body of Document",
+                description: "This is the markdown body",
+                isBody: true,
+              }
+            ]
+          },
+        ]
       },
       {// Sculptures Collection
         label: "Sculptures",
@@ -410,6 +734,12 @@ export default defineConfig({
                 type: "object",
                 fields: [
                   {
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
+                  },
+                  {
                     name: "caption",
                     label: "Caption",
                     type: "string"
@@ -417,13 +747,19 @@ export default defineConfig({
                   {
                     name: "focal_point",
                     label: "Focal Point",
-                    type: "string"
-                  },
-                  {
-                    name: "name",
-                    label: "Name",
                     type: "string",
-                    required: true
+                    options: [
+                      { value: "Smart", label: "Smart" },
+                      { value: "Center", label: "Center" },
+                      { value: "TopLeft", label: "Top Left" },
+                      { value: "Top", label: "Top" },
+                      { value: "TopRight", label: "Top Right" },
+                      { value: "Left", label: "Left" },
+                      { value: "Right", label: "Right" },
+                      { value: "BottomLeft", label: "Bottom Left" },
+                      { value: "Bottom", label: "Bottom" },
+                      { value: "BottomRight", label: "Bottom Right" }
+                    ]
                   },
                   {
                     name: "preview_only",

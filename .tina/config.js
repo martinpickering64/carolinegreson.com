@@ -13,8 +13,8 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
-      publicFolder: "static",
+      mediaRoot: "uploads",
+      publicFolder: "content",
     },
   },
   schema: {
@@ -46,16 +46,12 @@ export default defineConfig({
               { name: "subtitle",
                 label: "Sub-Title",
                 type: "string",
-                ui: {
-                  component: "textarea"
-                }
+                ui: { component: "textarea" }
               },
               { name: "summary",
                 label: "Summary",
                 type: "string",
-                ui: {
-                  component: "textarea"
-                }
+                ui: { component: "textarea" }
               },
               { name: "featured",
                 label: "Featured",
@@ -74,7 +70,12 @@ export default defineConfig({
                 label: "View",
                 type: "number",
                 description: "Toggle between the various page layout types: 1 = List, 2 = Compact, 3 = Card",
-                required: true
+                required: true,
+                ui: {
+                  validate: (value) => {if (value < 1 || value > 3) { return "Must be between 1 and 3" }},
+                  component: "number",
+                  step: 1
+                }
               },
               { name: "header",
                 label: "Header",
@@ -86,7 +87,7 @@ export default defineConfig({
                   },
                   { name: "image",
                     label: "Image",
-                    type: "string"
+                    type: "image"
                   }
                 ]
               },
@@ -107,70 +108,68 @@ export default defineConfig({
                       { name: "color",
                         label: "Colour",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
                       { name: "gradient_start",
                         label: "Gradient Start",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
                       { name: "gradient_end",
                         label: "Gradient End",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
                       { name: "image",
                         label: "Image",
                         type: "string",
-                        description: "Name of image in `static/img/`"
+                        description: "The filename of image in the `static/img/` folder"
                       },
                       { name: "image_darken",
                         label: "Image Darken",
                         type: "number",
-                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1",
+                        ui: {
+                          validate: (value) => {if (value < 0 || value > 1) { return "Must be between 0.0 and 1.0" }},
+                          component: "number",
+                          step: 0.1
+                        }
                       },
                       { name: "image_size",
                         label: "Image Size",
                         type: "string",
                         options: [
-                          {
-                            value: "cover", label: "cover"
-                          },
-                          {
-                            value: "contain", label: "contain"
-                          },
-                          {
-                            value: "actual", label: "actual"
-                          }
+                          { value: "cover", label: "cover" },
+                          { value: "contain", label: "contain" },
+                          { value: "actual", label: "actual" }
                         ]
                       },
                       { name: "image_position",
                         label: "Image Position",
                         type: "string",
                         options: [
-                          {
-                            value: "left", label: "left"
-                          },
-                          {
-                            value: "center", label: "center"
-                          },
-                          {
-                            value: "right", label: "right"
-                          }
+                          { value: "left", label: "left" },
+                          { value: "center", label: "center" },
+                          { value: "right", label: "right" }
                         ]
                       },
                       { name: "image_parallax",
                         label: "Image Parallax",
-                        type: "boolean"
+                        type: "boolean",
+                        description: "Use a fun parallax-like fixed background effect?"
                       },
                       { name: "image_min_height",
                         label: "Image Min Height",
-                        type: "string"
+                        type: "string",
+                        decsription: "The minimum size of the image, e.g. 500px"
                       },
                       { name: "text_color_light",
                         label: "Text Colour Light",
                         type: "boolean",
-                        description: "Apply a background color, gradient, or image."
+                        description: "Invert the colour of the Text over the image"
                       }
                     ]
                   },
@@ -193,18 +192,10 @@ export default defineConfig({
                     label: "Icon Pack",
                     type: "string",
                     options: [
-                      {
-                        value: "fa", label: "fa"
-                      },
-                      {
-                        value: "fas", label: "fas"
-                      },
-                      {
-                        value: "fab", label: "fab"
-                      },
-                      {
-                        value: "ai", label: "ai"
-                      }
+                      { value: "fa", label: "fa" },
+                      { value: "fas", label: "fas" },
+                      { value: "fab", label: "fab" },
+                      { value: "ai", label: "ai" }
                     ]
                   },
                   { name: "icon",
@@ -233,7 +224,8 @@ export default defineConfig({
                 fields: [
                   { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: { component: "textarea" }
                   }
                 ]
               },
@@ -315,7 +307,7 @@ export default defineConfig({
                   {
                     name: "name",
                     label: "Name",
-                    type: "string",
+                    type: "image",
                     required: true
                   },
                   {
@@ -633,7 +625,7 @@ export default defineConfig({
                   {
                     name: "image",
                     label: "Image",
-                    type: "string"
+                    type: "image"
                   }
                 ]
               },
@@ -736,7 +728,7 @@ export default defineConfig({
                   {
                     name: "name",
                     label: "Name",
-                    type: "string",
+                    type: "image",
                     required: true
                   },
                   {
@@ -1086,7 +1078,7 @@ export default defineConfig({
                   {
                     name: "image",
                     label: "Image",
-                    type: "string"
+                    type: "image"
                   }
                 ]
               },
@@ -1233,7 +1225,7 @@ export default defineConfig({
                   {
                     name: "name",
                     label: "Name",
-                    type: "string"
+                    type: "image"
                   },
                   {
                     name: "caption",
@@ -1561,7 +1553,7 @@ export default defineConfig({
                   {
                     name: "image",
                     label: "Image",
-                    type: "string"
+                    type: "image"
                   }
                 ]
               },

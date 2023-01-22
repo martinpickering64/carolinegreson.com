@@ -2,7 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.80
+      - image: cibuilds/hugo:0.108
+# The resource_class feature allows configuring CPU and RAM resources for each job.
+# Different resource classes are available for different executors.
+# https://circleci.com/docs/2.0/configuration-reference/#resourceclass   
+    resource_class: large
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
@@ -16,13 +20,10 @@ jobs:
       - run:
           name: add node 
           command: |
-            curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+            curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
             sudo apt-get install -y nodejs 
             node --version
             npm -version
-#      - run:
-#          name: add npm
-#          command: sudo apt-get install -y npm
       - checkout
       - run:
           name: make public dir
@@ -45,7 +46,7 @@ jobs:
           command: git submodule sync && git submodule update --init
       - run: 
           name: run hugo
-          command: HUGO_ENV=production hugo -v -s ~/hugo
+          command: HUGO_ENV=production npx tinacms build && hugo -v -s ~/hugo
           #-d $HUGO_BUILD_DIR
       - run:
           name: look at build

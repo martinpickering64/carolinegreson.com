@@ -1,7 +1,7 @@
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+const branch = "master";
 
 export default defineConfig({
   branch,
@@ -13,8 +13,8 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "uploads",
-      publicFolder: "content",
+      mediaRoot: "",
+      publicFolder: "static",
     },
   },
   schema: {

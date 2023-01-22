@@ -43,5 +43,5 @@ said about my animal sculptures is that you can always see where
 they are looking!
 
 The excellence of Caroline's work as a Willow Artist and Basketmaker has
-been recognised by her admission as Yeoman member of the Worshipful
+been recognised by her admission as Yeoman Member of the Worshipful
 Company of Basketmakers.

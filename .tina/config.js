@@ -24,6 +24,11 @@ export default defineConfig({
         name: "blog_posts",
         path: "content/blog",
         format: "md",
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         templates: [
           {// Blog Index Page
             name: "blog_index",
@@ -508,6 +513,11 @@ export default defineConfig({
         name: "sculptures",
         path: "content/gallery",
         format: "md",
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         templates: [
           {// gallery index page
             name: "index_page",
@@ -1145,6 +1155,11 @@ export default defineConfig({
         name: "workshops",
         path: "content/workshops",
         format: "md",
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         templates: [
           {// workshops index page
             name: "index_page",
@@ -1873,6 +1888,11 @@ export default defineConfig({
         name: "about_me",
         path: "content/about-me",
         format: "md",
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         templates: [
           {// about_me_page
             name: "about_me_page",
@@ -2174,6 +2194,11 @@ export default defineConfig({
         name: "schools",
         path: "content/schools",
         format: "md",
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         fields: [
           {
             name: "title",

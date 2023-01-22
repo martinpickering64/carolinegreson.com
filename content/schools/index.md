@@ -31,10 +31,11 @@ cta_note:
 featured: false
 ---
 
+
 ## Working with School Groups
 
 I have led many successful workshops over the years, working with groups in schools throughout the age range
-from pre-school through junior school to high school.
+from preschool through junior school to high school.
 
 Children love working with willow and often surprise themselves (and their teachers) with the quality
 of the work they are able to produce, leading to a great sense of achievement.
@@ -42,8 +43,8 @@ of the work they are able to produce, leading to a great sense of achievement.
 I can design workshops in several different ways, some of the most popular have proved to be:
 
 1. A single class, all working in pairs or threes tasked to make a small bird sculpture or similar. Suitable for Yr 6 upward. One Day
-2. Class or year group, taking groups of six at a time to work on a larger communal sculpture. One or Two Days
-3. The whole school, taking groups of six at a time to work on a larger communal sculpture. One or Several Days
+1. Class or year group, taking groups of six at a time to work on a larger communal sculpture. One or Two Days
+1. The whole school, taking groups of six at a time to work on a larger communal sculpture. One or Several Days
 
 I have also provided enhancement workshops for GCSE and A level using the students' existing work as inspiration.
 

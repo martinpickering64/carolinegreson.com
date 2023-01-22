@@ -1,29 +1,32 @@
 ---
-title: " 1-day Willow Sculpture Workshop"
-subtitle: ""
-summary: "Willow Sculpture Workshop to learn how to make willow sculptures to be held at Castle Park Arts Centre, Frodsham."
-date: 2023-03-24T10:00:00Z
-endDate: ""
-publishDate: 2022-11-03T11:38:30Z
+title: ' 1-day Willow Sculpture Workshop'
+subtitle: ''
+summary: >-
+  Willow Sculpture Workshop to learn how to make willow sculptures to be held at
+  Castle Park Arts Centre, Frodsham.
+date: '2023-03-24T10:00:00.000Z'
+endDate: '2023-03-24T00:00:00.000Z'
+publishDate: '2022-11-03T11:38:30.000Z'
 cancelled: false
-cancellation_text: ""
+cancellation_text: ''
 hidePrice: false
 price: 85
 deposit: 40
 hidePlaces: false
-places: 3
-venue: "CPAC"
+places: 0
+venue: CPAC
 image:
-    caption: ""
-    focal_point: "Smart"
-    name: "/uploads/castle-park-arts-centre.jpg"
-    preview_only: false
+  name: /uploads/castle-park-arts-centre.jpg
+  caption: ''
+  focal_point: Smart
+  preview_only: false
 featured: false
 share: false
 commentable: false
 editable: false
 _template: workshop
 ---
+
 Workshop to learn how to make willow sculptures. You can choose what you make. This one-day workshop shows you the techniques and materials I use in my own work to create sculptures from willow. The group is kept small so you will get help when you need it.
 
 The workshop is held at Castle Park Arts Centre in Frodsham, Cheshire and runs from 10AM to 4PM (bring your own lunch or buy some in the excellent Arts Centre Cafe).

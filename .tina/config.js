@@ -46,12 +46,28 @@ export default defineConfig({
               { name: "subtitle",
                 label: "Sub-Title",
                 type: "string",
-                ui: { component: "textarea" }
+                ui: {
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
               { name: "summary",
                 label: "Summary",
                 type: "string",
-                ui: { component: "textarea" }
+                ui: {
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 500)) {
+                      return "Must be between 3 and 500 characters"
+                    }
+                  }
+                }
               },
               { name: "featured",
                 label: "Featured",
@@ -63,7 +79,26 @@ export default defineConfig({
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
               { name: "view",
@@ -72,7 +107,10 @@ export default defineConfig({
                 description: "Toggle between the various page layout types: 1 = List, 2 = Compact, 3 = Card",
                 required: true,
                 ui: {
-                  validate: (value) => {if (value < 1 || value > 3) { return "Must be between 1 and 3" }},
+                  validate: (value) => {
+                    if (value < 1 || value > 3) 
+                    { return "Must be between 1 and 3" }
+                  },
                   component: "number",
                   step: 1
                 }
@@ -84,6 +122,14 @@ export default defineConfig({
                   { name: "caption",
                     label: "Caption",
                     type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
                   { name: "image",
                     label: "Image",
@@ -94,7 +140,15 @@ export default defineConfig({
               { name: "hero_media",
                 label: "Hero Media",
                 type: "string",
-                description: "Hero image (optional). Enter filename of an image in the `static/img/` folder."
+                description: "Hero image (optional). Enter the filename of an image in the `static/img/` folder.",
+                ui: {
+                 validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
               { name: "design",
                 label: "Design",
@@ -126,7 +180,15 @@ export default defineConfig({
                       { name: "image",
                         label: "Image",
                         type: "string",
-                        description: "The filename of image in the `static/img/` folder"
+                        description: "The filename of image in the `static/img/` folder",
+                        ui: {
+                        validate: (value) => {
+                            const fieldLength = value?.length || 0;
+                            if(value && (fieldLength < 3 || fieldLength > 100)) {
+                              return "Must be between 3 and 100 characters"
+                            }
+                          }
+                        }
                       },
                       { name: "image_darken",
                         label: "Image Darken",
@@ -164,7 +226,15 @@ export default defineConfig({
                       { name: "image_min_height",
                         label: "Image Min Height",
                         type: "string",
-                        decsription: "The minimum size of the image, e.g. 500px"
+                        decsription: "The minimum size of the image, e.g. 500px",
+                        ui: {
+                        validate: (value) => {
+                            const fieldLength = value?.length || 0;
+                            if(value && (fieldLength < 3 || fieldLength > 7)) {
+                              return "Must be between 3 and 7 characters"
+                            }
+                          }
+                        }
                       },
                       { name: "text_color_light",
                         label: "Text Colour Light",
@@ -182,11 +252,27 @@ export default defineConfig({
                 fields: [
                   { name: "url",
                     label: "URL",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 250)) {
+                          return "Must be between 3 and 250 characters"
+                        }
+                      }
+                    }
                   },
                   { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
                   { name: "icon_pack",
                     label: "Icon Pack",
@@ -200,7 +286,15 @@ export default defineConfig({
                   },
                   { name: "icon",
                     label: "Icon",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 1 || fieldLength > 15)) {
+                          return "Must be between 1 and 15 characters"
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -210,11 +304,27 @@ export default defineConfig({
                 fields: [
                   { name: "url",
                     label: "URL",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 250)) {
+                          return "Must be between 3 and 250 characters"
+                        }
+                      }
+                    }
                   },
                   { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -225,7 +335,15 @@ export default defineConfig({
                   { name: "label",
                     label: "Label",
                     type: "string",
-                    ui: { component: "textarea" }
+                    ui: {
+                      component: "textarea",
+                      validate: (value) => {
+                          const fieldLength = value?.length || 0;
+                          if(value && (fieldLength < 3 || fieldLength > 100)) {
+                            return "Must be between 3 and 100 characters"
+                          }
+                        }
+                    }
                   }
                 ]
               },
@@ -273,7 +391,13 @@ export default defineConfig({
                 label: "Sub-Title",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                      const fieldLength = value?.length || 0;
+                      if(value && (fieldLength < 3 || fieldLength > 100)) {
+                        return "Must be between 3 and 100 characters"
+                      }
+                    }
                 }
               },
               {
@@ -281,7 +405,13 @@ export default defineConfig({
                 label: "Summary",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                      const fieldLength = value?.length || 0;
+                      if(value && (fieldLength < 3 || fieldLength > 500)) {
+                        return "Must be between 3 and 500 characters"
+                      }
+                    }
                 }
               },
               {
@@ -296,7 +426,26 @@ export default defineConfig({
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
               {
@@ -304,19 +453,24 @@ export default defineConfig({
                 label: "Image",
                 type: "object",
                 fields: [
-                  {
-                    name: "name",
+                  { name: "name",
                     label: "Name",
                     type: "image",
                     required: true
                   },
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "focal_point",
+                  { name: "focal_point",
                     label: "Focal Point",
                     type: "string",
                     options: [
@@ -332,8 +486,7 @@ export default defineConfig({
                       { value: "BottomRight", label: "Bottom Right" }
                     ]
                   },
-                  {
-                    name: "preview_only",
+                  { name: "preview_only",
                     label: "Preview Only",
                     type: "boolean"
                   }
@@ -366,13 +519,27 @@ export default defineConfig({
                 type: "string",
                 isTitle: true,
                 required: true,
+                ui: {
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(fieldLength < 3 || fieldLength > 100) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
               {
                 name: "subtitle",
                 label: "Sub-Title",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
                 }
               },
               {
@@ -382,33 +549,61 @@ export default defineConfig({
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "hero_media",
+              { name: "hero_media",
                 label: "Hero Media",
-                type: "string"
+                type: "string",
+                description: "Hero image (optional). Enter the filename of an image in the `static/img/` folder.",
+                ui: {
+                 validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
-              {
-                name: "content",
+              { name: "content",
                 label: "Content",
                 type: "object",
                 fields: [
-                  {
-                    name: "count",
+                  { name: "count",
                     label: "Count",
-                    type: "number"
+                    type: "number",
+                    description: "Choose how much pages you would like to display (0 = all pages)",
+                    required: true
                   },
-                  {
-                    name: "offset",
+                  { name: "offset",
                     label: "Offset",
-                    type: "number"
+                    type: "number",
+                    description: "Choose how many pages you would like to offset by",
+                    required: true
                   },
-                  {
-                    name: "order",
+                  { name: "order",
                     Label: "Order",
                     type: "string",
+                    description: "Page Order",
                     options: [
                       {
                         value: "asc",
@@ -420,13 +615,74 @@ export default defineConfig({
                       }
                     ]
                   },
-                  {
-                    name: "page_type",
+                  { name: "page_type",
                     label: "Page Type",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "filter_button",
+                  { name: "filters",
+                    label: "Filters",
+                    type: "object",
+                    fields: [
+                      { name: "category",
+                        label: "Category",
+                        type: "string",
+                        ui: {
+                          validate: (value) => {
+                             const fieldLength = value?.length || 0;
+                             if(value && (fieldLength < 3 || fieldLength > 100)) {
+                               return "Must be between 3 and 100 characters"
+                             }
+                           }
+                         }
+                      },
+                      { name: "tag",
+                        label: "Tag",
+                        type: "string",
+                        ui: {
+                          validate: (value) => {
+                             const fieldLength = value?.length || 0;
+                             if(value && (fieldLength < 3 || fieldLength > 100)) {
+                               return "Must be between 3 and 100 characters"
+                             }
+                           }
+                         }
+                      },
+                      { name: "exclude_featured",
+                        label: "Exclude Featured",
+                        type: "boolean"
+                      },
+                      { name: "exclude_future",
+                        label: "Exclude Future",
+                        type: "boolean",
+                      },
+                      { name: "exclude_past",
+                        label: "Exclude Past",
+                        type: "boolean",
+                      },
+                      { name: "filter_default",
+                        label: "Filter Default",
+                        type: "number",
+                        description: "Default filter index (e.g. 0 corresponds to the first `Filter Button`",
+                        ui: {
+                          validate: (value) => {
+                            if (value < 0) 
+                            { return "Must be 0 or greater" }
+                          },
+                          component: "number",
+                          step: 1
+                        }
+                      }
+                    ]
+                  },
+                  { name: "filter_button",
                     label: "Filter Button",
                     type: "object",
                     list: true,
@@ -447,202 +703,266 @@ export default defineConfig({
                   }
                 ]
               },
-              {
-                name: "cta",
+              { name: "cta",
                 label: "Call to Action",
                 type: "object",
                 fields: [
-                  {
-                    name: "url",
+                  { name: "url",
                     label: "URL",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 250)) {
+                           return "Must be between 3 and 250 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "label",
+                  { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "icon_pack",
+                  { name: "icon_pack",
                     label: "Icon Pack",
                     type: "string",
                     options: [
-                      {
-                        value: "fa", label: "fa"
-                      },
-                      {
-                        value: "fas", label: "fas"
-                      },
-                      {
-                        value: "fab", label: "fab"
-                      },
-                      {
-                        value: "ai", label: "ai"
-                      }
+                      { value: "fa", label: "fa" },
+                      { value: "fas", label: "fas" },
+                      { value: "fab", label: "fab" },
+                      { value: "ai", label: "ai" }
                     ]
                   },
-                  {
-                    name: "icon",
+                  { name: "icon",
                     label: "Icon",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 1 || fieldLength > 15)) {
+                           return "Must be between 1 and 15 characters"
+                         }
+                       }
+                     }
                   }
                 ]
               },
-              {
-                name: "cta_alt",
+              { name: "cta_alt",
                 label: "CTA ALT",
                 type: "object",
                 fields: [
-                  {
-                    name: "url",
+                  { name: "url",
                     label: "URL",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 250)) {
+                           return "Must be between 3 and 250 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "label",
+                  { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   }
                 ]
               },
-              {
-                name: "cta_note",
+              { name: "cta_note",
                 label: "CTA Note",
                 type: "object",
                 fields: [
-                  {
-                    name: "label",
+                  { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   }
                 ]
               },
-              {
-                name: "design",
+              { name: "design",
                 label: "Design",
                 type: "object",
                 fields: [
-                  {
-                    name: "view",
+                  { name: "view",
                     label: "View",
-                    type: "number"
+                    type: "number",
+                    description: "Toggle between the various page layout types: 1 = List, 2 = Compact, 3 = Card",
+                    required: true,
+                    ui: {
+                      validate: (value) => {
+                        if (value < 1 || value > 3) 
+                        { return "Must be between 1 and 3" }
+                      },
+                      component: "number",
+                      step: 1
+                    }
                   },
-                  {
-                    name: "background",
+                  { name: "background",
                     label: "Background",
                     type: "object",
+                    description: "Apply a background color, gradient, or image.",
                     fields: [
-                      {
-                        name: "color",
+                      { name: "color",
                         label: "Colour",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
-                      {
-                        name: "gradient_start",
+                      { name: "gradient_start",
                         label: "Gradient Start",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
-                      {
-                        name: "gradient_end",
+                      { name: "gradient_end",
                         label: "Gradient End",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
-                      {
-                        name: "image",
+                      { name: "image",
                         label: "Image",
-                        type: "string"
+                        type: "string",
+                        description: "The filename of image in the `static/img/` folder",
+                        ui: {
+                        validate: (value) => {
+                            const fieldLength = value?.length || 0;
+                            if(value && (fieldLength < 3 || fieldLength > 100)) {
+                              return "Must be between 3 and 100 characters"
+                            }
+                          }
+                        }
                       },
-                      {
-                        name: "image_darken",
+                      { name: "image_darken",
                         label: "Image Darken",
                         type: "number",
-                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1",
+                        ui: {
+                          validate: (value) => {if (value < 0 || value > 1) { return "Must be between 0.0 and 1.0" }},
+                          component: "number",
+                          step: 0.1
+                        }
                       },
-                      {
-                        name: "image_size",
+                      { name: "image_size",
                         label: "Image Size",
                         type: "string",
                         options: [
-                          {
-                            value: "cover", label: "cover"
-                          },
-                          {
-                            value: "contain", label: "contain"
-                          },
-                          {
-                            value: "actual", label: "actual"
-                          }
+                          { value: "cover", label: "cover" },
+                          { value: "contain", label: "contain" },
+                          { value: "actual", label: "actual" }
                         ]
                       },
-                      {
-                        name: "image_position",
+                      { name: "image_position",
                         label: "Image Position",
                         type: "string",
                         options: [
-                          {
-                            value: "left", label: "left"
-                          },
-                          {
-                            value: "center", label: "center"
-                          },
-                          {
-                            value: "right", label: "right"
-                          }
+                          { value: "left", label: "left" },
+                          { value: "center", label: "center" },
+                          { value: "right", label: "right" }
                         ]
                       },
-                      {
-                        name: "image_parallax",
+                      { name: "image_parallax",
                         label: "Image Parallax",
-                        type: "boolean"
+                        type: "boolean",
+                        description: "Use a fun parallax-like fixed background effect?"
                       },
-                      {
-                        name: "image_min_height",
+                      { name: "image_min_height",
                         label: "Image Min Height",
-                        type: "string"
+                        type: "string",
+                        decsription: "The minimum size of the image, e.g. 500px",
+                        ui: {
+                        validate: (value) => {
+                            const fieldLength = value?.length || 0;
+                            if(value && (fieldLength < 3 || fieldLength > 7)) {
+                              return "Must be between 3 and 7 characters"
+                            }
+                          }
+                        }
                       },
-                      {
-                        name: "text_color_light",
+                      { name: "text_color_light",
                         label: "Text Colour Light",
-                        type: "boolean"
+                        type: "boolean",
+                        description: "Invert the colour of the Text over the image"
                       }
                     ]
                   },
                 ]
               },
-              {
-                name: "header",
+              { name: "header",
                 label: "Header",
                 type: "object",
                 fields: [
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
                     type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "image",
+                  { name: "image",
                     label: "Image",
                     type: "image"
                   }
                 ]
               },
-              {
-                name: "image",
+              { name: "image",
                 label: "Image",
                 type: "object",
                 fields: [
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "placement",
+                  { name: "placement",
                     label: "Placement",
-                    type: "number"
+                    type: "number",
+                    description: "1=column width, 2=container width, 3=fluid, any other value article container width",
+                    required: true,
+                    ui: {
+                      validate: (value) => {
+                        if (value < 1 || value > 4) 
+                        { return "Must be between 1 and 4" }
+                      },
+                      component: "number",
+                      step: 1
+                    }
                   }
                 ]
               },
@@ -658,88 +978,126 @@ export default defineConfig({
             name: "sculpture",
             label: "Sculpture",
             fields: [
-              {
-                name: "title",
+              { name: "title",
                 label: "Title",
                 type: "string",
                 isTitle: true,
                 required: true,
+                ui: {
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(fieldLength < 3 || fieldLength > 100) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
-              {
-                name: "summary",
+              { name: "summary",
                 label: "Summary",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 500)) {
+                      return "Must be between 3 and 500 characters"
+                    }
+                  }
                 }
               },
-              {
-                name: "date",
-                label: "Date",
+              { name: "date",
+                label: "Date published",
                 type: "datetime",
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "type",
+              { name: "type",
                 label: "Type",
-                type: "string"
+                type: "string",
+                required: true,
+                description: 'Always set this to "project"',
+                ui: {
+                  validate: (value) => {
+                    if(value && value != 'project') {
+                      return "Must be set to 'project'"
+                    }
+                  }
+                }
               },
-              {
-                name: "weight",
+              { name: "weight",
                 label: "Weight",
                 type: "number",
-                required: true
+                required: true,
+                description: "The sort order for display in the gallery. Set it to 500 if you don't care"
               },
-              {
-                name: "featured",
-                label: "Featured",
-                type: "boolean"
+              { name: "featured",
+                label: "Is a featured Sculpture?",
+                type: "boolean",
+                description: "You can filter by featured content on your homepage"
               },
-              {
-                name: "tags",
+              { name: "tags",
                 label: "Tags",
                 type: "string",
-                list: true
+                list: true,
+                description: 'e.g. "dogs" "farm or domestic"'
               },
-              {
-                name: "share",
-                label: "Share",
-                type: "boolean"
-              },
-              {
-                name: "commentable",
-                label: "Commentable",
-                type: "boolean"
-              },
-              {
-                name: "editable",
-                label: "Editable",
-                type: "boolean"
-              },
-              {
-                name: "image",
-                label: "Image",
+              { name: "image",
+                label: "Featured Image",
                 type: "object",
                 fields: [
-                  {
-                    name: "name",
+                  { name: "name",
                     label: "Name",
                     type: "image",
-                    required: true
+                    required: true,
+                    description: 'This is optional',
+                    ui: {
+                      validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
-                    type: "string"
+                    type: "string",
+                    description: 'The caption text to add to your image',
+                    ui: {
+                      validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "focal_point",
+                  { name: "focal_point",
                     label: "Focal Point",
                     type: "string",
+                    description: "Choose Smart if you don't know",
                     options: [
                       { value: "Smart", label: "Smart" },
                       { value: "Center", label: "Center" },
@@ -759,6 +1117,18 @@ export default defineConfig({
                     type: "boolean"
                   }
                 ]
+              },
+              { name: "share",
+                label: "Share",
+                type: "boolean"
+              },
+              { name: "commentable",
+                label: "Commentable",
+                type: "boolean"
+              },
+              { name: "editable",
+                label: "Editable",
+                type: "boolean"
               },
               {
                 label: "Body",
@@ -780,55 +1150,95 @@ export default defineConfig({
             name: "index_page",
             label: "Index Page",
             fields: [
-              {
-                name: "title",
+              { name: "title",
                 label: "Title",
                 type: "string",
                 isTitle: true,
                 required: true,
+                ui: {
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(fieldLength < 3 || fieldLength > 100) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
-              {
-                name: "subtitle",
+              { name: "subtitle",
                 label: "Sub-Title",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
                 }
               },
-              {
-                name: "date",
+              { name: "date",
                 label: "Date",
                 type: "datetime",
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "hero_media",
+              { name: "hero_media",
                 label: "Hero Media",
-                type: "string"
+                type: "string",
+                description: "Hero image (optional). Enter the filename of an image in the `static/img/` folder.",
+                ui: {
+                 validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
               {
                 name: "content",
                 label: "Content",
                 type: "object",
                 fields: [
-                  {
-                    name: "count",
+                  { name: "count",
                     label: "Count",
-                    type: "number"
+                    type: "number",
+                    description: "Choose how much pages you would like to display (0 = all pages)",
+                    required: true
                   },
-                  {
-                    name: "offset",
+                  { name: "offset",
                     label: "Offset",
-                    type: "number"
+                    type: "number",
+                    description: "Choose how many pages you would like to offset by",
+                    required: true
                   },
-                  {
-                    name: "order",
+                  { name: "order",
                     Label: "Order",
                     type: "string",
+                    description: "Page Order",
                     options: [
                       {
                         value: "asc",
@@ -840,8 +1250,74 @@ export default defineConfig({
                       }
                     ]
                   },
-                  {
-                    name: "filter_button",
+                  { name: "page_type",
+                    label: "Page Type",
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
+                  },
+                  { name: "filters",
+                    label: "Filters",
+                    type: "object",
+                    fields: [
+                      { name: "category",
+                        label: "Category",
+                        type: "string",
+                        ui: {
+                          validate: (value) => {
+                             const fieldLength = value?.length || 0;
+                             if(value && (fieldLength < 3 || fieldLength > 100)) {
+                               return "Must be between 3 and 100 characters"
+                             }
+                           }
+                         }
+                      },
+                      { name: "tag",
+                        label: "Tag",
+                        type: "string",
+                        ui: {
+                          validate: (value) => {
+                             const fieldLength = value?.length || 0;
+                             if(value && (fieldLength < 3 || fieldLength > 100)) {
+                               return "Must be between 3 and 100 characters"
+                             }
+                           }
+                         }
+                      },
+                      { name: "exclude_featured",
+                        label: "Exclude Featured",
+                        type: "boolean"
+                      },
+                      { name: "exclude_future",
+                        label: "Exclude Future",
+                        type: "boolean",
+                      },
+                      { name: "exclude_past",
+                        label: "Exclude Past",
+                        type: "boolean",
+                      },
+                      { name: "filter_default",
+                        label: "Filter Default",
+                        type: "number",
+                        description: "Default filter index (e.g. 0 corresponds to the first `Filter Button`",
+                        ui: {
+                          validate: (value) => {
+                            if (value < 0) 
+                            { return "Must be 0 or greater" }
+                          },
+                          component: "number",
+                          step: 1
+                        }
+                      }
+                    ]
+                  },
+                  { name: "filter_button",
                     label: "Filter Button",
                     type: "object",
                     list: true,
@@ -859,243 +1335,269 @@ export default defineConfig({
                         required: true
                       }
                     ]
-                  },
-                  {
-                    name: "filters",
-                    label: "Filters",
-                    type: "object",
-                    fields: [
-                      {
-                        name: "category",
-                        label: "Category",
-                        type: "string"
-                      },
-                      {
-                        name: "exclude_featured",
-                        label: "Exclude Featured Workshops",
-                        type: "boolean"
-                      },
-                      {
-                        name: "exclude_future",
-                        label: "Exclude workshops dated in the future",
-                        type: "boolean"
-                      },
-                      {
-                        name: "exclude_past",
-                        label: "Exclude workshops from the past",
-                        type: "boolean"
-                      },
-                      {
-                        name: "filter_default",
-                        label: "Show how many?",
-                        type: "number",
-                        description: "0 (zero) means show them all"
-                      },
-                      {
-                        name: "tag",
-                        label: "Filter by a Tag",
-                        type: "string"
-                      }
-                    ]
                   }
                 ]
               },
-              {
-                name: "cta",
+              { name: "cta",
                 label: "Call to Action",
                 type: "object",
                 fields: [
-                  {
-                    name: "url",
+                  { name: "url",
                     label: "URL",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 250)) {
+                           return "Must be between 3 and 250 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "label",
+                  { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "icon_pack",
+                  { name: "icon_pack",
                     label: "Icon Pack",
                     type: "string",
                     options: [
-                      {
-                        value: "fa", label: "fa"
-                      },
-                      {
-                        value: "fas", label: "fas"
-                      },
-                      {
-                        value: "fab", label: "fab"
-                      },
-                      {
-                        value: "ai", label: "ai"
-                      }
+                      { value: "fa", label: "fa" },
+                      { value: "fas", label: "fas" },
+                      { value: "fab", label: "fab" },
+                      { value: "ai", label: "ai" }
                     ]
                   },
-                  {
-                    name: "icon",
+                  { name: "icon",
                     label: "Icon",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 1 || fieldLength > 15)) {
+                           return "Must be between 1 and 15 characters"
+                         }
+                       }
+                     }
                   }
                 ]
               },
-              {
-                name: "cta_alt",
+              { name: "cta_alt",
                 label: "CTA ALT",
                 type: "object",
                 fields: [
-                  {
-                    name: "url",
+                  { name: "url",
                     label: "URL",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 250)) {
+                           return "Must be between 3 and 250 characters"
+                         }
+                       }
+                     }
                   },
-                  {
-                    name: "label",
+                  { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   }
                 ]
               },
-              {
-                name: "cta_note",
+              { name: "cta_note",
                 label: "CTA Note",
                 type: "object",
                 fields: [
-                  {
-                    name: "label",
+                  { name: "label",
                     label: "Label",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                         const fieldLength = value?.length || 0;
+                         if(value && (fieldLength < 3 || fieldLength > 100)) {
+                           return "Must be between 3 and 100 characters"
+                         }
+                       }
+                     }
                   }
                 ]
               },
-              {
-                name: "design",
+              { name: "design",
                 label: "Design",
                 type: "object",
                 fields: [
-                  {
-                    name: "view",
+                  { name: "view",
                     label: "View",
-                    type: "number"
+                    type: "number",
+                    description: "Toggle between the various page layout types: 1 = List, 2 = Compact, 3 = Card",
+                    required: true,
+                    ui: {
+                      validate: (value) => {
+                        if (value < 1 || value > 3) 
+                        { return "Must be between 1 and 3" }
+                      },
+                      component: "number",
+                      step: 1
+                    }
                   },
-                  {
-                    name: "background",
+                  { name: "background",
                     label: "Background",
                     type: "object",
+                    description: "Apply a background color, gradient, or image.",
                     fields: [
-                      {
-                        name: "color",
+                      { name: "color",
                         label: "Colour",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
-                      {
-                        name: "gradient_start",
+                      { name: "gradient_start",
                         label: "Gradient Start",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
-                      {
-                        name: "gradient_end",
+                      { name: "gradient_end",
                         label: "Gradient End",
                         description: "RGB Colour specification, e.g. rgb(236, 244, 232)",
-                        type: "string"
+                        type: "string",
+                        ui: { component: "color", colorFormat: "rgb" }
                       },
-                      {
-                        name: "image",
+                      { name: "image",
                         label: "Image",
-                        type: "string"
+                        type: "string",
+                        description: "The filename of image in the `static/img/` folder",
+                        ui: {
+                        validate: (value) => {
+                            const fieldLength = value?.length || 0;
+                            if(value && (fieldLength < 3 || fieldLength > 100)) {
+                              return "Must be between 3 and 100 characters"
+                            }
+                          }
+                        }
                       },
-                      {
-                        name: "image_darken",
+                      { name: "image_darken",
                         label: "Image Darken",
                         type: "number",
-                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1"
+                        description: "Darken the image? Range 0-1 where 0 is transparent and 1 is opaque, in steps of 0.1",
+                        ui: {
+                          validate: (value) => {if (value < 0 || value > 1) { return "Must be between 0.0 and 1.0" }},
+                          component: "number",
+                          step: 0.1
+                        }
                       },
-                      {
-                        name: "image_size",
+                      { name: "image_size",
                         label: "Image Size",
                         type: "string",
                         options: [
-                          {
-                            value: "cover", label: "cover"
-                          },
-                          {
-                            value: "contain", label: "contain"
-                          },
-                          {
-                            value: "actual", label: "actual"
-                          }
+                          { value: "cover", label: "cover" },
+                          { value: "contain", label: "contain" },
+                          { value: "actual", label: "actual" }
                         ]
                       },
-                      {
-                        name: "image_position",
+                      { name: "image_position",
                         label: "Image Position",
                         type: "string",
                         options: [
-                          {
-                            value: "left", label: "left"
-                          },
-                          {
-                            value: "center", label: "center"
-                          },
-                          {
-                            value: "right", label: "right"
-                          }
+                          { value: "left", label: "left" },
+                          { value: "center", label: "center" },
+                          { value: "right", label: "right" }
                         ]
                       },
-                      {
-                        name: "image_parallax",
+                      { name: "image_parallax",
                         label: "Image Parallax",
-                        type: "boolean"
+                        type: "boolean",
+                        description: "Use a fun parallax-like fixed background effect?"
                       },
-                      {
-                        name: "image_min_height",
+                      { name: "image_min_height",
                         label: "Image Min Height",
-                        type: "string"
+                        type: "string",
+                        decsription: "The minimum size of the image, e.g. 500px",
+                        ui: {
+                        validate: (value) => {
+                            const fieldLength = value?.length || 0;
+                            if(value && (fieldLength < 3 || fieldLength > 7)) {
+                              return "Must be between 3 and 7 characters"
+                            }
+                          }
+                        }
                       },
-                      {
-                        name: "text_color_light",
+                      { name: "text_color_light",
                         label: "Text Colour Light",
-                        type: "boolean"
+                        type: "boolean",
+                        description: "Invert the colour of the Text over the image"
                       }
                     ]
                   },
                 ]
               },
-              {
-                name: "header",
+              { name: "header",
                 label: "Header",
                 type: "object",
                 fields: [
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
                     type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "image",
+                  { name: "image",
                     label: "Image",
                     type: "image"
                   }
                 ]
               },
-              {
-                name: "image",
+              { name: "image",
                 label: "Image",
                 type: "object",
                 fields: [
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                    validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "placement",
+                  { name: "placement",
                     label: "Placement",
-                    type: "number"
+                    type: "number",
+                    description: "1=column width, 2=container width, 3=fluid, any other value article container width",
+                    required: true,
+                    ui: {
+                      validate: (value) => {
+                        if (value < 1 || value > 4) 
+                        { return "Must be between 1 and 4" }
+                      },
+                      component: "number",
+                      step: 1
+                    }
                   }
                 ]
               },
@@ -1111,104 +1613,184 @@ export default defineConfig({
             name: "workshop",
             label: "Workshop",
             fields: [
-              {
-                name: "title",
+              { name: "title",
                 label: "Title",
                 type: "string",
                 isTitle: true,
                 required: true,
+                ui: {
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(fieldLength < 3 || fieldLength > 100) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
+                }
               },
-              {
-                name: "subtitle",
+              { name: "subtitle",
                 label: "Sub-Title",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 100)) {
+                      return "Must be between 3 and 100 characters"
+                    }
+                  }
                 }
               },
-              {
-                name: "summary",
+              { name: "summary",
                 label: "Summary",
                 type: "string",
                 ui: {
-                  component: "textarea"
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 500)) {
+                      return "Must be between 3 and 500 characters"
+                    }
+                  }
                 }
               },
-              {
-                name: "date",
+              { name: "date",
                 label: "Date",
                 type: "datetime",
                 required: true,
                 description: "The date on which the workshop will be held",
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "endDate",
+              { name: "endDate",
                 label: "End Date",
                 type: "datetime",
-                required: false,
-                description: "Leave blank unless this is a multi-day course",
+                required: true,
+                description: "Set this to the same value as Date unless this is a multi-day course",
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "publishDate",
+              { name: "publishDate",
                 label: "Publish Date",
                 type: "datetime",
                 required: true,
                 description: "the date the workshop should be publicised",
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "cancelled",
+              { name: "cancelled",
                 label: "Cancelled",
                 type: "boolean",
                 description: "Has this workshop been cancelled?"
               },
-              {
-                name: "cancellation_text",
+              { name: "cancellation_text",
                 label: "Cancellation Text",
                 type: "string",
-                description: "A message about the cancellation"
+                description: "A message about the cancellation",
+                ui: {
+                  component: "textarea",
+                  validate: (value) => {
+                    const fieldLength = value?.length || 0;
+                    if(value && (fieldLength < 3 || fieldLength > 500)) {
+                      return "Must be between 3 and 500 characters"
+                    }
+                  }
+                }
               },
-              {
-                name: "hidePrice",
-                label: "Hide Price Display",
+              { name: "hidePrice",
+                label: "Hide the Prices Display",
                 type: "boolean"
               },
-              {
-                name: "price",
+              { name: "price",
                 label: "Price",
                 type: "number",
                 description: "The price of the workshop"
               },
-              {
-                name: "deposit",
+              { name: "deposit",
                 label: "Deposit",
                 type: "number",
                 description: "The amount of deposit required"
               },
-              {
-                name: "hidePlaces",
-                label: "Hide Place Display",
+              { name: "hidePlaces",
+                label: "Hide the Places Display",
                 type: "boolean"
               },
-              {
-                name: "places",
+              { name: "places",
                 label: "Places",
                 type: "number",
-                description: "The number of available places on the workshop"
+                description: "The number of available places on the workshop",
+                ui: {
+                  validate: (value) => {
+                    if (value < 0 || value > 12) 
+                    { return "Must be between 0 and 12" }
+                  },
+                  component: "number",
+                  step: 1
+                }
               },
-              {
-                name: "venue",
+              { name: "venue",
                 label: "Venue",
                 type: "string",
                 options:[
@@ -1217,23 +1799,28 @@ export default defineConfig({
                   { value: "BODFARI", label: "Bodfari" }
                 ]
               },
-              {
-                name: "image",
+              { name: "image",
                 label: "Image",
                 type: "object",
                 fields: [
-                  {
-                    name: "name",
+                  { name: "name",
                     label: "Name",
-                    type: "image"
+                    type: "image",
+                    required: true
                   },
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
-                    type: "string"
+                    type: "string",
+                    ui: {
+                      validate: (value) => {
+                        const fieldLength = value?.length || 0;
+                        if(value && (fieldLength < 3 || fieldLength > 100)) {
+                          return "Must be between 3 and 100 characters"
+                        }
+                      }
+                    }
                   },
-                  {
-                    name: "focal_point",
+                  { name: "focal_point",
                     label: "Focal Point",
                     type: "string",
                     options: [
@@ -1249,31 +1836,26 @@ export default defineConfig({
                       { value: "BottomRight", label: "Bottom Right" }
                     ]
                   },
-                  {
-                    name: "preview_only",
+                  { name: "preview_only",
                     label: "Preview Only",
                     type: "boolean"
                   }
                 ]
               },
-              {
-                name: "featured",
+              { name: "featured",
                 label: "Featured",
                 type: "boolean",
                 description: "You can filter by featured content on your homepage"
               },
-              {
-                name: "share",
+              { name: "share",
                 label: "Share",
                 type: "boolean"
               },
-              {
-                name: "commentable",
+              { name: "commentable",
                 label: "Commentable",
                 type: "boolean"
               },
-              {
-                name: "editable",
+              { name: "editable",
                 label: "Editable",
                 type: "boolean"
               },
@@ -1296,29 +1878,44 @@ export default defineConfig({
             name: "about_me_page",
             label: "About Me",
             fields: [
-              {
-                name: "name",
+              { name: "name",
                 label: "Name",
                 type: "string",
                 required: true,
               },
-              {
-                name: "featured",
+              { name: "featured",
                 label: "Featured",
                 type: "boolean"
               },
-              {
-                name: "date",
+              { name: "date",
                 label: "Date",
                 type: "datetime",
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "role",
+              { name: "role",
                 label: "Role",
                 type: "string",
                 required: true,
@@ -1326,63 +1923,53 @@ export default defineConfig({
                   component: "textarea"
                 }
               },
-              {
-                name: "bio",
+              { name: "bio",
                 label: "Bio",
                 type: "rich-text",
                 description: "A short bio displyed in user profile at end of posts. Between 10 and 700 characters long.",
               },
-              {
-                name: "organizations",
+              { name: "organizations",
                 label: "Organizations",
                 type: "object",
                 list: true,
                 fields: [
-                  {
-                    name: "name",
+                  { name: "name",
                     label: "Name",
                     type: "string",
                     required: true
                   },
-                  {
-                    name: "url",
+                  { name: "url",
                     label : "URL",
                     type: "string",
                     required: true
                   }
                 ]
               },
-              {
-                name: "interests",
+              { name: "interests",
                 label: "Interests",
                 type: "string",
                 list: true
               },
-              {
-                name: "education",
+              { name: "education",
                 label: "Education",
                 type: "object",
                 fields: [
-                  {
-                    name: "courses",
+                  { name: "courses",
                     label: "Courses",
                     type: "object",
                     list: true,
                     fields: [
-                      {
-                        name: "course",
+                      { name: "course",
                         label: "Course",
                         type: "string",
                         required: true
                       },
-                      {
-                        name: "institution",
+                      { name: "institution",
                         label: "Instritution",
                         type: "string",
                         required: true
                       },
-                      {
-                        name: "year",
+                      { name: "year",
                         label: "Year",
                         type: "number",
                         required: true
@@ -1391,14 +1978,12 @@ export default defineConfig({
                   }
                 ]
               },
-              {
-                name: "social",
+              { name: "social",
                 label: "Social Media",
                 type: "object",
                 list: true,
                 fields: [
-                  {
-                    name: "icon",
+                  { name: "icon",
                     label: "Icon",
                     type: "string",
                     description: "Which icon?",
@@ -1411,8 +1996,7 @@ export default defineConfig({
                       { value: "cv", label: "cv" }
                     ]
                   },
-                  {
-                    name: "icon_pack",
+                  { name: "icon_pack",
                     label: "Icon Pack",
                     type: "string",
                     description: "From which Font Awesome set?",
@@ -1423,42 +2007,35 @@ export default defineConfig({
                       { value: "far", label: "far" },                      
                     ]
                   },
-                  {
-                    name: "link",
+                  { name: "link",
                     label: "Link",
                     type: "string"
                   }
                 ]
               },
-              {
-                name: "email",
+              { name: "email",
                 label: "Email",
                 type: "string",
                 description: "Enter email to display Gravatar (if Gravatar enabled in Config)"
               },
-              {
-                name: "user_groups",
+              { name: "user_groups",
                 label: "User Groups",
                 type: "string",
                 list: true
               },
-              {
-                name: "share",
+              { name: "share",
                 label: "Share",
                 type: "boolean"
               },
-              {
-                name: "commentable",
+              { name: "commentable",
                 label: "Commentable",
                 type: "boolean"
               },
-              {
-                name: "editable",
+              { name: "editable",
                 label: "Editable",
                 type: "boolean"
               },
-              {
-                name: "body",
+              { name: "body",
                 label: "Body",
                 type: "rich-text",
                 isBody: true
@@ -1469,111 +2046,112 @@ export default defineConfig({
             name: "page",
             label: "Page",
             fields: [
-              {
-                name: "title",
+              { name: "title",
                 label: "Title",
                 type: "string",
                 isTitle: true,
                 required: true,
               },
-              {
-                name: "subtitle",
+              { name: "subtitle",
                 label: "Sub-Title",
                 type: "string",
                 ui: {
                   component: "textarea"
                 }
               },
-              {
-                name: "summary",
+              { name: "summary",
                 label: "Summary",
                 type: "string",
                 ui: {
                   component: "textarea"
                 }
               },
-              {
-                name: "featured",
+              { name: "featured",
                 label: "Featured",
                 type: "boolean"
               },
-              {
-                name: "date",
+              { name: "date",
                 label: "Date",
                 type: "datetime",
                 required: true,
                 ui: {
                   dateFormat: 'DD/MM/YYYY',
-                  parse: (val)=>{ val.utc(true); return val.toISOString(); }
+                  validate: (val) => {
+                    const fieldLength = val?.length || 0;
+                    if (fieldLength > 0
+                      && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                    { 
+                      return "That does not look like a date!";
+                    }
+                    if (fieldLength == 0)
+                    {
+                      return `A value is required!`;
+                    }
+                  },
+                  parse: (val)=> {
+                    if (val && typeof val != 'string')
+                    {
+                      val.utc(true);
+                      return val.toISOString();
+                    }
+                    return val;
+                  }
                 }
               },
-              {
-                name: "authors",
+              { name: "authors",
                 label: "Authors",
                 type: "string",
                 list: true,
               },
-              {
-                name: "categories",
+              { name: "categories",
                 label: "Categories",
                 type: "string",
                 list: true
               },
-              {
-                name: "tags",
+              { name: "tags",
                 label: "Tags",
                 type: "string",
                 list: true
               },
-              {
-                name: "share",
+              { name: "share",
                 label: "Share",
                 type: "boolean"
               },
-              {
-                name: "commentable",
+              { name: "commentable",
                 label: "Commentable",
                 type: "boolean"
               },
-              {
-                name: "editable",
+              { name: "editable",
                 label: "Editable",
                 type: "boolean"
               },
-              {
-                name: "header",
+              { name: "header",
                 label: "Header",
                 type: "object",
                 fields: [
-                  {
-                    name: "caption",
+                  { name: "caption",
                     label: "Caption",
                     type: "string"
                   },
-                  {
-                    name: "image",
+                  { name: "image",
                     label: "Image",
                     type: "image"
                   }
                 ]
               },
-              {
-                name: "design",
+              { name: "design",
                 label: "Design",
                 type: "object",
                 fields: [
-                  {
-                    name: "background",
+                  { name: "background",
                     label: "Background",
                     type: "object",
                     fields: [
-                      {
-                        name: "image_darken",
+                      { name: "image_darken",
                         label: "Image Darken",
                         type: "number"
                       },
-                      { 
-                        name: "image_min_height",
+                      { name: "image_min_height",
                         label: "Image Minumum Height",
                         type: "string"
                       }
@@ -1632,7 +2210,26 @@ export default defineConfig({
             required: true,
             ui: {
               dateFormat: 'DD/MM/YYYY',
-              parse: (val)=>{ val.utc(true); return val.toISOString(); }
+              validate: (val) => {
+                const fieldLength = val?.length || 0;
+                if (fieldLength > 0
+                  && val.search(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/) < 0)
+                { 
+                  return "That does not look like a date!";
+                }
+                if (fieldLength == 0)
+                {
+                  return `A value is required!`;
+                }
+              },
+              parse: (val)=> {
+                if (val && typeof val != 'string')
+                {
+                  val.utc(true);
+                  return val.toISOString();
+                }
+                return val;
+              }
             }
           },
           {
@@ -1773,7 +2370,10 @@ export default defineConfig({
             label: "Body",
             name: "body",
             isBody: true,
-            type: "rich-text"
+            type: "string",
+            ui: {
+              component: "textarea"
+            }
           }
         ]
       },

@@ -7,6 +7,13 @@ content:
   offset: 0
   order: asc
   page_type: ''
+  filters:
+    category: ''
+    tag: ''
+    exclude_featured: false
+    exclude_future: false
+    exclude_past: false
+    filter_default: 1
   filter_button:
     - name: All
       tag: '*'

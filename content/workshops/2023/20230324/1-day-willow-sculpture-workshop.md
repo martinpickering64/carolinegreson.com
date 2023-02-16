@@ -13,7 +13,7 @@ hidePrice: false
 price: 85
 deposit: 40
 hidePlaces: false
-places: 0
+places: 1
 venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg

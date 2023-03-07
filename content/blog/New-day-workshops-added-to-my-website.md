@@ -12,3 +12,4 @@ image:
 _template: blog_post
 ---
 
+Places have filled so quickly for my first 3 willow sculpture workshops of 2023, so I have just added some more dates for later in the autumn. If you would like more information go to my Workshops page, or contact me if you have questions, would like to book a place, or would like to discuss ideas for your project.

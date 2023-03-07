@@ -9,7 +9,7 @@ endDate: '2023-05-19T00:00:00.000Z'
 featured: false
 hidePlaces: false
 hidePrice: false
-places: 2
+places: 0
 price: 85
 publishDate: '2022-12-20T11:25:04.000Z'
 share: false

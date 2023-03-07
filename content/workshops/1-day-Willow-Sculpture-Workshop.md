@@ -10,6 +10,9 @@ venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg
   preview_only: true
+summary: >-
+  Willow Sculpture Workshop to learn how to make willow sculptures to be held at
+  Castle Park Arts Centre, Frodsham.
 _template: workshop
 ---
 

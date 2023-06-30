@@ -1,6 +1,6 @@
 ---
 cancellation_text: ''
-cancelled: false
+cancelled: true
 commentable: false
 date: '2023-07-21T09:00:00.000Z'
 deposit: 40

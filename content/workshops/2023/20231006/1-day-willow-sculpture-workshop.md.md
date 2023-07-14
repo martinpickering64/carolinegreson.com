@@ -8,14 +8,13 @@ endDate: '2023-10-06T00:00:00.000Z'
 publishDate: '2023-03-07T00:00:00.000Z'
 price: 85
 deposit: 40
-places: 1
+places: 0
 venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg
   caption: 'Castle Park Arts Center, Frodsham'
 _template: workshop
 ---
-
 
 Workshop to learn how to make willow sculptures. You can choose what you make. This one-day workshop shows you the techniques and materials I use in my own work to create sculptures from willow. The group is kept small so you will get help when you need it.
 

@@ -3,7 +3,7 @@ title: 1-day Willow Sculpture Workshop
 date: '2023-12-01T00:00:00.000Z'
 endDate: '2023-12-01T00:00:00.000Z'
 publishDate: '2023-03-07T00:00:00.000Z'
-price: 85
+price: 90
 deposit: 40
 places: 6
 venue: CPAC

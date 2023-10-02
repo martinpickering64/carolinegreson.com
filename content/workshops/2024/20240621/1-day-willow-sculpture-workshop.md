@@ -12,7 +12,7 @@ places: 6
 venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg
+cancelled: true
 _template: workshop
 ---
-
 

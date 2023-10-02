@@ -1,5 +1,5 @@
 ---
-title: 1-day willow sculpture workshop
+title: 1-day Willow Sculpture Workshop
 summary: ''
 date: '2024-03-22T00:00:00.000Z'
 endDate: '2024-03-22T00:00:00.000Z'

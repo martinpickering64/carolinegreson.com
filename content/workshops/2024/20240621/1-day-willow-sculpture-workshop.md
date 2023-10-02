@@ -13,6 +13,7 @@ venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg
 cancelled: true
+cancellation_text: Change of date
 _template: workshop
 ---
 

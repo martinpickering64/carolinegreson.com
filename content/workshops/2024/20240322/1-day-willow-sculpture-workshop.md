@@ -8,13 +8,12 @@ endDate: '2024-03-22T00:00:00.000Z'
 publishDate: '2023-10-02T00:00:00.000Z'
 price: 90
 deposit: 40
-places: 6
+places: 2
 venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg
 _template: workshop
 ---
-
 
 Workshop to learn how to make willow sculptures. You can choose what you make. This one-day workshop shows you the techniques and materials I use in my own work to create sculptures from willow. The group is kept small so you will get help when you need it.
 

@@ -26,7 +26,7 @@ export default defineConfig({
         format: "md",
         ui: {
           filename: {
-            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+            slugify: values => { return typeof(values.title) != 'string' ? `` : `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
           }
         },
         templates: [
@@ -515,7 +515,7 @@ export default defineConfig({
         format: "md",
         ui: {
           filename: {
-            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+            slugify: values => { return typeof(values.title) != 'string' ? `` : `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
           }
         },
         templates: [
@@ -1157,7 +1157,7 @@ export default defineConfig({
         format: "md",
         ui: {
           filename: {
-            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+            slugify: values => { return typeof(values.title) != 'string' ? `` : `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
           }
         },
         templates: [
@@ -1890,7 +1890,7 @@ export default defineConfig({
         format: "md",
         ui: {
           filename: {
-            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+            slugify: values => { return typeof(values.title) != 'string' ? `` : `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
           }
         },
         templates: [
@@ -2196,7 +2196,7 @@ export default defineConfig({
         format: "md",
         ui: {
           filename: {
-            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+            slugify: values => { return typeof(values.title) != 'string' ? `` : `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
           }
         },
         fields: [

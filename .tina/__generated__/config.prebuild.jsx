@@ -28,7 +28,7 @@ var config_default = defineConfig({
         ui: {
           filename: {
             slugify: (values) => {
-              return `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
+              return typeof values.title != "string" ? `` : `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
             }
           }
         },
@@ -559,7 +559,7 @@ var config_default = defineConfig({
         ui: {
           filename: {
             slugify: (values) => {
-              return `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
+              return typeof values.title != "string" ? `` : `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
             }
           }
         },
@@ -1262,7 +1262,7 @@ var config_default = defineConfig({
         ui: {
           filename: {
             slugify: (values) => {
-              return `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
+              return typeof values.title != "string" ? `` : `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
             }
           }
         },
@@ -2061,7 +2061,7 @@ var config_default = defineConfig({
         ui: {
           filename: {
             slugify: (values) => {
-              return `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
+              return typeof values.title != "string" ? `` : `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
             }
           }
         },
@@ -2406,7 +2406,7 @@ var config_default = defineConfig({
         ui: {
           filename: {
             slugify: (values) => {
-              return `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
+              return typeof values.title != "string" ? `` : `${values.title.toLowerCase().replace(/\W+/g, "-")}`;
             }
           }
         },

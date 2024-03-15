@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.108
+      - image: cibuilds/hugo:0.123.8
 # The resource_class feature allows configuring CPU and RAM resources for each job.
 # Different resource classes are available for different executors.
 # https://circleci.com/docs/2.0/configuration-reference/#resourceclass   

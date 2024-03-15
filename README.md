@@ -1,6 +1,6 @@
 # CarolineGregson.com
 
-[![CircleCI](https://circleci.com/gh/martinpickering64/carolinegreson.com.svg?style=svg&circle-token=e5688de139dbe5f8a0c65e75eb37b93f5f1d237f)](https://circleci.com/gh/martinpickering64/carolinegreson.com)
+[![<CarolineGregson.com>](https://circleci.com/gh/martinpickering64/carolinegreson.com.svg?style=shield)](https://carolinegregson.com)
 
 This is the website source for Caroline Gregson's Website.
 

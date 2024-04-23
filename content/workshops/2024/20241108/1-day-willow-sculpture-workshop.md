@@ -5,7 +5,7 @@ summary: >-
   Castle Park Arts Centre, Frodsham.
 date: 2024-11-08T00:00:00.000Z
 endDate: 2024-11-08T00:00:00.000Z
-publishDate: 2024-04-24T00:00:00.000Z
+publishDate: 2024-04-23T00:00:00.000Z
 price: 90
 deposit: 40
 places: 6

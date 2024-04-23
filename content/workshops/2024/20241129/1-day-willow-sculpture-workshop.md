@@ -1,5 +1,8 @@
 ---
 title: 1-Day Willow Sculpture Workshop
+summary: >-
+  Willow Sculpture Workshop to learn how to make willow sculptures to be held at
+  Castle Park Arts Centre, Frodsham.
 date: 2024-11-29T00:00:00.000Z
 endDate: 2024-11-29T00:00:00.000Z
 publishDate: 2024-04-23T00:00:00.000Z

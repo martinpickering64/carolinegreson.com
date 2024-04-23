@@ -20,4 +20,4 @@ _template: workshop
 
 Practise random weave techniques to create a sphere, heart, pod, fish or bird. No experience necessary for this fun and accessible medium.
 
-A lovely venue with options to work inside or out if the weather is good, super lunches and afternoon cake included! Contact Alison at Zantium direct for more information and bookings [www.zantium.co.uk](www.zantium.co.uk) or [01629 824377](tel:01629824377).
+A lovely venue with options to work inside or out if the weather is good, super lunches and afternoon cake included! Contact Alison at Zantium direct for more information and bookings www\.zantium.co.uk or  01629 824377

@@ -6,6 +6,8 @@ summary: >-
 date: 2024-06-18T00:00:00.000Z
 endDate: 2024-06-19T00:00:00.000Z
 publishDate: 2024-04-23T00:00:00.000Z
+hidePrice: true
+hidePlaces: true
 venue: ZANTIUM
 image:
   name: /uploads/deer-in-woods-willow-sculpture.jpg

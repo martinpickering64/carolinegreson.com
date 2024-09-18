@@ -8,7 +8,7 @@ endDate: 2024-11-08T00:00:00.000Z
 publishDate: 2024-04-23T00:00:00.000Z
 price: 90
 deposit: 40
-places: 6
+places: 2
 venue: CPAC
 image:
   name: /uploads/castle-park-arts-centre.jpg

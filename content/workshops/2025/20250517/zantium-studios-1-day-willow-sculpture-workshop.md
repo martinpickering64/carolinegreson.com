@@ -1,7 +1,7 @@
 ---
 title: Zantium Studios 1-Day Willow Sculpture Workshop
 summary: >-
-  A taster day using willow to create simple sculptural forms.
+  A taster day using willow to create sculptural forms.
 
   This workshop will be held at Zantium Studios near Wirksworth in the beautiful
   Derbyshire countryside.

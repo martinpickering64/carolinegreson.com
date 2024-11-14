@@ -10,6 +10,8 @@ price: 95
 deposit: 45
 places: 6
 venue: CPAC
+image:
+  name: /uploads/castle-park-arts-centre.jpg
 _template: workshop
 ---
 

@@ -9,6 +9,8 @@ publishDate: 2024-11-14T00:00:00.000Z
 hidePrice: true
 hidePlaces: true
 venue: ZANTIUM
+image:
+  name: /uploads/deer-in-woods-willow-sculpture.jpg
 _template: workshop
 ---
 

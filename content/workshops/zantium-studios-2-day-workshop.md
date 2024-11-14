@@ -1,5 +1,8 @@
 ---
 title: Zantium Studios 2-Day Workshop
+summary: >-
+  Caroline will again be teaching her popular 2-day workshops at Zantium Studios
+  near Wirksworth, Derbyshire.
 date: 2025-09-18T00:00:00.000Z
 endDate: 2025-09-19T00:00:00.000Z
 publishDate: 2024-11-14T00:00:00.000Z

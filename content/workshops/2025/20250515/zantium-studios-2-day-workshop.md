@@ -14,7 +14,7 @@ image:
 _template: workshop
 ---
 
-Caroline will again be teaching her popular 2-day workshops at Zantium Studios near Wirksworth, Derbyshire on 19th and 20th September 2024.
+Caroline will again be teaching her popular 2-day workshops at Zantium Studios near Wirksworth, Derbyshire on 15th and 16th May 2025.
 
 With having a full 2 days, we have the opportunity to make bigger sculptures, deer or sheep are always popular but other animals are also possible. Caroline will always try and help you create what you want.
 

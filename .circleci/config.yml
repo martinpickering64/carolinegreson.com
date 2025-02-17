@@ -57,6 +57,6 @@ jobs:
 #          command: |
 #            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
 #            --empty-alt-ignore --disable-external
-      - deploy:
+      - run:
           name: deploy to Firebase
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"

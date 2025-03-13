@@ -7,7 +7,7 @@ date: 2025-10-11T00:00:00.000Z
 endDate: 2025-10-11T00:00:00.000Z
 publishDate: 2024-11-14T00:00:00.000Z
 price: 95
-deposit: 45
+deposit: 40
 places: 6
 venue: CPAC
 image:

@@ -2,7 +2,7 @@
 title: New Workshops Options
 subtitle: Come and learn with me at my Home Workshop near Chester
 summary: >-
-  In 2025 I will be offering the option to come and learn willow sculpture or
+  In 2026 I will be offering the option to come and learn willow sculpture or
   basketmaking with me in my comfortable workshop near Chester. Groups of no
   more than 3 people will mean we can tailor the contents to what you want to
   make and there will be time for lots of individual attention if needed. I am

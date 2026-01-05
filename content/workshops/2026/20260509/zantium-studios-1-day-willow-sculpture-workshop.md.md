@@ -13,6 +13,8 @@ publishDate: 2026-01-01T00:00:00.000Z
 hidePrice: true
 hidePlaces: true
 venue: ZANTIUM
+image:
+  name: /uploads/zantium-studios.jpg
 _template: workshop
 ---
 

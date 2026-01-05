@@ -14,6 +14,8 @@ publishDate: 2026-01-05T00:00:00.000Z
 hidePrice: true
 hidePlaces: true
 venue: BODFARI
+image:
+  name: /uploads/bodfari-woodland-skills-centre.jpg
 _template: workshop
 ---
 

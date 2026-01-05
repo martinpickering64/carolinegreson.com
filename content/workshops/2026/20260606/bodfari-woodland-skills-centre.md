@@ -1,5 +1,5 @@
 ---
-title: Woodland Skills Centre
+title: Woodland Skills Centre 2-day Workshop
 summary: >-
   Caroline will again be teaching a 2-day Willow Sculpture Workshop at The
   Woodland Skills Centre at Bodfari, Denbighshire.  This is a beautiful venue

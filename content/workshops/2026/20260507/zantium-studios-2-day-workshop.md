@@ -11,6 +11,7 @@ hidePlaces: true
 venue: ZANTIUM
 image:
   name: /uploads/zantium-studios.jpg
+  caption: Zantium Studios
 _template: workshop
 ---
 

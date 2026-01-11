@@ -56,6 +56,19 @@
   "addressCountry": "UK"
   }
   },
+  {{ else if eq $page.Params.Venue "STUDIO" }}
+  "location": {
+  "@type": "Place",
+  "name": "Caroline's Studio",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "8 Andrews Close, Tarvin",
+  "addressLocality": "Chester",
+  "postalCode": "CH3 8LN",
+  "addressRegion": "Cheshire",
+  "addressCountry": "UK"
+  }
+  },
   {{ else if eq $page.Params.Venue "ZANTIUM" }}
   "location": {
   "@type": "Place",

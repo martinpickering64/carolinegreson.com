@@ -1969,6 +1969,7 @@ var config_default = defineConfig({
                 type: "string",
                 options: [
                   { value: "CPAC", label: "Castle Park" },
+                  { value: "STUDIO", label: "Home Studio" },
                   { value: "ZANTIUM", label: "Zantium" },
                   { value: "BODFARI", label: "Bodfari" }
                 ]

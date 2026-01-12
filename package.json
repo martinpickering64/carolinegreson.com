@@ -4,11 +4,11 @@
   "description": "carolinengregson.com website",
   "main": "index.js",
   "dependencies": {
-    "@tinacms/cli": ">=1.0.9",
+    "@tinacms/cli": "^2.1.0",
     "tinacms": ">=1.1.4"
   },
   "devDependencies": {
-    "firebase-tools": "^10.1.0"
+    "firebase-tools": "^15.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

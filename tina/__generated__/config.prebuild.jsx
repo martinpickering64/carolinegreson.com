@@ -1,4 +1,4 @@
-// .tina/config.js
+// tina/config.js
 import { defineConfig } from "tinacms";
 var branch = "main";
 var config_default = defineConfig({

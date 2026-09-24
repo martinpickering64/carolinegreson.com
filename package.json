@@ -4,11 +4,11 @@
   "description": "carolinengregson.com website",
   "main": "index.js",
   "dependencies": {
-    "@tinacms/cli": "^2.1.0",
+    "@tinacms/cli": "^3.0.0",
     "tinacms": ">=1.1.4"
   },
   "devDependencies": {
-    "firebase-tools": "^15.2.1"
+    "firebase-tools": "^15.31.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,18 @@
   "bugs": {
     "url": "https://github.com/martinpickering64/carolinegregson.com/issues"
   },
-  "homepage": "https://github.com/martinpickering64/carolinegregson.com#readme"
+  "homepage": "https://github.com/martinpickering64/carolinegregson.com#readme",
+  "allowScripts": {
+    "protobufjs@7.6.6": true,
+    "better-sqlite3@12.11.1": true,
+    "re2@1.26.1": true,
+    "core-js@3.50.0": true,
+    "yarn@1.22.22": true,
+    "leveldown@6.1.1": true,
+    "esbuild@0.12.29": true,
+    "esbuild@0.15.18": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.14.54": true
+  }
 }

@@ -1,5 +1,6 @@
 {
   "hosting": {
+    site: "carolinegregson-com",
     "public": "public",
     "ignore": [
       "firebase.json",

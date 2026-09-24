@@ -27,7 +27,7 @@ jobs:
             sudo apt-get update && sudo apt-get install nodejs -y
       - run:
             name: update npm
-            command: npm install -g npm@latest
+            command: sudo npm install -g npm@latest
       - checkout
       - run:
           name: make public dir
